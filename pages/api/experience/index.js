@@ -23,7 +23,8 @@ export default async function handler(req, res) {
       // Create a experience and post it to database
       case 'POST':
         const experience = new ExperienceModel({
-          text: req.body.text
+          content: req.body.content,
+          skills: req.body.skills
         })
         try {
           const newexperience = await experience.save()
