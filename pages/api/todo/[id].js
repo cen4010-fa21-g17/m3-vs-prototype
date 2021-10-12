@@ -1,5 +1,5 @@
 import dbConnect from '../../../utils/dbConnect'
-import ExampleModel from '../../../models/example'
+import TodoModel from '../../../models/todo'
 
 export default async function handler(req, res) {
 
@@ -8,17 +8,18 @@ export default async function handler(req, res) {
   switch (req.method) {
     case 'GET':
       try {
-        const example = await ExampleModel.findById(req.query.id)
-        res.json(example)
+        const todo = await TodoModel.findById(req.query.id)
+        res.json(todo)
       } catch (err) {
         res.status(500).json({ message: err.message })
       }
       break;
+      
     case 'DELETE':
       try {
-        const example = await ExampleModel.findById(req.query.id)
-        example.remove()
-        res.json({ message: 'Deleted example' })
+        const todo = await TodoModel.findById(req.query.id)
+        todo.remove()
+        res.json({ message: 'Deleted todo' })
       } catch (err) {
         res.status(500).json({ message: err.message })
       }

@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import dbConnect from '../../../utils/dbConnect'
-import ExampleModel from '../../../models/example'
+import TodoModel from '../../../models/todo'
 
 
 export default async function handler(req, res) {
@@ -10,19 +10,20 @@ export default async function handler(req, res) {
   switch (req.method) {
       case 'GET':
         try {
-          const allExamples = await ExampleModel.find()
-          res.json(allExamples)
+          const allTodos = await TodoModel.find()
+          res.json(allTodos)
         } catch (err) {
           res.status(500).json({ message: err.message })
         }
         break;
+
       case 'POST':
-        const example = new ExampleModel({
+        const todo = new TodoModel({
           text: req.body.text
         })
         try {
-          const newExample = await example.save()
-          res.status(201).json(newExample)
+          const newtodo = await todo.save()
+          res.status(201).json(newtodo)
         } catch (err) {
           res.status(500).json({ message: err.message })
         }
