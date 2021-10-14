@@ -1,8 +1,8 @@
 import React from 'react';
-import IndexView from 'views/IndexView';
+import MetaSpace from 'views/MetaSpace';
 
-const IndexPage = () => {
-  return <IndexView />;
+const MetaSpace = () => {
+  return <MetaSpace />;
 };
 
-export default IndexPage;
+export default MetaSpace;
