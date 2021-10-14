@@ -1,34 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [theFront - Multipurpose Template + UI Kit](https://thefront.maccarianagency.com/)
 
-## Getting Started
+MUI & ReactJS based Landing Pages Kit made with [MUI's](https://MUI.com/?ref=maccarian-agency) components, [React](https://reactjs.org/?ref=maccarian-agency). It supports [create-react-app](https://facebook.github.io/create-react-app/?ref=maccarian-agency) build-tools (react-scripts), [NextJS](https://nextjs.org/?ref=maccarian-agency), [GatsbyJS](https://www.gatsbyjs.com/?ref=maccarian-agency) and Typescript to boost your app development process!
+A professional React Kit that comes with plenty of ready-to-use MUI components that will help you to build faster & beautiful fontend pages. Each component is fully customizable, responsive and easy to integrate.
 
-First, run the development server:
+## Built with
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- React
+- MUI
+- React Scripts
+- NextJS
+- GatsbyJS
+- Typescript
+- Figma & Sketch
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+theFront landing page examples can be used out of the box, but since they’re built on flexible components, you can also create new pages all your own with ease. Copy-paste a section here, a component there, switch up a few variables, and you have an entirely new landing!
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- More than 45 pages
+- 300+ component reusable compositions
+- create-react-app & react-scripts support
+- NextJS and server side rendering support
+- GatsbyJS and server side rendering support
+- Typescript support
+- Dark mode support
+- Image lazy loading support
+- Animated sections on scroll
+- Swiper support
+- Fully responsive on all modern browsers
+- Figma and Sketch design files (available in Standard Plus & Extended licences)
+- Rich documentation with code samples and parameters/options
+- Free customer support
+- Free updates
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Learn more
 
-## Learn More
+- [Launch a live demo](https://thefront.maccarianagency.com)
+- [Documentation & Quick Start](https://thefront.maccarianagency.com/docs/introduction)
 
-To learn more about Next.js, take a look at the following resources:
+## Design Highlights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+theFront was designed as a rich system from the start, which is reflected in both the end result and the original design.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 15 Figma and Sketch files are available
+- Beautiful, modern style flexible enough to suit most brands
+- All images are included with a free-to-use license
+- Icon set provided by Font Awesome Kit
 
-## Deploy on Vercel
+The following are the pages that have Figma and Sketch design implementation:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Job Listing](https://thefront.maccarianagency.com/job-listing)
+- [Rental](https://thefront.maccarianagency.com/rental)
+- [E-commerce](https://thefront.maccarianagency.com/e-commerce)
+- [Cloud Hosting](https://thefront.maccarianagency.com/cloud-hosting)
+- [Logistics](https://thefront.maccarianagency.com/logistics)
+- [Portfolio](https://thefront.maccarianagency.com/portfolio-page)
+- [Career Listing](https://thefront.maccarianagency.com/career-listing-minimal)
+- [Career Opening](https://thefront.maccarianagency.com/career-opening)
+- [Help Center](https://thefront.maccarianagency.com/help-center)
+- [Company About](https://thefront.maccarianagency.com/about)
+- [Company Pricing](https://thefront.maccarianagency.com/pricing)
+- [Blog Newsroom](https://thefront.maccarianagency.com/blog-newsroom)
+- [Blog Article](https://thefront.maccarianagency.com/blog-article)
+- [Company Contact](https://thefront.maccarianagency.com/contact-page)
+- [Account Page](https://thefront.maccarianagency.com/account/general)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Quick start
+
+- Install dependencies: `yarn install`
+- Start the server: `yarn run dev`
+- Build on production: `yarn run build`
+
+## MUI Documentation
+
+The full documentation for the React Material Kit can be found [here](https://MUI.com?ref=maccarian-agency).
+
+## Free Updates and Support
+
+No matter how well documented and built something is, sometimes you just need a little help! That’s why we make ourselves available to help you anytime, just contact our [support](hi@maccarianagency.com) email. We’re also planning tons of updates! In addition to keeping theFront up to date with MUI's core and any necessary patches, we’ll be adding new features regularly over the coming months!
+
+- [Contact us via email](hi@maccarianagency.com)
+
+## Contact Us
+
+- Email Us: hi@maccarianagency.com
+- [Follow us on Linkedin](https://www.linkedin.com/company/maccarian)
+- [Follow us on Instagram](https://www.instagram.com/maccarian/)
+- [Follow us on Facebook](https://facebook.com/maccarian.agency/)
