@@ -1,5 +1,5 @@
-import dbConnect from '../../../utils/dbConnect'
-import ExperienceModel from '../../../models/experience'
+import dbConnect from '../../../../../utils/dbConnect'
+import ExperienceModel from '../../../../../models/experience'
 
 // Request handler function
 export default async function handler(req, res) {
