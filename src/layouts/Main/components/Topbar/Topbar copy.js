@@ -103,19 +103,17 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             href="https://MUI.com/store/items/the-front-landing-page/"
             size="large"
           >
-            Sign Up
+            Log In
           </Button>
         </Box>
-        <Box marginLeft={1}>
+        <Box marginLeft={4}>
           <Button
             variant="contained"
             color="primary"
             component="a"
             target="blank"
-            href=""
-            size="large"
-          >
-            Log In
+            
+            >
           </Button>
         </Box>
       </Box>
