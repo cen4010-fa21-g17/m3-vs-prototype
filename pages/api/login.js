@@ -1,6 +1,6 @@
 
-import dbConnect from '../../../utils/dbConnect'
-import UserModel from '../../../models/user'
+import dbConnect from '../../utils/dbConnect'
+import UserModel from '../../models/user'
 
 // Request handler function
 export default async function handler(req, res) {
@@ -9,20 +9,24 @@ export default async function handler(req, res) {
   await dbConnect()
 
   // Handle request methods
-  if (req.method == "POST") {
-
-    try {
-      const user = await UserModel.findByCredentials(req.body.user, req.body.password)
-      const token = await UserModel.generateAuthToken();
-      res.send({ user, token})
-    } catch (err) {
-      res.status(501).json({ message: 'Username or Password incorrect' })
-    }
-    break;
+  switch (req.method) {
+          
+    // Get all todos from database
+    case 'POST':
+        try {
+            const user =  await UserModel.findOne({Username: req.body.Username, Password: req.body.Password})
+            if (user)
+              res.status(202).json({ user, message: "Login successful" })
+            else 
+              res.status(401).json({ user, message: "Incorrect credentials" })
+        } catch (err) {
+            res.status(500).json({ message: err.message})
+        }
+      break;
+    // Method not implemented
+    default:
+      console.log('ran the defulat')
+      res.status(501).json({ message: 'Request method not implemented' })
   }
-  else
-    {
-      res.status(501).json({ message: 'User not found'})
-    }
 
 }

@@ -20,19 +20,6 @@ export default async function handler(req, res) {
         }
         break;
 
-      // Create a todo and post it to database
-      case 'POST':
-        const user = new UserModel({
-          Username: req.body.Username,
-          Password: req.body.Password
-        })
-        try {
-          const newuser = await user.save()
-          res.status(201).json(newuser)
-        } catch (err) {
-          res.status(500).json({ message: err.message })
-        }
-        break;
 
       // Method not implemented
       default:

@@ -1,5 +1,5 @@
-import dbConnect from '../../../../../utils/dbConnect'
-import ProfileModel from '../../../../../models/Profile'
+import dbConnect from '../../../../utils/dbConnect'
+import profileModel from '../../../../models/profile'
 
 // Request handler function
 export default async function handler(req, res) {
@@ -10,28 +10,16 @@ export default async function handler(req, res) {
   // Handle request methods
   switch (req.method) {
 
-      // Get all Profiles from database
+      // Get all profiles from database
       case 'GET':
         try {
-          const allProfile = await ProfileModel.findOne({user_id: `${req.query.id}`})
-          res.json(allProfile)
+          const allprofile = await profileModel.findOne({userid: `${req.query.id}`})
+          res.json(allprofile)
         } catch (err) {
           res.status(500).json({ message: err.message })
         }
         break;
 
-   // Find and delete a profile from database
-    case 'DELETE':
-      try {
-        const profile = await ProfileModel.findById(req.query.id)
-        profile.remove()
-        res.json({ message: 'Deleted Profile' })
-      } catch (err) {
-        res.status(500).json({ message: err.message })
-      }
-      break;
-
-      // Method not implemented
       default:
         res.status(501).json({ message: 'Request method not implemented' })
   }

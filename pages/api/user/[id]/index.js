@@ -1,5 +1,5 @@
-import dbConnect from '../../../utils/dbConnect'
-import UserModel from '../../../models/user'
+import dbConnect from '../../../../utils/dbConnect'
+import UserModel from '../../../../models/user'
 
 // Request handler function
 export default async function handler(req, res) {
@@ -13,7 +13,15 @@ export default async function handler(req, res) {
     // Get all todos from database
     case 'GET':
       try {
-        const user = await UserModel.findById(req.query.id)
+        const user = await UserModel.findOne({ Username: `${req.query.username}` })
+        if (user)
+        {
+          // successs
+        }
+        else
+        {
+          // failure
+        }
         res.json(user)
       } catch (err) {
         res.status(500).json({ message: err.message })
