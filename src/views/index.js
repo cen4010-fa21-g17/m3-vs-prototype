@@ -22,6 +22,7 @@ export { default as JobListing } from './JobListing';
 export { default as Rental } from './Rental';
 export { default as CloudHosting } from './CloudHosting';
 export { default as Logistics } from './Logistics';
+export { default as Metaspace } from './Metaspace';
 export { default as Ecommerce } from './Ecommerce';
 export { default as Pricing } from './Pricing';
 export { default as About } from './About';

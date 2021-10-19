@@ -59,6 +59,7 @@ const Customization = () => {
           justifyContent={'center'}
           marginTop={2}
         >
+          {/* Start now button */}
           <Button
             variant="contained"
             color="primary"
@@ -67,6 +68,7 @@ const Customization = () => {
           >
             Start now
           </Button>
+          {/* Learn more button */}
           <Box
             component={Button}
             variant="outlined"
@@ -80,6 +82,7 @@ const Customization = () => {
           </Box>
         </Box>
       </Box>
+      {/* Dashboard images */}
       <Grid container spacing={isMd ? 4 : 2}>
         <Grid item xs={12} sm={6} data-aos={'fade-up'}>
           <Grid container alignItems="center">
@@ -102,6 +105,7 @@ const Customization = () => {
             />
           </Grid>
         </Grid>
+        {/* Integrations */}
         <Grid item xs={12} sm={6} data-aos={'fade-up'}>
           <Grid
             container

@@ -1,8 +1,8 @@
 import React from 'react';
-import MetaSpace from 'views/MetaSpace';
+import WebBasicPage from './web-basic';
 
-const MetaSpace = () => {
-  return <MetaSpace />;
+const WebBasic = () => {
+  return <WebBasicPage />;
 };
 
-export default MetaSpace;
+export default WebBasic;
