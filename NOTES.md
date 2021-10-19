@@ -10,7 +10,7 @@
 - Account: account-general.js
 - Security: account-security.js
 
-**Action Steps**
+**Action Steps** | October 19, 2021
 - Reduce the code base in the template
+- Finish the  navigation
 - Create the mockup from the existing files in template
-- Finish the navigation
