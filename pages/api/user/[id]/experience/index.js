@@ -23,6 +23,7 @@ export default async function handler(req, res) {
       // Create a experience and post it to database
       case 'POST':
         const experience = new ExperienceModel({
+          user_id: `${req.query.id}`,
           content: req.body.content,
           skills: req.body.skills
         })

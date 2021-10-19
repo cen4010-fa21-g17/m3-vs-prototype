@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     // Get all experiences from database
     case 'GET':
       try {
-        const experience = await ExperienceModel.findById(req.query.id)
+        const experience = await ExperienceModel.findById(req.query.experience_id)
         res.json(experience)
       } catch (err) {
         res.status(500).json({ message: err.message })
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     // Find and delete a experience from database
     case 'DELETE':
       try {
-        const experience = await ExperienceModel.findById(req.query.id)
+        const experience = await ExperienceModel.findById(req.query.experience_id)
         experience.remove()
         res.json({ message: 'Deleted Experience' })
       } catch (err) {

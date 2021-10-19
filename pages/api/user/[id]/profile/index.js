@@ -20,7 +20,7 @@ export default async function handler(req, res) {
         }
         break;
 
-    // Find and delete a experience from database
+   // Find and delete a profile from database
     case 'DELETE':
       try {
         const profile = await ProfileModel.findById(req.query.id)
