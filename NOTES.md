@@ -14,3 +14,6 @@
 - Reduce the code base in the template
 - Finish the  navigation (aka work out the routing for the necessary pages)
 - Create the Journey based on the mockup from the existing files in template
+
+**Corrections** | October 19, 2021
+- Add back NotFoundCover views folder and page

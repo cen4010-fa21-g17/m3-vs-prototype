@@ -16,7 +16,7 @@ import {
   Users,
 } from './components';
 
-const WebBasic = () => {
+const Landing = () => {
   const theme = useTheme();
 
   return (
@@ -135,4 +135,4 @@ const WebBasic = () => {
   );
 };
 
-export default WebBasic;
+export default Landing;

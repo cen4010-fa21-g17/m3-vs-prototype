@@ -1,1 +1,1 @@
-export { default } from './WebBasic';
+export { default } from './landing';

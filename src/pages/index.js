@@ -1,8 +1,8 @@
 import React from 'react';
-import WebBasicPage from './web-basic';
+import LandingPage from './landing';
 
-const WebBasic = () => {
-  return <WebBasicPage />;
+const Landing = () => {
+  return <LandingPage />;
 };
 
-export default WebBasic;
+export default Landing;

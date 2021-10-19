@@ -49,7 +49,7 @@ const NavItem = ({ title, id, items, colorInvert = false }) => {
         </Typography>
         <ExpandMoreIcon
           sx={{
-            marginLeft: theme.spacing(1/4),
+            marginLeft: theme.spacing(1 / 4),
             width: 16,
             height: 16,
             transform: openedPopoverId === id ? 'rotate(180deg)' : 'none',
