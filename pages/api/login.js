@@ -13,24 +13,19 @@ export default async function handler(req, res) {
           
     // Get all todos from database
     case 'POST':
-      
         try {
-            const user =  await UserModel.findOne({Username: `${req.query.Username}`, Password: `${req.query.Password}`})
-            console.log (user)
-            if (user) {
-              res.status(201).json({ message: 'Login successful'})
-            }
-            else {
-              res.status(201).json({message: 'Incorrect Username or Password'})
-            }
-            
+            const user =  await UserModel.findOne({Username: req.body.Username, Password: req.body.Password})
+            if (user)
+              res.status(202).json({ user, message: "Login successful" })
+            else 
+              res.status(401).json({ user, message: "Incorrect credentials" })
         } catch (err) {
-  
             res.status(500).json({ message: err.message})
         }
-  
+      break;
     // Method not implemented
     default:
+      console.log('ran the defulat')
       res.status(501).json({ message: 'Request method not implemented' })
   }
 
