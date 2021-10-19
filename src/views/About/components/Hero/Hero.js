@@ -76,7 +76,7 @@ const Hero = () => {
               textTransform: 'uppercase',
             }}
           >
-            About us
+            About Us
           </Typography>
           <Typography
             variant="h6"
@@ -86,8 +86,7 @@ const Hero = () => {
               color: 'common.white',
             }}
           >
-            We are founded by a leading academic and researcher in the field of
-            Industrial Systems Engineering.
+            We are a team of students at Florida Atlantic University, College of Engineering and Computer Science.
           </Typography>
         </Box>
       </Container>

@@ -17,3 +17,6 @@
 
 **Corrections** | October 19, 2021
 - Add back NotFoundCover views folder and page
+
+**Ancillary Action Steps**
+- Add about page section pages

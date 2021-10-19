@@ -44,16 +44,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           paddingBottom={'0 !important'}
         >
           <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-            <Box marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/docs/introduction"
-                color={colorInvert ? 'common.white' : 'text.primary'}
-              >
-                Documentation
-              </Link>
-            </Box>
+            {/*  Dark/Light Mode Toggler */}
             <Box>
               <ThemeModeToggler />
             </Box>

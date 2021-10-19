@@ -10,7 +10,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   const {
-    abouts: aboutPages
+    abouts: aboutPages,
+    supports: supportPages
   } = pages;
 
   return (
@@ -26,7 +27,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
+        title="metaspace"
         width={{ xs: 100, md: 120 }}
       >
         {/*  Site Logo */}
@@ -54,14 +55,22 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             colorInvert={colorInvert}
           />
         </Box>
-        {/* Login Button */}
+        <Box marginLeft={4}>
+          <NavItem
+            title={'Support'}
+            id={'support-page'}
+            items={supportPages}
+            colorInvert={colorInvert}
+          />
+        </Box>
+        {/* Signup Button */}
         <Box marginLeft={4}>
           <Button
             variant="contained"
             color="primary"
             component="a"
             target="blank"
-            href="https://MUI.com/store/items/the-front-landing-page/"
+            href="/signup-simple"
             size="large"
           >
             Sign Up
@@ -69,6 +78,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         </Box>
       </Box>
       {/*  END site navigation */}
+      {/*  Alternate Navigation on smaller displays */}
       <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
         <Button
           onClick={() => onSidebarOpen()}

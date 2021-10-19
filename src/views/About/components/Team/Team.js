@@ -12,34 +12,29 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 
 const mock = [
   {
-    name: 'Clara Bertoletti',
+    name: 'Laura Casals',
     title: 'MUI lover',
     avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
   },
   {
-    name: 'Jhon Anderson',
+    name: 'Ignacio Albornoz',
     title: 'Senior Frontend Developer',
     avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
   },
   {
-    name: 'Chary Smith',
+    name: 'Carlos Fonseca',
     title: 'SEO at Comoti',
     avatar: 'https://assets.maccarianagency.com/avatars/img6.jpg',
   },
   {
-    name: 'Clara Bertoletti',
+    name: 'Thiago Vasconcelos',
     title: 'MUI lover',
     avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
   },
   {
-    name: 'Jhon Anderson',
+    name: 'David Moore',
     title: 'Senior Frontend Developer',
     avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
-  },
-  {
-    name: 'Chary Smith',
-    title: 'SEO at Comoti',
-    avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
   },
 ];
 
