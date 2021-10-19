@@ -1,5 +1,5 @@
-import dbConnect from '../../../utils/dbConnect'
-import ExperienceModel from '../../../models/experience'
+import dbConnect from '../../../../../utils/dbConnect'
+import ExperienceModel from '../../../../../models/experience'
 
 // Request handler function
 export default async function handler(req, res) {
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       // Get all experiences from database
       case 'GET':
         try {
-          const allExperience = await ExperienceModel.find()
+          const allExperience = await ExperienceModel.find({user_id: `${req.query.id}`})
           res.json(allExperience)
         } catch (err) {
           res.status(500).json({ message: err.message })
@@ -23,6 +23,7 @@ export default async function handler(req, res) {
       // Create a experience and post it to database
       case 'POST':
         const experience = new ExperienceModel({
+          user_id: `${req.query.id}`,
           content: req.body.content,
           skills: req.body.skills
         })

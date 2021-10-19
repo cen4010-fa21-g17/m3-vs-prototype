@@ -1,5 +1,5 @@
 import dbConnect from '../../../utils/dbConnect'
-import ExperienceModel from '../../../models/experience'
+import UserModel from '../../../models/user'
 
 // Request handler function
 export default async function handler(req, res) {
@@ -10,22 +10,22 @@ export default async function handler(req, res) {
   // Handle request methods
   switch (req.method) {
 
-    // Get all experiences from database
+    // Get all todos from database
     case 'GET':
       try {
-        const experience = await ExperienceModel.findById(req.query.id)
-        res.json(experience)
+        const user = await UserModel.findById(req.query.id)
+        res.json(user)
       } catch (err) {
         res.status(500).json({ message: err.message })
       }
       break;
 
-    // Find and delete a experience from database
+    // Find and delete a todo from database
     case 'DELETE':
       try {
-        const experience = await ExperienceModel.findById(req.query.id)
-        experience.remove()
-        res.json({ message: 'Deleted Experience' })
+        const user = await UserModel.findById(req.query.id)
+        user.remove()
+        res.json({ message: 'Deleted User' })
       } catch (err) {
         res.status(500).json({ message: err.message })
       }
