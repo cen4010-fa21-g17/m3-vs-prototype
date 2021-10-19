@@ -12,5 +12,5 @@
 
 **Action Steps** | October 19, 2021
 - Reduce the code base in the template
-- Finish the  navigation
-- Create the mockup from the existing files in template
+- Finish the  navigation (aka work out the routing for the necessary pages)
+- Create the Journey based on the mockup from the existing files in template
