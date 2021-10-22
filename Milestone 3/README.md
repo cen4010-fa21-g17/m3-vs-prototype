@@ -41,7 +41,7 @@
 &nbsp;
 
 <p align = "center" font-size>
-	MetaSpace
+	OnRamp
 </p>
 
 &nbsp;
@@ -84,7 +84,7 @@
 
  Carlos Fonseca &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  cfonseca2018@fau.edu  
  Ignacio Albornoz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ialbornoz2016@fau.edu  
- Thiago Goncalves Vasconcelos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  tgoncalvesva2020@fau.edu  
+ Thiago Goncalves Vasconcelos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  goncalvesva2020@fau.edu  
  David Moore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  davidmoore2014@fau.edu  
  Laura Casals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  lcasals2014@fau.edu  
  
@@ -116,10 +116,10 @@
 
 
 <p align = "center" font-size>
-	Milestone 3 Document Modification
+	Milestone 1 Project Proposal and High-level Description
 </p>
 <p align = "center" font-size>
-	10/25/2021
+	9/28/2021
 </p>
 
 ---
@@ -301,7 +301,7 @@ The user will start an experience.
 | ------------- | ------------- | ------------- | ------------- | 
 | Path          |     Data      | Activity Type |A path consists of user input (descriptions and keywords) that lead to other potential areas of interest in the technology field. |   
 | Journey       |     Data      | Activity Type |The workspace the user can open create a path. |   
-| Onramp        |  Domain Name  |Use Case Scenario|Name of our website. describes the user's journey. one possible name of our application.|      
+| Metaspace        |  Domain Name  |Use Case Scenario|Name of our website. describes the user's journey. one possible name of our application.|      
 | Account       |     Data      |Activity Type  |Stores all of the member's information.|     
 | Search        |    Service    | Member service|Members can find other members.|      
 | Login         |    Service    |Site User Service|Allows the user to begin/display their journey by choosing a path. will also gain ability to upload content and connect with other users.|        
