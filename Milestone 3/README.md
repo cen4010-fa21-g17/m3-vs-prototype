@@ -320,7 +320,7 @@ The user will start an experience.
 | Triple Graph  |    Data       |User Interface   |A graphical composite of "Experiences" created by the user.|
 
 ---
-# **Initial list of high level functional requirements**
+# **High level functional requirements**
 ## Non-Member expectation 
 
 #### 1. Creating an account. 
