@@ -609,3 +609,13 @@ The homepage has many white blank spaces, does not guide the user properly to cr
 OnRamp is all about the journey. Many portfolio-creating sites just seem to ask the user to input information mindlessly. OnRamp encourages the user to form genuine creative partnerships, in what we call collaborations, to connect the knowledge they have gained, how it affected them, and how they have applied new knowledge. Most of the career support sites are an endpoint that assumes job readiness. But what pre-professional users need help translating courses (college or otherwise) into transferrable skills and experience as they progress towards applying for employment? People who are just starting or self-learners?  
 
 OnRamp allows its users to bridge the gap from start to finish. It is a holistic journey with a timeline and measurable progress. This means that the users have the freedom to start from wherever they want and begin documenting their journey. As a result, if a company is interested in you, this platform will put your personality on display. In other media, it seems complicated to have your profile stand out among the rest, but that's where the beauty of OnRamp comes into play. It allows you to keep track of what you learned, document products created with the knowledge obtained, and display what type of person you are too. This platform will make the endpoint easier to create and share with companies when the time comes to perform a job search.
+
+---
+
+#### Team Roles
+* Team Lead, Front End Team Lead/Developer: David Moore
+* Github Master, Front End Developer: Laura Casals
+* Scrum Master, Back End Developer: Carlos Fonseca
+* Back End Team Lead/Developer: Thiago Goncalves Vasconcelos
+* Back End Developer: Ignacio Albornoz
+
