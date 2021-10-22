@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+//
+/*import React, { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Lightbox from 'react-image-lightbox';
 import { useTheme } from '@mui/material/styles';
@@ -166,4 +167,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Gallery;*/

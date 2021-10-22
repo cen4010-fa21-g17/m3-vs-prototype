@@ -13,7 +13,7 @@ import Container from 'components/Container';
 const mock = [
   {
     label: 'Phone',
-    value: '+39 659-657-0133',
+    value: '+01 999-999-9999',
     icon: (
       <svg
         width={20}
@@ -28,7 +28,7 @@ const mock = [
   },
   {
     label: 'Email',
-    value: 'hi@maccarianagency.com',
+    value: 'metaspace_group17@fau.edu',
     icon: (
       <svg
         width={20}
@@ -44,7 +44,7 @@ const mock = [
   },
   {
     label: 'Address',
-    value: 'Via Venini 33, 20147',
+    value: '777 Glades Rd, Boca Raton, FL 33431',
     icon: (
       <svg
         width={20}
@@ -74,9 +74,8 @@ const Contact = () => {
             Contact us
           </Typography>
           <Typography color="text.secondary">
-            Rather than worrying about switching offices every couple years, you
-            can instead stay in the same location and grow-up from your shared
-            coworking space to an office that takes up an entire floor.
+            If you would like to reach out to our team for any questions,
+            please feel free to contact us.
           </Typography>
         </Box>
         <Box
@@ -124,7 +123,7 @@ const Contact = () => {
         marginHeight={0}
         marginWidth={0}
         scrolling="no"
-        src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Milan&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+        src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Florida+Atlantic+University&ie=UTF8&t=&z=14&iwloc=B&output=embed"
         style={{
           minHeight: 300,
           filter:

@@ -13,28 +13,28 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 const mock = [
   {
     name: 'Laura Casals',
-    title: 'MUI lover',
-    avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
+    title: 'Frontend Developer',
+    avatar: 'https://images.squarespace-cdn.com/content/v1/5685b058a976af7af993efc6/1634846753756-LM289OT1BBMDVKFKTUW8/4.jpg',
   },
   {
     name: 'Ignacio Albornoz',
-    title: 'Senior Frontend Developer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
+    title: 'Backend Developer',
+    avatar: 'https://images.squarespace-cdn.com/content/v1/5685b058a976af7af993efc6/1634846753011-80KN7XTGVZY87QW2L1T1/1.jpg',
   },
   {
     name: 'Carlos Fonseca',
-    title: 'SEO at Comoti',
-    avatar: 'https://assets.maccarianagency.com/avatars/img6.jpg',
+    title: 'Backend Developer',
+    avatar: 'https://images.squarespace-cdn.com/content/v1/5685b058a976af7af993efc6/1634846753688-YL915J0G2E6CVSACGUPM/3.jpg',
   },
   {
     name: 'Thiago Vasconcelos',
-    title: 'MUI lover',
-    avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
+    title: 'Backend Developer',
+    avatar: 'https://images.squarespace-cdn.com/content/v1/5685b058a976af7af993efc6/1634846753123-SUGQ2AKRIABWIQ3ZB4U9/2.jpg',
   },
   {
     name: 'David Moore',
-    title: 'Senior Frontend Developer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
+    title: 'Frontend Developer',
+    avatar: 'https://images.squarespace-cdn.com/content/v1/5685b058a976af7af993efc6/1634846754229-D8T69Q2XFAGUZ94VD7S5/5.jpg',
   },
 ];
 
@@ -65,10 +65,6 @@ const Team = () => {
           }}
         >
           Small team. Big hearts.
-        </Typography>
-        <Typography variant="h6" align={'center'} color={'text.secondary'}>
-          Our focus is always on finding the best people to work with. Our bar
-          is high, but you look ready to take on the challenge.
         </Typography>
       </Box>
       <Grid container spacing={2}>

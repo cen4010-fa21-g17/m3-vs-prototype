@@ -1,3 +1,4 @@
+//the top of the About page 
 import React, { useEffect } from 'react';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';

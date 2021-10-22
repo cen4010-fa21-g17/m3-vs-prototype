@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+//Who we are page on the About page
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -28,10 +29,10 @@ const WhoWeAre = () => {
               Who are we?
             </Typography>
             <Typography component={'p'} color={'text.secondary'}>
-              Our sign up is simple. We only require your basic company
-              information and what type of data storage you want. Our sign up is
-              dead simple. We only require your basic company information and
-              what type of data storage you want.
+              CITDL (pronounced "citadel") is a team of undergraduate engineering students at
+              Florida Atlantic University. We are working together to produce a product
+              that connects the user's experiences into a Journey that is dynamically presented
+              in chronological order.
             </Typography>
           </Box>
         </Grid>
@@ -48,10 +49,10 @@ const WhoWeAre = () => {
               Our process
             </Typography>
             <Typography component={'p'} color={'text.secondary'}>
-              We support bulk uploading via SQL, integrations with most data
-              storage products, or you can use our API. Simply select where
-              you'd like to transfer your data and we'll being the process of
-              migrating it instantly.
+              Over the course of the Fall 2021 semester we have been tasked with completing various
+              milestones simulating working in a real-world environment. Currently, we are working on milestone 3, which encompasses creating a vertical prototype of
+              our product. This assignments main purpose is to test the infrastructure and 
+              chosen framework. 
             </Typography>
           </Box>
         </Grid>

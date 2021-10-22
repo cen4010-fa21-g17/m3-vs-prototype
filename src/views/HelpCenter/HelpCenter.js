@@ -12,9 +12,6 @@ const HelpCenter = () => {
   return (
     <Main colorInvert={true}>
       <Hero />
-      <Container>
-        <Faq />
-      </Container>
       <Box
         position={'relative'}
         sx={{

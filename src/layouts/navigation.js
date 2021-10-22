@@ -7,6 +7,10 @@ const pages = {
   ],
   supports: [
     {
+      title: 'FAQs',
+      href: '/faq',
+    },
+    {
       title: 'Help Center',
       href: '/help-center',
     },

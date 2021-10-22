@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+/*import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -15,13 +15,13 @@ const Application = () => {
       >
         <Box>
           <Typography fontWeight={700} variant={'h5'} gutterBottom>
-            Interested in joining our team?
+            Interested in signing up?
           </Typography>
-          <Typography>Hit us up and we'll get in touch with you.</Typography>
+          <Typography>Sign up today!</Typography>
         </Box>
         <Box display="flex" marginTop={{ xs: 2, md: 0 }}>
           <Button variant="contained" color="primary" size="large">
-            Apply
+            Sign up
           </Button>
         </Box>
       </Box>
@@ -29,4 +29,4 @@ const Application = () => {
   );
 };
 
-export default Application;
+export default Application;*/

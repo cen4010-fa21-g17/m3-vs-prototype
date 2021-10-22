@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+//our story in the about page
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -21,19 +22,15 @@ const Story = () => {
               Our story
             </Typography>
             <Typography component={'p'}>
-              Our focus is always on finding the best people to work with. Our
-              bar is high, but you look ready to take on the challenge.
-              <br />
-              We design and implement creative solutions to everyday business
-              problems.
+              We are a team tasked with a semester-long group project to test the skills we have acquired
+              in a real-world corporate setting.
+    
               <br />
               <br />
-              We are a team of creative consultants who help bridge the digital
-              gap between companies and their clients with websites that not
-              only serve as marketing platforms but also provide solutions to
-              online business problems and digital marketing strategies that
-              connect you with the ideal client and help create a loyal
-              customer.
+              We are a team of students who are striving to help bridge the
+              gap between you and achieving your dream job. We are accomplishing by
+              providing the user with a dynamic platform that encourages routinely updates
+              to track their Journey and the paths it took.
             </Typography>
           </Box>
         </Grid>

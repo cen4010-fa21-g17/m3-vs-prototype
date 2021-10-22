@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+//I tried to delete this, but it got mad at me. I will try again later
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -22,7 +23,7 @@ const Partners = () => {
         <Grid item xs={12} md={6}>
           <Box>
             <Typography variant={'h4'} gutterBottom sx={{ fontWeight: 700 }}>
-              Trusted by you favorite companies
+              Trusted by you favorite companie
             </Typography>
             <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
               We are registered as a distributor with AMFI,

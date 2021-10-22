@@ -6,13 +6,13 @@ import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
   Contact,
-  Gallery,
+  //Gallery,
   Hero,
-  Partners,
+  //Partners,
   Story,
   Team,
   WhoWeAre,
-  Application,
+  //Application,
 } from './components';
 
 const About = () => {
@@ -31,18 +31,7 @@ const About = () => {
       <Container>
         <Team />
       </Container>
-      <Box bgcolor={'alternate.main'}>
-        <Container>
-          <Partners />
-        </Container>
-      </Box>
       <Contact />
-      <Container>
-        <Gallery />
-      </Container>
-      <Container maxWidth={800} paddingTop={'0 !important'}>
-        <Application />
-      </Container>
     </Main>
   );
 };

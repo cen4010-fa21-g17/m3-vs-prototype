@@ -65,14 +65,14 @@ const Content = () => {
           title={'Basics'}
           items={[
             {
-              title: 'Can I purchase a gift certificate?',
+              title: 'Is this a subscription service?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'No, this is not a subscription service. It is required to make an account to have access to all of the sevices, otherwise it is free to use.',
             },
             {
-              title: 'What is your return policy?',
+              title: 'Do I have to make an account?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'Yes. To have access to the services you must create an account.',
             },
             {
               title: 'Do you sell gift cards?',
@@ -97,27 +97,27 @@ const Content = () => {
           title={'Account & settings'}
           items={[
             {
-              title: 'Can I purchase a gift certificate?',
+              title: 'How do I change my email?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
             {
-              title: 'What is your return policy?',
+              title: 'How do I update my About?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
             {
-              title: 'Do you sell gift cards?',
+              title: 'How do I change my profile picture?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
             {
-              title: 'Can I change plans later on?',
+              title: 'How do I manage my notifications?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
             {
-              title: 'Is this a subscription service?',
+              title: 'How do add or remove paths?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
@@ -129,27 +129,22 @@ const Content = () => {
           title={'Security'}
           items={[
             {
-              title: 'Can I purchase a gift certificate?',
+              title: 'How do I rest my password?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
             {
-              title: 'What is your return policy?',
+              title: 'I forgot my username/password',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
             {
-              title: 'Do you sell gift cards?',
+              title: 'Can I make my profile public?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },
             {
-              title: 'Can I change plans later on?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'Is this a subscription service?',
+              title: 'How do I report a profile?',
               subtitle:
                 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
             },

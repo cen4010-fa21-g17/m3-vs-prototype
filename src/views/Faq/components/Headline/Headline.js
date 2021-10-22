@@ -25,7 +25,7 @@ const Headline = () => {
         Have a question?
       </Typography>
       <Typography variant="h6" align={'center'} color={'textSecondary'}>
-        Search our FAQ for answers to anything you might ask.
+        We're here to help!
       </Typography>
     </Box>
   );

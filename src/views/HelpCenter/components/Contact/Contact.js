@@ -17,7 +17,7 @@ import Avatar from '@mui/material/Avatar';
 const mock = [
   {
     label: 'Phone',
-    value: '+39 659-657-0133',
+    value: '+99 999-999-9999',
     icon: (
       <svg
         width={20}
@@ -32,7 +32,7 @@ const mock = [
   },
   {
     label: 'Email',
-    value: 'hi@maccarianagency.com',
+    value: 'metaspace_group17@fau.edu',
     icon: (
       <svg
         width={20}
@@ -48,7 +48,7 @@ const mock = [
   },
   {
     label: 'Address',
-    value: 'Via Venini 33, 20147',
+    value: '777 Glades Rd, Boca Raton, FL 33431',
     icon: (
       <svg
         width={20}
@@ -116,12 +116,11 @@ const Contact = () => {
           gutterBottom
           align={'center'}
         >
-          Can't find the answer you need?
+          How can we help?
         </Typography>
         <Typography color="text.secondary" align={'center'}>
-          Keep track of what's happening with your data, change permissions, and
-          run reports against your data anywhere in the world. Keep track of
-          what's happening with your data, change permissions.
+          If you could not find the answer you were looking for in the FAQ page, please
+          feel free to reach out to us here.
         </Typography>
       </Box>
       <Box
