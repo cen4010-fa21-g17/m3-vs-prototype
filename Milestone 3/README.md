@@ -41,7 +41,7 @@
 &nbsp;
 
 <p align = "center" font-size>
-	OnRamp
+	Metaspace
 </p>
 
 &nbsp;
@@ -84,7 +84,7 @@
 
  Carlos Fonseca &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  cfonseca2018@fau.edu  
  Ignacio Albornoz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ialbornoz2016@fau.edu  
- Thiago Goncalves Vasconcelos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  goncalvesva2020@fau.edu  
+ Thiago Goncalves Vasconcelos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  tgoncalvesva2020@fau.edu  
  David Moore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  davidmoore2014@fau.edu  
  Laura Casals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  lcasals2014@fau.edu  
  
@@ -119,7 +119,7 @@
 	Milestone 1 Project Proposal and High-level Description
 </p>
 <p align = "center" font-size>
-	9/28/2021
+	10/25/2021
 </p>
 
 ---
