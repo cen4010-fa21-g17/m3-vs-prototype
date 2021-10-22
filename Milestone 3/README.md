@@ -207,7 +207,7 @@ The user gains immediate access to their account when they register. The user ca
 
 #### 3. Account confirmation 
 
-When the user is successfully registered, they will receive an email confirmatio  
+When the user is successfully registered, they will receive an email confirmation  
 
 #### 4. Recovering Access 
 
