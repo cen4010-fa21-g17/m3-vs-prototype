@@ -612,7 +612,7 @@ OnRamp allows its users to bridge the gap from start to finish. It is a holistic
 
 ---
 
-#### Team Roles
+# Team Roles
 * Team Lead, Front End Team Lead/Developer: 
    * David Moore
 * Github Master, Front End Developer: 
@@ -624,48 +624,48 @@ OnRamp allows its users to bridge the gap from start to finish. It is a holistic
 * Back End Developer: 
    * Ignacio Albornoz
 
-#### Working with GitHub
+# Working with GitHub
 * https://github.com/cen4010-fa21-g17/m3-vs-prototype/commits/main/Milestone%203/README.md
 
 ---
-#### Checklist
+# Checklist
 
-Team decided on basic means of communication: 
-* For verbal communication: Microsoft Teams
-* For messaging purposes: Jira, WhatsApp
-* For taking and keeping track of meeting notes: Jira Confluence
-* GitHub
+### Team decided on basic means of communication: 
+   * For verbal communication: Microsoft Teams
+   * For messaging purposes: Jira, WhatsApp
+   * For taking and keeping track of meeting notes: Jira Confluence
+   * GitHub
 
-Team found a time slot to meet outside of the class: 
-* Tuesday from 9:30-10:30, for brief meetings, but we extend the meeting longer for more pressing issues/tasks
-*Additionally, we have been meeting on Mondays and Thursdays more often. So we meet up some weeks 2 or 3 times a week
+### Team found a time slot to meet outside of the class: 
+   * Tuesday from 9:30-10:30, for brief meetings, but we extend the meeting longer for more pressing issues/tasks
+   * Additionally, we have been meeting on Mondays and Thursdays more often. So we meet up some weeks 2 or 3 times a week
 
-Front and Back End Team Leads Chosen: 
-* Front End Team Lead: David Moore
-* Back End Team Lead: Thiago Goncalves Vasconcelos
+### Front and Back End Team Leads Chosen: 
+   * Front End Team Lead: David Moore
+   * Back End Team Lead: Thiago Goncalves Vasconcelos
 
-GitHub Master Chosen:
-* Laura Casals
+### GitHub Master Chosen:
+   * Laura Casals
 
-Team ready and able to use the chosen back and front-end frameworks: 
-* Back End: Node.js, Postman, MongoDB
-* Front End: React.js, Bootstrap, Next.js
+### Team ready and able to use the chosen back and front-end frameworks: 
+   * Back End: Node.js, Postman, MongoDB
+   * Front End: React.js, Bootstrap, Next.js
 
-Skills of each team member defined and known to all: 
-* @David Moore
-     * Frontend: HTML, CSS, JavaScript, SQL, Database
-     * Grow: Connecting the backend stack
-* @Carlos Fonseca
-     * Strong: C++, C, JavaScript, Python
-     * Grow: Backend: Database, PHP, HTML, CSS
-* @Laura Casals
-     * Strong: C++, Python
-     * Grow: Frontend: Database,HTML, CSS, JavaScript
-* @Ignacio Albornoz
-     * Strong: Frontend: HTML, CSS, JavaScript, Java, C++ , Python
-     * Grow: Backend: (MySQL)
-* @Thiago Goncalves Vasconcelos
-     * Strong: Backend: C++, JavaScript, Websockets, Vue.js
-     * Grow: Relearn database
+### Skills of each team member defined and known to all: 
+   * @David Moore
+        * Frontend: HTML, CSS, JavaScript, SQL, Database
+        * Grow: Connecting the backend stack
+   * @Carlos Fonseca
+        * Strong: C++, C, JavaScript, Python
+        * Grow: Backend: Database, PHP, HTML, CSS
+   * @Laura Casals
+        * Strong: C++, Python
+        * Grow: Frontend: Database,HTML, CSS, JavaScript
+   * @Ignacio Albornoz
+        * Strong: Frontend: HTML, CSS, JavaScript, Java, C++ , Python
+        * Grow: Backend: (MySQL)
+   * @Thiago Goncalves Vasconcelos
+        * Strong: Backend: C++, JavaScript, Websockets, Vue.js
+        * Grow: Relearn database
  
 ---
