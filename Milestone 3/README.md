@@ -613,11 +613,16 @@ OnRamp allows its users to bridge the gap from start to finish. It is a holistic
 ---
 
 #### Team Roles
-* Team Lead, Front End Team Lead/Developer: David Moore
-* Github Master, Front End Developer: Laura Casals
-* Scrum Master, Back End Developer: Carlos Fonseca
-* Back End Team Lead/Developer: Thiago Goncalves Vasconcelos
-* Back End Developer: Ignacio Albornoz
+* Team Lead, Front End Team Lead/Developer: 
+   * David Moore
+* Github Master, Front End Developer: 
+   * Laura Casals
+* Scrum Master, Back End Developer: 
+   * Carlos Fonseca
+* Back End Team Lead/Developer:  
+   * Thiago Goncalves Vasconcelos
+* Back End Developer: 
+   * Ignacio Albornoz
 
 #### Working with GitHub
 * https://github.com/cen4010-fa21-g17/m3-vs-prototype/commits/main/Milestone%203/README.md
