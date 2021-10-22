@@ -1,3 +1,130 @@
+<p align = "center" font-size>
+	Principles of Software Engineering Fall 2021
+</p> 
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+<p align = "center" style ="font-size:150%;">
+	FAU CEN 4010
+</p>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+<p align = "center" font-size>
+	OnRamp
+</p>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+<p align = "center" font-size>
+	Group: FA21-G17
+</p>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+ Carlos Fonseca &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  cfonseca2018@fau.edu  
+ Ignacio Albornoz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ialbornoz2016@fau.edu  
+ Thiago Goncalves Vasconcelos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  goncalvesva2020@fau.edu  
+ David Moore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  davidmoore2014@fau.edu  
+ Laura Casals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  lcasals2014@fau.edu  
+ 
+ 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+<p align = "center" font-size>
+	Milestone 1 Project Proposal and High-level Description
+</p>
+<p align = "center" font-size>
+	9/28/2021
+</p>
+
+---
+
+
 # **Executive Summary**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There is a gap between education credentials and job attainment, among other modern concerns for at least three groups of learners pursuing careers in technology; college students (undergraduate and graduate), primarily self-taught students, and post-college career changers. CITDL aims to help people build their unique paths that will bridge the gap. To accomplish this, we want to research and develop a platform that facilitates the answers to at least three implicit questions of modern learners. First, what is the most immediate thing to creatively fulfill the experience gap besides internships? Second, what essential knowledge domains and domain skills do I want to master in the technology field? How can I put together and translate the knowledge, skills, and experience into an overall credible background of meaningful experiences while not, for example, yet job-ready and between internships (or before college graduation)? Everybody now knows that going to college and getting a degree is not enough. Experience and proof of expertise now compete with mere credentials.
