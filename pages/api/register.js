@@ -16,8 +16,8 @@ export default async function handler(req, res) {
             const user = new UserModel({ username: req.body.username, password: req.body.password})
     
             try {
-                const newuser = await user.save()
-                res.status(201).json(newuser)
+                const newUser = await user.save()
+                res.status(201).json(newUser)
             } catch (err) {
     
                 res.status(500).json({ message: err.message})
