@@ -14,14 +14,6 @@ export default async function handler(req, res) {
     case 'GET':
       try {
         const user = await UserModel.findOne({ Username: `${req.query.username}` })
-        if (user)
-        {
-          // successs
-        }
-        else
-        {
-          // failure
-        }
         res.json(user)
       } catch (err) {
         res.status(500).json({ message: err.message })
