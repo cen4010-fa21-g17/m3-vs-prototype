@@ -20,7 +20,7 @@ export default async function handler(req, res) {
         }
         break;
 
-      // Create a experience and post it to database
+      // Create an experience and post it to database
       case 'POST':
         const experience = new ExperienceModel({
           content: req.body.content,
