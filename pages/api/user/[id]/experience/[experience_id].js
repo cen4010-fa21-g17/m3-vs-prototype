@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   // Handle request methods
   switch (req.method) {
 
-    // Get all experiences from database
+    // Get info from a single experience from a single user from the database
     case 'GET':
       try {
         const experience = await ExperienceModel.findById(req.query.experience_id)
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       }
       break;
 
-    // Find and delete a experience from database
+    // Find and delete an experience from the database
     case 'DELETE':
       try {
         const experience = await ExperienceModel.findById(req.query.experience_id)

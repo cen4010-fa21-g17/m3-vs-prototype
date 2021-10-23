@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   // Handle request methods
   switch (req.method) {
 
-      // Get all experiences from database
+      // Get all experiences from a single user from the database
       case 'GET':
         try {
           const allExperience = await ExperienceModel.find({userid: `${req.query.id}`})
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
         }
         break;
 
-      // Create an experience and post it to database
+      // Create an experience for an user and post it to the database
       case 'POST':
         const experience = new ExperienceModel({
           content: req.body.content,

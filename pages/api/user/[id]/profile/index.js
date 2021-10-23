@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   // Handle request methods
   switch (req.method) {
 
-      // Get all profiles from database
+      // Get profile info for a single user from the database
       case 'GET':
         try {
           const allprofile = await profileModel.findOne({userid: `${req.query.id}`})

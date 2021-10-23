@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   // Handle request methods
   switch (req.method) {
 
-      // Get all todos from database
+      // Get all users from database
       case 'GET':
         try {
           const allUsers = await UserModel.find()

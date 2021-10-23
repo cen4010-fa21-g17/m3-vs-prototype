@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   // Handle request methods
   switch (req.method) {
 
-    // Get all todos from database
+    // Get info about a single user from the database
     case 'GET':
       try {
         const user = await UserModel.findOne({ Username: `${req.query.username}` })

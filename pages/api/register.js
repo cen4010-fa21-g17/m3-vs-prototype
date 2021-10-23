@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     // Handle request methods
     switch (req.method) {
         
-        // Get all todos from database
+        // Create a new user and store account information in the database
         case 'POST':
             const user = new UserModel({ username: req.body.username, password: req.body.password})
     
