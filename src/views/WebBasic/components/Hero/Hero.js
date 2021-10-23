@@ -92,7 +92,7 @@ const Hero = () => {
                <Link
                 underline="none"
                 component="a"
-                href="/login-simple"
+                href="/signin-simple"
                 color="text.primary"
                 variant={'subtitle2'}
               >
