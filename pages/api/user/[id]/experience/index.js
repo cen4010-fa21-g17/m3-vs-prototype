@@ -26,6 +26,7 @@ export default async function handler(req, res) {
           content: req.body.content,
           skills: req.body.skills
         })
+    
         try {
           const newExperience = await experience.save()
           res.status(201).json(newExperience)
