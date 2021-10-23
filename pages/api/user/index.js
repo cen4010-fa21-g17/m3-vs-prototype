@@ -13,8 +13,8 @@ export default async function handler(req, res) {
       // Get all todos from database
       case 'GET':
         try {
-          const allUser = await UserModel.find()
-          res.json(allUser)
+          const allUsers = await UserModel.find()
+          res.json(allUsers)
         } catch (err) {
           res.status(500).json({ message: err.message })
         }
