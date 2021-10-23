@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
   // Connect to database or reuse previous connection
   await dbConnect()
-
+ 
   // Handle request methods
   switch (req.method) {
 
