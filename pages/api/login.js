@@ -25,7 +25,6 @@ export default async function handler(req, res) {
       break;
     // Method not implemented
     default:
-      console.log('ran the defulat')
       res.status(501).json({ message: 'Request method not implemented' })
   }
 

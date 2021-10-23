@@ -27,8 +27,8 @@ export default async function handler(req, res) {
           skills: req.body.skills
         })
         try {
-          const newexperience = await experience.save()
-          res.status(201).json(newexperience)
+          const newExperience = await experience.save()
+          res.status(201).json(newExperience)
         } catch (err) {
           res.status(500).json({ message: err.message })
         }
