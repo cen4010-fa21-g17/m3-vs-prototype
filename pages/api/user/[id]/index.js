@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     // Get info about a single user from the database
     case 'GET':
       try {
-        const user = await UserModel.findOne({ Username: `${req.query.username}` })
+        const user = await UserModel.findOne(req.query.id)
         res.json(user)
       } catch (err) {
         res.status(500).json({ message: err.message })
