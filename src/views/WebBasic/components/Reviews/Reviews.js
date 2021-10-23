@@ -13,43 +13,22 @@ const mock = [
   {
     feedback:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    name: 'Clara Bertoletti',
-    title: 'MUI lover',
+    name: 'Nico Robin',
+    title: 'Engineering student',
     avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
   },
   {
     feedback:
       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    name: 'Jhon Anderson',
-    title: 'Senior Frontend Developer',
+    name: 'Itachi Uchiha',
+    title: 'Self-learner',
     avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
   },
   {
     feedback:
       'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    name: 'Chary Smith',
-    title: 'SEO at Comoti',
-    avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
-  },
-  {
-    feedback:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    name: 'Clara Bertoletti',
-    title: 'MUI lover',
-    avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
-  },
-  {
-    feedback:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    name: 'Jhon Anderson',
-    title: 'Senior Frontend Developer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
-  },
-  {
-    feedback:
-      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    name: 'Chary Smith',
-    title: 'SEO at Comoti',
+    name: 'Light Yagami',
+    title: 'Computer Science student',
     avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
   },
 ];

@@ -7,10 +7,9 @@ import Grid from '@mui/material/Grid';
 
 const mock = [
   {
-    title: 'Create an experience',
+    title: 'Built for developers',
     subtitle:
-      'Each experience will be a point in your journey, where you can provide personal insights about why you learned a subject, what you will learn, and what you produced. ',
-      
+      'theFront is built to make your life easier. Variables, build tooling, documentation, and reusable components.',
     icon: (
       <svg
         height={24}
@@ -30,9 +29,9 @@ const mock = [
     ),
   },
   {
-    title: 'Track your progess',
+    title: 'Designed to be modern',
     subtitle:
-      'Your work, courses taken, accomplishments, etc. will be placed in chronological order providing you with a visual representation of what you finished and are currently working on. ',
+      'Designed with the latest design trends in mind. theFront feels modern, minimal, and beautiful.',
     icon: (
       <svg
         height={24}
@@ -52,9 +51,9 @@ const mock = [
     ),
   },
   {
-    title: 'Share your knowledge',
+    title: 'Documentation for everything',
     subtitle:
-      'Use this platform to display your experiences, knowledge, and skills to future employers',
+      'We\'ve written extensive documentation for components and tools, so you never have to reverse engineer anything.',
     icon: (
       <svg
         height={24}

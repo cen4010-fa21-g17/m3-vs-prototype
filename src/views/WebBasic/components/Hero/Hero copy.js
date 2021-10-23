@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 
 const Hero = () => {
   const theme = useTheme();
@@ -26,7 +25,7 @@ const Hero = () => {
                 fontWeight: 700,
               }}
             >
-              See where your{' '}
+              Develop anything your{' '}
               <Typography
                 component={'span'}
                 variant={'inherit'}
@@ -35,7 +34,7 @@ const Hero = () => {
                   background: `linear-gradient(180deg, transparent 82%, ${alpha(theme.palette.secondary.main, 0.3)} 0%)`,
                 }}
               >
-                journey takes you.
+                business needs.
               </Typography>
             </Typography>
           </Box>
@@ -46,8 +45,8 @@ const Hero = () => {
               color="text.secondary"
               sx={{ fontWeight: 400 }}
             >
-              Metaspace will make your journey look modern and professional.
-              
+              theFront will make your product look modern and professional while
+              saving you precious time.
             </Typography>
           </Box>
           <Box
@@ -66,16 +65,7 @@ const Hero = () => {
               }
               target={'_blank'}
             >
-              <Link
-                underline="none"
-                component="a"
-                href="/signup-simple"
-                color="common.white"
-                variant={'subtitle2'}
-              >
-                Sign up 
-              </Link>
-             
+              Purchase now
             </Button>
             <Box
               marginTop={{ xs: 2, sm: 0 }}
@@ -84,20 +74,13 @@ const Hero = () => {
             >
               <Button
                 component={'a'}
+                href={'/docs/introduction'}
                 variant="outlined"
                 color="primary"
                 size="large"
                 fullWidth={isMd ? false : true}
               >
-               <Link
-                underline="none"
-                component="a"
-                href="/login-simple"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Login
-              </Link>
+                View documentation
               </Button>
             </Box>
           </Box>

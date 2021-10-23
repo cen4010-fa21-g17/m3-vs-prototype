@@ -4,11 +4,16 @@ import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
+  About,
+  Contact,
   Faq,
+  Features,
   Hero,
-  Users,
+  Partners,
+  Pricings,
   Reviews,
   Services,
+  Users,
 } from './components';
 
 const Landing = () => {
@@ -48,12 +53,23 @@ const Landing = () => {
       <Container paddingTop={'0 !important'}>
         <Services />
       </Container>
+      <Container maxWidth={1} paddingTop={'0 !important'}>
+        <Partners />
+      </Container>
       <Box
         position={'relative'}
         sx={{
           backgroundColor: theme.palette.alternate.main,
         }}
       >
+        <Box>
+          <Container>
+            <Contact />
+          </Container>
+          <Container paddingTop={'0 !important'}>
+            <About />
+          </Container>
+        </Box>
         <Box
           component={'svg'}
           preserveAspectRatio="none"
@@ -72,13 +88,16 @@ const Landing = () => {
           ></path>
         </Box>
       </Box>
+      <Container paddingTop={'0 !important'}>
+        <Users />
+      </Container>
       <Box bgcolor={'alternate.main'}>
         <Container>
           <Reviews />
         </Container>
       </Box>
-      <Container paddingTop={'0 !important'}>
-        <Users />
+      <Container>
+        <Features />
       </Container>
       <Box
         position={'relative'}
@@ -87,6 +106,9 @@ const Landing = () => {
         }}
       >
         <Box>
+          <Container>
+            <Pricings />
+          </Container>
           <Container paddingTop={'0 !important'}>
             <Faq />
           </Container>

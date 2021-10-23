@@ -52,7 +52,7 @@ const Users = () => {
           color={'secondary'}
           align={'center'}
         >
-          BUILD YOUR JOURNEY
+          BUILD UP A COMMUNITY
         </Typography>
         <Typography
           variant="h4"
@@ -63,7 +63,7 @@ const Users = () => {
             fontWeight: 700,
           }}
         >
-          Follow your path to a career
+          Join the biggest community of users
         </Typography>
         <Typography
           variant="h6"
@@ -71,10 +71,54 @@ const Users = () => {
           color={'text.secondary'}
           data-aos={'fade-up'}
         >
-          For students, self-learners, and engineers.
+          For entrepreneurs, startups and freelancers.
           <br />
-          Build a beautiful, modern, and dynamic profile to display your journey
+          Build a beautiful, modern website with flexible, fully customizable,
+          atomic MUI components.
         </Typography>
+        <Box
+          display="flex"
+          flexDirection={{ xs: 'column', sm: 'row' }}
+          alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+          justifyContent={'center'}
+          marginTop={2}
+        >
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            fullWidth={isMd ? false : true}
+            startIcon={
+              <Box
+                component={'svg'}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                width={20}
+                height={20}
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </Box>
+            }
+          >
+            Download
+          </Button>
+          <Box
+            component={Button}
+            variant="outlined"
+            color="primary"
+            size="large"
+            marginTop={{ xs: 2, sm: 0 }}
+            marginLeft={{ sm: 2 }}
+            fullWidth={isMd ? false : true}
+          >
+            See pricing
+          </Box>
+        </Box>
       </Box>
       <Grid
         container
