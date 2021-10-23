@@ -13,7 +13,7 @@ export default async function handler(req, res) {
         
         // Get all todos from database
         case 'POST':
-            const user = new UserModel({ Username: req.body.Username, Password: req.body.Password})
+            const user = new UserModel({ Username: req.body.username, Password: req.body.password})
     
             try {
                 const newuser = await user.save()

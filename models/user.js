@@ -2,12 +2,12 @@ import mongoose from 'mongoose'
 
 // Create a schema of the data to be stored in the database
 const userSchema = new mongoose.Schema({
-    Username: {
+    username: {
         type: String,
         required: true,
         unique: true
     },
-    Password: {
+    password: {
         type: String,
         required: true
     }

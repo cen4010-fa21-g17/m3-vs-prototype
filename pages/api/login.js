@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     // Get all todos from database
     case 'POST':
         try {
-            const user =  await UserModel.findOne({Username: req.body.Username, Password: req.body.Password})
+            const user =  await UserModel.findOne({ username: req.body.username, password: req.body.password })
             if (user)
               res.status(202).json({ user, message: "Login successful" })
             else 
