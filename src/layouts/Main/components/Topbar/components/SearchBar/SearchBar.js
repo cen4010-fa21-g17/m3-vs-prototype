@@ -1,26 +1,26 @@
-import { Input } from '@mui/material';
 import { React, useState } from 'react';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
 
 const profiles = ['David','Laura','Ignacio','Carlos','Thiago'];
 
+const ariaLabel = { 'aria-label': 'description' };
 
 export default function SearchBar() {
   const [results, setResults] = useState();
 
   return (
-    <div>
-      <Input 
-        id="outlined-basic"
-        type="text"
-        placeholder="Search"
-        startAdornment={
-          <InputAdornment position="start">
-            <SearchOutlinedIcon />
-          </InputAdornment>
-        }
+    <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400}}
+    >
+
+      <InputBase 
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Search Metaspace"
+        inputProps={ariaLabel}
         onChange={async (e) => {
           const { value } = e.currentTarget;
           // Dynamically load fuse.js
@@ -29,7 +29,11 @@ export default function SearchBar() {
           setResults(fuse.search(value));
         }}
       />
-      {/* <pre>Results: {JSON.stringify(results, null, 2)}</pre> */}
-    </div>
+      <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+        <SearchIcon />
+      </IconButton>
+    </Paper>
+      
   );
 }
+
