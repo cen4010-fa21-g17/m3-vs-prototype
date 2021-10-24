@@ -48,6 +48,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       {/*  Site Navigation */}
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
+          
+        </Box>
+        <Box>
           <NavItem
             title={'About'}
             id={'about-page'}
