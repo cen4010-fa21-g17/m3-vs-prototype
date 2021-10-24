@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import { NavItem } from './components';
+import { NavItem, SearchBar } from './components';
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
@@ -47,8 +47,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
 
       {/*  Site Navigation */}
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
-          
+        {/*  Search Bar */}
+        <Box marginLeft={4}>
+          <SearchBar />
         </Box>
         <Box>
           <NavItem
