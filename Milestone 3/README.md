@@ -292,6 +292,10 @@ The user will start an experience.
 4.2. The user must Create a Path.  
 4.3. The user can click add to place an Experience onto a Path.
 
+#### **Sitemap Diagram**
+
+MetaSpace Sitemap: https://octopus.do/h63ddpkldbm
+
 ---
 # **Data Definition**
 |      Name     |    Meaning    |     Usage     |  Description  |    
@@ -543,9 +547,6 @@ A collaboration wiki tool that will allow our team to develop the documentation 
 
 The system will be a web-based web app that operates on at least two of all of the major browsers, including Google Chrome, Mozilla Firefox, Safari, Opera, and Internet Explorer. In addition, it will have functionality that will provide alternatives if the browser does not have JavaScript installed on it.
 
-#### **UML Diagram**
-
-MetaSpace Sitemap: https://octopus.do/h63ddpkldbm
 
 ---
 # **Risk Analysis**
