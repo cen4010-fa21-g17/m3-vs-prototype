@@ -543,6 +543,10 @@ A collaboration wiki tool that will allow our team to develop the documentation 
 
 The system will be a web-based web app that operates on at least two of all of the major browsers, including Google Chrome, Mozilla Firefox, Safari, Opera, and Internet Explorer. In addition, it will have functionality that will provide alternatives if the browser does not have JavaScript installed on it.
 
+#### **UML Diagram**
+
+MetaSpace Sitemap: https://octopus.do/h63ddpkldbm
+
 ---
 # **Risk Analysis**
 
