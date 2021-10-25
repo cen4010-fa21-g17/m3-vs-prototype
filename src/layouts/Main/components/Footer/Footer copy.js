@@ -24,19 +24,43 @@ const Footer = () => {
             display={'flex'}
             component="a"
             href="/"
-            title="MetaSpace"
+            title="theFront"
             width={80}
           >
             <Box
               component={'img'}
               src={
                 mode === 'light'
-                  ? 'https://static1.squarespace.com/static/61761f1d24a61e30e89a214c/t/61762b8cec8bf834944ae975/1635134348443/Logo_LightMode.png'
-                  : 'https://static1.squarespace.com/static/61761f1d24a61e30e89a214c/t/6176294b0d878d509435e3ce/1635133771670/Logo_DarkMode.png'
+                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
               }
               height={1}
               width={1}
             />
+          </Box>
+          <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
+            <Box marginTop={1} marginRight={2}>
+              <Link
+                underline="none"
+                component="a"
+                href="/"
+                color="text.primary"
+                variant={'subtitle2'}
+              >
+                Home
+              </Link>
+            </Box>
+            <Box marginTop={1} marginRight={2}>
+              <Link
+                underline="none"
+                component="a"
+                href="/docs/introduction"
+                color="text.primary"
+                variant={'subtitle2'}
+              >
+                Documentation
+              </Link>
+            </Box>
           </Box>
         </Box>
       </Grid>
@@ -47,7 +71,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; MetaSpace 2021, CITDL. All rights reserved
+          &copy; theFront. 2021, Maccarian. All rights reserved
         </Typography>
         <Typography
           align={'center'}
@@ -55,7 +79,7 @@ const Footer = () => {
           color="text.secondary"
           component={'p'}
         >
-          When you visit or interact with our site, services or tools, we or
+          When you visit or interact with our sites, services or tools, we or
           our authorised service providers may use cookies for storing
           information to help provide you with a better, faster and safer
           experience and for marketing purposes.
