@@ -544,6 +544,49 @@ A collaboration wiki tool that will allow our team to develop the documentation 
 The system will be a web-based web app that operates on at least two of all of the major browsers, including Google Chrome, Mozilla Firefox, Safari, Opera, and Internet Explorer. In addition, it will have functionality that will provide alternatives if the browser does not have JavaScript installed on it.
 
 ---
+# **Risk Analysis**
+
+### Skills Risks
+
+1. **M1 Implementation is advanced.** With regard to implementing the M1 document, the frontend sub-team will need ample time to work with React, our frontend framework of choice. While React is indeed a powerful tool for fast application development, there remains a good deal of research and trial and error. To our credit, we have made surprising strides to produce a development version of the vertical software prototype. Unfortunately, we are running short on time for Milestone 3 to fulfill at least our first use case: Search. 
+
+
+### Schedule Risks
+
+1. **Work balance.** Balancing other class coursework with the work in CEN4010 is the greatest challenge.
+2. **Quantifying the research and development in terms of time.** We could not adequately gauge the time commitment of the group project even as late as the start of Milestone 3. It was not until we began building out the application shell (theming, pages, and routing) of the vertical software prototype that we encountered the steepness of the learning curve. 
+
+
+### Technical Risks
+
+1. **Research Graph technical requirements.** The most important unknown is how can we faithfully achieve the dynamic data interaction within the research graph when a user hovers the mouse over an Experience or Path. Admittedly, it is a lofty goal and for reasons already identified under skills risks. Moreover, there is the legal challenge of legally leveraging real-time job list data. …
+
+    An alternative approach is that we gather data from sites such as [Kaggle](https://www.kaggle.com/) to simulate the feature through a seeded database for server-side rendering. At best, the alternative may cut down the amount of time required to develop the research graph.
+
+
+
+### Teamwork Risks
+
+
+
+1. **Team morale.** Although we were unanimously interested in this project and the chosen idea for a web application, it appears that all of the risks mentioned (above primarily) are taking their toll. It seems that the group morale has hit a low point. The most detectable indicators are the decrease in communication and the lower rate of completion of tasks in Jira.
+2. **Remote working.**  Conducting the project entirely online has some considerable effects and probably plays a large part in the low morale. Remote work entails a large preliminary step of establishing a workflow (managing and organizing information), which would be easier were we meeting in person. It is only after we know the 5Ws (who, what, when, where, why) for a viable workflow that we could get our footing. Sadly, we’re facing information overload and fatigue. 
+
+
+#### Legal Risks
+
+1. **Third-party resources.** The application utilizes a React template created by a third-party developer. We will include attribution within the documentation of the final product and utilize an appropriate license to mitigate the risks.
+2. **Data gathering and use.** Assuming that the team can achieve real-time skills correlational data from job list data, there is still a two-fold problem: 
+    - Obtaining such data cannot be achieved with automated technology, such as web crawlers with web scraping software for legal reasons.
+    - Obtaining the data through third-party APIs or SASS is prohibitively expensive and far beyond the scope of this course.
+
+
+#### Risk Mitigation
+
+1. **Scale back the harder aspects of the application.** It is the opinion of the team lead that we should eliminate the real-time data delivery aspect of the research graph. The opinion is based on the skills risk aforementioned and the amount of research overhead that would likely result in avoidable technical debt. Otherwise, the debt could cause the project to miss its scheduled launch date, having not achieved our full set of use cases. 
+2. **Reallocate the time gained by scaling back for other aspects.** The upshot is that the project can still fulfill the use cases without the real-time data feed feature.
+
+---
 # **Competitive analysis**
 The competitors’ websites/platforms analysis will focus on six main features (homepage, design, usability, networking, journey, personality). In addition, the competitive analysis will utilize a numerical scale (1=bad, 2=poor, 3=fair, 4=good, 5=outstanding) and five websites/platforms chosen to focus on portfolio building, personality display, and presenting knowledge through implementation.
 
