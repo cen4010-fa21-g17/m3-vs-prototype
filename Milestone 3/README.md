@@ -555,7 +555,7 @@ The system will be a web-based web app that operates on at least two of all of t
 
 1. **Work balance.** Balancing other class coursework with the work in CEN4010 is the greatest challenge.
 2. **Quantifying the research and development in terms of time.** We could not adequately gauge the time commitment of the group project even as late as the start of Milestone 3. It was not until we began building out the application shell (theming, pages, and routing) of the vertical software prototype that we encountered the steepness of the learning curve.
-3. **Actions: We have transitioned from meeting only Tuesdays to squeezing some additional times on Monday and Thursday. This has greatly improved our workflow.
+3. **Actions:** We have transitioned from meeting only Tuesdays to squeezing some additional times on Monday and Thursday. This has greatly improved our workflow.
 
 
 ### Technical Risks
