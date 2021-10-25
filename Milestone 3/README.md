@@ -495,7 +495,7 @@ Exception handling will be implemented in all situations where an error may occu
 2. There will not be self-checking software implemented since this system is not critical enough to warrant it.
 
 ---
-# **High-Level Systems Architecture and Database Organization**
+# **High-Level System Architecture (UML)**
 #### **Frontend Technologies:**
 
 1. Hyper Text Markup Language (HTML):  
