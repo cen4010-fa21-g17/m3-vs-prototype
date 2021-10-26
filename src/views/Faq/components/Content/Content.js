@@ -75,19 +75,14 @@ const Content = () => {
                 'Yes. To have access to the services you must create an account.',
             },
             {
-              title: 'Do you sell gift cards?',
+              title: 'Where can I get help?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'You can visit our help center if your question was not answered on the FAQ page',
             },
             {
-              title: 'Can I change plans later on?',
+              title: 'What is MetaSpace?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'Is this a subscription service?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'MetaSpace goes against the grain by providing a place not simply to build a profile of posted credentials and a friends list of references, but to provide a means to formulate job-relevant vision and action',
             },
           ]}
         />

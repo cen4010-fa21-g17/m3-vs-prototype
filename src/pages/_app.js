@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <title>Metaspace</title>
+        <title>MetaSpace</title>
       </Head>
       <Page>
         <Component {...pageProps} />
