@@ -731,6 +731,6 @@ MetaSpace allows its users to bridge the gap from start to finish. It is a holis
         * Grow: Backend: (MySQL)
    * @Thiago Goncalves Vasconcelos
         * Strong: Backend: C++, JavaScript, Websockets, Vue.js
-        * Grow: Relearn database
+        * Grow: Relearn database 
  
 ---
