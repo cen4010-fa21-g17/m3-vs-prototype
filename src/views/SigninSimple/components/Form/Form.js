@@ -9,6 +9,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
+import axios from 'axios'
+
 const validationSchema = yup.object({
   email: yup
     .string()
@@ -28,7 +30,13 @@ const Form = () => {
   };
 
   const onSubmit = (values) => {
-    return values;
+    axios.post('http://localhost:3000/api/login', {
+      email: values.email,
+      password: values.password
+    }).then(response => {
+      console.log(response)
+    })
+    //return values;
   };
 
   const formik = useFormik({
