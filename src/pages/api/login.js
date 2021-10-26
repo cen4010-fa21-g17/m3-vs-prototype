@@ -15,9 +15,9 @@ export default async function handler(req, res) {
     // Send username and password info to server to authenticate
     case 'POST':
         try {
-            const account =  await AccountModel.findOne({ username: req.body.username, password: req.body.password })
+            const account =  await AccountModel.findOne({ email: req.body.email, password: req.body.password })
             if (account)
-              res.status(202).json({ username: account.username, message: "Login successful" })
+              res.status(202).json({ email: account.email, message: "Login successful" })
             else 
               res.status(401).json({ message: "Incorrect credentials" })
         } catch (err) {

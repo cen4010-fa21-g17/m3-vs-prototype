@@ -14,9 +14,18 @@ export default async function handler(req, res) {
         
         // Create a new user and store account information in the database
         case 'POST':
-            const user = new UserModel({ profileName: req.body.username, profileContent: 'My Profile' })
-            const account = new AccountModel({ user_id: user._id, username: req.body.username, password: req.body.password })
-            console.log(user)
+            const user = new UserModel({ 
+                profileName: req.body.firstName + req.body.lastName,
+                profileContent: 'My Profile'
+            })
+            const account = new AccountModel({ 
+                user_id: user._id,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                password: req.body.password 
+            })
+
             try {
                 const newUser = await user.save()
                 await account.save()
