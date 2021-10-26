@@ -292,10 +292,6 @@ The user will start an experience.
 4.2. The user must Create a Path.  
 4.3. The user can click add to place an Experience onto a Path.
 
-#### **Sitemap Diagram**
-
-MetaSpace Sitemap: https://octopus.do/h63ddpkldbm
-
 ---
 # **Data Definition**
 |      Name     |    Meaning    |     Usage     |  Description  |    
