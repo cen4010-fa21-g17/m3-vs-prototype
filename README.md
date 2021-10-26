@@ -320,64 +320,87 @@ The user will start an experience.
 # **High level functional requirements**
 ## Non-Member expectation 
 
-#### 1. Creating an account (Priority: 1) 
+#### 1. Creating an account 
 
-The user will be able to register for an account. The system will complete this by storing the user’s preferred username and password. Next, the user will input their first name, last name, date of birth, and email address.  
-If the username entered is already in use, the system will tell the user that the ID already exists and prompt them to enter a different one. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1 The user will be able to register for an account. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2 The system will register an account via a unique username and password. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2.1 If the username entered is already in use, the system will tell the user that the ID already exists and prompt them to enter a different one. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.3 The user will input their first name, last name, date of birth, and email address. [1]
+ 
+ 
+#### 2. Account Access 
 
-#### 2. Account Access (Priority: 1)
-
-The user gains immediate access to their account when they register. The user can log in and out of the account.
-
-#### 3. Recovering Access (Priority: 1)
-
-During the account creation process, the user will create two-factor authentication security questions. When a user forgets their username or password, the system uses the security questions for login recovery.
-
-#### 4. Account confirmation (Priority: 3)
-
-When the user is successfully registered, they will receive an email confirmation. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1 The user must complete email verification for immediate access to their account after registering. The user can log in and out of the account. [1]  
 
 
+#### 3. Recovering Access  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 The user can recover their account through email verification. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.1 When a user forgets their username or password, the system uses the user’s email address for login recovery. [1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.2 The system will initiate the login recovery process without revealing any login information, to include the email address. [2]
+
+
+#### 4. Account confirmation
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.1 When the user is successfully registered and completed the email verification process, they will receive an email confirmation.[3] 
 
  
 ---
 ## Member expectation 
 
-#### 1. Profile (Priority: 1)
+#### 5. Profile 
 
-The user will be able to update and edit their profile, entailing standard account information: first name, last name, date of birth, personal summary, and profile picture.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.1 The user will be able to update and edit their profile [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.1.1 Update standard account information: first name, last name, date of birth, personal summary, and profile picture. [1]  
 
-#### 2. Journey  (Priority: 1)
 
-The user will receive a journey or workspace and an option to create a new path to connect their experiences. Each experience will be a point on the timeline, and they can provide personal insights about why they decided to learn a subject, what they will learn, and what they produce. The user will also have the option to upload projects that showcase their knowledge of the material. 
+#### 6. Journey 
 
-#### 3. Timeline (Priority: 1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.1 The user will receive a Journey workspace [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.2 The user can create multiple Experience nodes that appear in their Research Graph. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.3 The user can create a new path to connect any two Experience nodes. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4 Each Experience will be a point on the timeline within the graph [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.1 The Experience will facilitate skills tracking in terms of what they are or will learn and the source. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.2 The Experience will facilitate showcasing what the user builds as a product of skills learned. The user can upload projects that showcase their application of the material. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.3 The Experience will facilitate documenting how the user applied and implemented skills to build their product. The Document module enables media-rich options to provide project details and instructions for potential users and collaborators to understand the user’s work. [2] 
 
-The system will generate a “triple graph,” similar to a timeline to illustrate the user’s journey on their profile. It presents their work, courses taken, accomplishments, etc., which the user achieved in chronological order. Thus, providing them with a visual representation of what they finished and are currently working on. If they do not want time constraints on their graph, they can turn off the feature. 
 
-#### 4. Search (Priority: 1)
+#### 7. Timeline 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.1 The system will generate a chronological graph similar to a timeline [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.1.1 The Presentation Graph presents the user’s work, courses taken, accomplishments, etc. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.2 If they do not want time constraints on their graph, they can turn off the feature.[3]  
+ 
 
-The user will be able to search for other account members. Each account is private by default unless the account’s visibility is set to public. If the account they are searching for is private, the user must request to connect to see the member’s journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately.
+#### 8. Search 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1 The user will be able to search for other account members. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.1 Each account is private by default unless the account’s visibility is set to public. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.2 If the account they are searching for is private, the user must request to connect to see the member’s Journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately. [2]  
 
-#### 5. Help desk (Priority: 1)
+#### 9. Help desk 
 
-There will be a FAQ page with the most common issues and ways to fix them. Users can email MetaSpace directly for assistance when solutions are not in the FAQ. The user must include their username, full name, email address, and their queries. User help emails will receive a response within 24 hours.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.1 There will be a FAQ page with the most common issues and ways to fix them. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2 Users can email MetaSpace directly for assistance when solutions are not in the FAQ. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2.2 The user must include their username, full name, email address, and their queries. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2.3 User’s emails will receive a response within 24 hours. [3]
 
-#### 6. Member Collaborations (Priority: 2)
+#### 10. Member Collaborations 
 
-A user will be able to connect with other account members. By following other account members, users can collaborate to share experiences and work together on real-world problems. If a user unfollows a member with a private account, they will lose access to viewing their profile.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.1 A user will be able to connect with other account members. By following other account members. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.2 If a user unfollows a member with a private account, they will lose access to viewing their profile. [2]  
 
-#### 7. Messaging  (Priority: 2)
+#### 11. Messaging  
 
-The user will be able to message account members that they follow. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.1 The user will be able to message account members that they follow.[2]  
 
-#### 8. Notifications (Priority: 2)
+#### 12. Notifications 
 
-The user will receive notifications regarding new followers, messages, and reminders to visit their account if a specific amount of time has passed since their last login. The user will be able to manage how they want to receive notifications.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.1 The user will receive notifications regarding new followers, messages, and reminders. [2]. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.2 The user will be able to manage how they want to receive notifications. [3]  
 
-#### 9. Block (Priority: 3)
 
-The user will have the ability to block an account member from viewing and messaging their profile or report an account member. 
+#### 13. Block 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.1 The user will have the ability to block an account member from viewing and messaging their profile or report an account member. [3] 
 
 
  #### [Core Feature UML Diagram: Journey](https://lucid.app/documents/edit/75ac5c2c-5d62-4a4e-a36e-a8055055c0e5/0?callback=close&name=docs&callback_type=back&v=1366&s=612)
