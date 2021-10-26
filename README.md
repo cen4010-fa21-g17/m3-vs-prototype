@@ -41,7 +41,7 @@
 &nbsp;
 
 <p align = "center" font-size>
-	Metaspace
+	MetaSpace
 </p>
 
 &nbsp;
@@ -82,11 +82,11 @@
 &nbsp;
 &nbsp;
 
- Carlos Fonseca &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  cfonseca2018@fau.edu  
- Ignacio Albornoz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ialbornoz2016@fau.edu  
- Thiago Goncalves Vasconcelos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  tgoncalvesva2020@fau.edu  
- David Moore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  davidmoore2014@fau.edu  
- Laura Casals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  lcasals2014@fau.edu  
+ Carlos Fonseca | cfonseca2018@fau.edu  
+ Ignacio Albornoz | ialbornoz2016@fau.edu  
+ Thiago Goncalves Vasconcelos | tgoncalvesva2020@fau.edu  
+ David Moore | davidmoore2014@fau.edu  
+ Laura Casals | lcasals2014@fau.edu  
  
  
 &nbsp;
@@ -320,67 +320,91 @@ The user will start an experience.
 # **High level functional requirements**
 ## Non-Member expectation 
 
-#### 1. Creating an account (Priority: 1) 
+#### 1. Creating an account 
 
-The user will be able to register for an account. The system will complete this by storing the user’s preferred username and password. Next, the user will input their first name, last name, date of birth, and email address.  
-If the username entered is already in use, the system will tell the user that the ID already exists and prompt them to enter a different one. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1 The user will be able to register for an account. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2 The system will register an account via a unique username and password. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2.1 If the username entered is already in use, the system will tell the user that the ID already exists and prompt them to enter a different one. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.3 The user will input their first name, last name, date of birth, and email address. [1]
+ 
+ 
+#### 2. Account Access 
 
-#### 2. Account Access (Priority: 1)
-
-The user gains immediate access to their account when they register. The user can log in and out of the account.
-
-#### 3. Recovering Access (Priority: 1)
-
-During the account creation process, the user will create two-factor authentication security questions. When a user forgets their username or password, the system uses the security questions for login recovery.
-
-#### 4. Account confirmation (Priority: 3)
-
-When the user is successfully registered, they will receive an email confirmation  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1 The user must complete email verification for immediate access to their account after registering. The user can log in and out of the account. [1]  
 
 
+#### 3. Recovering Access  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 The user can recover their account through email verification. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.1 When a user forgets their username or password, the system uses the user’s email address for login recovery. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.2 The system will initiate the login recovery process without revealing any login information, to include the email address. [2]  
+
+
+
+#### 4. Account confirmation
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.1 When the user is successfully registered and completed the email verification process, they will receive an email confirmation.[3] 
 
  
 ---
 ## Member expectation 
 
-#### 1. Profile (Priority: 1)
+#### 5. Profile 
 
-The user will be able to update and edit their profile, entailing standard account information: first name, last name, date of birth, personal summary, and profile picture.
-
-#### 2. Journey  (Priority: 1)
-
-The user will receive a journey or workspace and an option to create a new path to connect their experiences. Each experience will be a point on the timeline, and they can provide personal insights about why they decided to learn a subject, what they will learn, and what they produce. The user will also have the option to upload projects that showcase their knowledge of the material. 
-
-#### 3. Timeline (Priority: 1)
-
-The system will generate a “triple graph,” similar to a timeline to illustrate the user’s journey on their profile. It presents their work, courses taken, accomplishments, etc., which the user achieved in chronological order. Thus, providing them with a visual representation of what they finished and are currently working on. If they do not want time constraints on their graph, they can turn off the feature. 
-
-#### 4. Search (Priority: 1)
-
-The user will be able to search for other account members. Each account is private by default unless the account’s visibility is set to public. If the account they are searching for is private, the user must request to connect to see the member’s journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately.
-
-#### 5. Help desk (Priority: 1)
-
-There will be a FAQ page with the most common issues and ways to fix them. Users can email MetaSpace directly for assistance when solutions are not in the FAQ. The user must include their username, full name, email address, and their queries. User help emails will receive a response within 24 hours.
-
-#### 6. Member Collaborations (Priority: 2)
-
-A user will be able to connect with other account members. By following other account members, users can collaborate to share experiences and work together on real-world problems. If a user unfollows a member with a private account, they will lose access to viewing their profile.
-
-#### 7. Messaging  (Priority: 2)
-
-The user will be able to message account members that they follow. 
-
-#### 8. Notifications (Priority: 2)
-
-The user will receive notifications regarding new followers, messages, and reminders to visit their account if a specific amount of time has passed since their last login. The user will be able to manage how they want to receive notifications.
-
-#### 9. Block (Priority: 3)
-
-The user will have the ability to block an account member from viewing and messaging their profile or report an account member. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.1 The user will be able to update and edit their profile [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.1.1 Update standard account information: first name, last name, date of birth, personal summary, and profile picture. [1]  
 
 
+#### 6. Journey 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.1 The user will receive a Journey workspace [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.2 The user can create multiple Experience nodes that appear in their Research Graph. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.3 The user can create a new path to connect any two Experience nodes. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4 Each Experience will be a point on the timeline within the graph [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.1 The Experience will facilitate skills tracking in terms of what they are or will learn and the source. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.2 The Experience will facilitate showcasing what the user builds as a product of skills learned. The user can upload projects that showcase their application of the material. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.3 The Experience will facilitate documenting how the user applied and implemented skills to build their product. The Document module enables media-rich options to provide project details and instructions for potential users and collaborators to understand the user’s work. [2] 
+
+
+#### 7. Timeline 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.1 The system will generate a chronological graph similar to a timeline [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.1.1 The Presentation Graph presents the user’s work, courses taken, accomplishments, etc. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.2 If they do not want time constraints on their graph, they can turn off the feature.[3]  
  
+
+#### 8. Search 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1 The user will be able to search for other account members. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.1 Each account is private by default unless the account’s visibility is set to public. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.2 If the account they are searching for is private, the user must request to connect to see the member’s Journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately. [2]  
+
+#### 9. Help desk 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.1 There will be a FAQ page with the most common issues and ways to fix them. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2 Users can email MetaSpace directly for assistance when solutions are not in the FAQ. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2.2 The user must include their username, full name, email address, and their queries. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2.3 User’s emails will receive a response within 24 hours. [3]
+
+#### 10. Member Collaborations 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.1 A user will be able to connect with other account members. By following other account members. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.2 If a user unfollows a member with a private account, they will lose access to viewing their profile. [2]  
+
+#### 11. Messaging  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.1 The user will be able to message account members that they follow.[2]  
+
+#### 12. Notifications 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.1 The user will receive notifications regarding new followers, messages, and reminders. [2]. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.2 The user will be able to manage how they want to receive notifications. [3]  
+
+
+#### 13. Block 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.1 The user will have the ability to block an account member from viewing and messaging their profile or report an account member. [3] 
+
+
+ #### [Core Feature UML Diagram: Journey](https://lucid.app/documents/edit/75ac5c2c-5d62-4a4e-a36e-a8055055c0e5/0?callback=close&name=docs&callback_type=back&v=1366&s=612)
 
 ---
 # **List of non-functional requirements**
@@ -503,14 +527,14 @@ CSS will be used to style web pages and enhance the user interface and user
 experience.
 
 3. Bootstrap:  
-Bootstrap is the CSS framework that will be used to provide mobile-first and responsiveness for the WebPages and templates for components, like forms, buttons, and navigation. License: https://github.com/twbs/bootstrap/blob/main/LICENSE
+Bootstrap is the CSS framework that will be used to provide mobile-first and responsiveness for the WebPages and templates for components, like forms, buttons, and navigation. [License:](https://github.com/twbs/bootstrap/blob/main/LICENSE)
 
 4. JavaScript:  
 The JavaScript language will be used to program the web pages’ behavior and
 functionality and define how the data flows and is stored on the client side.
 
 5. ReactJS:  
-A JavaScript framework will be used for modern, scalable, and modular web app development with the use of interactive and reusable components. License: https://github.com/facebook/react/blob/main/LICENSE
+A JavaScript framework will be used for modern, scalable, and modular web app development with the use of interactive and reusable components. [License:](https://github.com/facebook/react/blob/main/LICENSE)
 
 #### **Backend Technologies:**
 
@@ -519,14 +543,14 @@ The Fall 2021 CEN4010 term project will be temporarily hosted on a Florida
 Atlantic University server.
 
 7. NodeJS:  
-A JavaScript runtime environment that will be used to develop and run our web application using JavaScript. It will also provide tools to facilitate and automate the development process. License: https://github.com/nodejs/node/blob/master/LICENSE 
+A JavaScript runtime environment that will be used to develop and run our web application using JavaScript. It will also provide tools to facilitate and automate the development process. [License:](https://github.com/nodejs/node/blob/master/LICENSE )
 
 8. ExpressJS:  
 This will be used to facilitate the development of the backend API and interfacing
-with the database. License: https://github.com/expressjs/express/blob/master/LICENSE 
+with the database. [License:](https://github.com/expressjs/express/blob/master/LICENSE )
 
 9. MongoDB:  
-This is a NoSQL database system that will be used to build an easily scalable database with flexible and evolving data schemas.License: https://github.com/mongodb/mongo/blob/master/LICENSE-Community.txt 
+This is a NoSQL database system that will be used to build an easily scalable database with flexible and evolving data schemas. [License:](https://github.com/mongodb/mongo/blob/master/LICENSE-Community.txt )
 
 #### **Other Technologies**
 
@@ -625,24 +649,24 @@ The competitors’ websites/platforms analysis will focus on six main features (
 
 The MetaSpace homepage will be very user-friendly. It will explain to the user what our platform is about and a breakdown and walkthrough on starting. Our design should have little to no blank spaces, be very informative, and catch users’ attention. MetaSpace will allow users with common interests/professions to connect and exchange information (their experiences etc.) to develop professional and social contracts. The journey and personality feature will give that freedom and connection to the users that other platforms do not offer. They will feel invested and interested in the profile they are creating.
 
-#### LinkedIn (3.33) https://www.linkedin.com/ 
+#### [LinkedIn (3.33)](https://www.linkedin.com/ )
 
 LinkedIn seems not to have a very informative homepage (from a new user standpoint). However, the design is clean, simple, and cut up in small sections with clickable text, links, and bubbles/buttons, but it does not quickly inform a person what they need to accomplish to get up and running on their profile quickly. It has good usability because it allows users to add additional information, but it seems tedious and challenging to figure out how to add information. As for journey and personality, this platform seems not to encourage the user to become invested. On the other hand, networking on this platform is outstanding. It allows the user to search fellow users, lets you message them, and it lets you look for jobs. So, from a networking standpoint, it seems like an all-in-one. 
 
-#### Handshake (3.67) https://joinhandshake.com/ 
+#### [Handshake (3.67)](https://joinhandshake.com/ )
 
 The Handshake homepage (as a new user) is well-built. It is informative, and the design has high appeal. Sub-pages are not as attractive as the front page of the site. The students can access this platform, meaning a .edu profile is required. The profile building is not as elaborate and visually pleasing as LinkedIn and the designs planned for MetaSpace. Networking is fair because it allows communication directly with companies about jobs. However, it does not facilitate user collaboration and connectivity. There is no method to showcase a finished product and its connection to what users have learned.
 
-#### Indeed (1.83) https://www.indeed.com/
+#### [Indeed (1.83)](https://www.indeed.com/)
 
 The homepage has many excess whitespaces. It does not guide the user to create a user profile properly and does not feel user-friendly. Design is poor and lackluster, and uninviting. Anyone can join, and page transitions are quick. It is challenging to begin profile building. The site coerces users to create a resume. New users who are inexperienced or at a pre-professional stage of learning may be confused about making a resume/Usability is poor because it is not user-friendly. For the last two features, it doesn't seem to be present here. You’re just adding info for a job instead of connecting your knowledge with your work.
 
-#### Sumry (3.67) https://sumry.me/# 
+#### [Sumry (3.67)](https://sumry.me/#) 
 
 The user interface is somewhat user-friendly, explains briefly how the platform works and has some graphics and color. However, some images are hard to see unless you click on them, they seem cluttered, and there are some big white spaces. Anyone
-can join, and the pages transition quickly. Users can find other user profiles, but direct messaging appears to be absent. As for the last two features, it seems you can talk about your experiences and skills and how you have applied them in the real world. You can see the personality in some examples, like http://www.dayoolopade.com
+can join, and the pages transition quickly. Users can find other user profiles, but direct messaging appears to be absent. As for the last two features, it seems you can talk about your experiences and skills and how you have applied them in the real world. You can see the personality in some examples, like [Dayo Olopade](http://www.dayoolopade.com)
 
-#### AngelList (2.00) https://angel.co/ 
+#### [AngelList (2.00)](https://angel.co/ )
 
 The homepage has many white blank spaces, does not guide the user properly to create a profile, and does not feel user-friendly. Design is poor, lackluster, and it seems it would steer away users than bring them in. Anyone can join, and the pages transition quickly. Just like Handshake, it focuses more on connecting you to jobs instead of colleagues. The site only allows the user and the company to connect and message. For the last two features, it does not seem to be present here. You're just adding info for a job instead of connecting your knowledge with your work.
     
@@ -667,7 +691,7 @@ MetaSpace allows its users to bridge the gap from start to finish. It is a holis
    * Ignacio Albornoz
 
 # Working with GitHub
-* https://github.com/cen4010-fa21-g17/m3-vs-prototype/commits/main/Milestone%203/README.md
+* [Commit History](https://github.com/cen4010-fa21-g17/m3-vs-prototype/commits/main/Milestone%203/README.md)
 
 ---
 # Checklist
@@ -708,6 +732,6 @@ MetaSpace allows its users to bridge the gap from start to finish. It is a holis
         * Grow: Backend: (MySQL)
    * @Thiago Goncalves Vasconcelos
         * Strong: Backend: C++, JavaScript, Websockets, Vue.js
-        * Grow: Relearn database
+        * Grow: Relearn database 
  
 ---
