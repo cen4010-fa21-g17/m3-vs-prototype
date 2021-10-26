@@ -640,7 +640,7 @@ The homepage has many excess whitespaces. It does not guide the user to create a
 #### [Sumry (3.67)](https://sumry.me/#) 
 
 The user interface is somewhat user-friendly, explains briefly how the platform works and has some graphics and color. However, some images are hard to see unless you click on them, they seem cluttered, and there are some big white spaces. Anyone
-can join, and the pages transition quickly. Users can find other user profiles, but direct messaging appears to be absent. As for the last two features, it seems you can talk about your experiences and skills and how you have applied them in the real world. You can see the personality in some examples, like http://www.dayoolopade.com
+can join, and the pages transition quickly. Users can find other user profiles, but direct messaging appears to be absent. As for the last two features, it seems you can talk about your experiences and skills and how you have applied them in the real world. You can see the personality in some examples, like [Dayo Olopade](http://www.dayoolopade.com)
 
 #### [AngelList (2.00)](https://angel.co/ )
 
