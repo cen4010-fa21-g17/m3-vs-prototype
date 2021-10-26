@@ -328,7 +328,7 @@ The user will start an experience.
 1.3 The user will input their first name, last name, date of birth, and email address. [1]
  
 
-**2. Account Access **
+**2. Account Access**
 
 2.1 The user must complete email verification for immediate access to their account after registering. The user can log in and out of the account. [1]
 
@@ -338,7 +338,7 @@ The user will start an experience.
 3.1.1 When a user forgets their username or password, the system uses the user’s email address for login recovery. [1]
 3.1.2 The system will initiate the login recovery process without revealing any login information, to include the email address. [2]
 
-**4. Account confirmation **
+**4. Account confirmation**
 
 4.1 When the user is successfully registered and completed the email verification process, they will receive an email confirmation.[3]
 
@@ -350,7 +350,7 @@ The user will start an experience.
 5.1 The user will be able to update and edit their profile [1]
 5.1.1 Update standard account information: first name, last name, date of birth, personal summary, and profile picture. [1]
 
-**6. Journey ** 
+**6. Journey** 
 
 6.1 The user will receive a Journey workspace. [1]
 6.2 The user can create multiple Experience nodes that appear in their Research Graph. [1]
@@ -367,20 +367,20 @@ The user will start an experience.
 7.2 If they do not want time constraints on their graph, they can turn off the feature.[3]
 
 
-**8. Search **
+**8. Search**
 
 8.1 The user will be able to search for other account members. [1]
 8.1.1 Each account is private by default unless the account’s visibility is set to public. [2]
 8.1.2 If the account they are searching for is private, the user must request to connect to see the member’s Journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately. [2]
 
-**9. Help desk **
+**9. Help desk**
 
 9.1 There will be a FAQ page with the most common issues and ways to fix them. [1]
 9.2 Users can email MetaSpace directly for assistance when solutions are not in the FAQ. [1]
 9.2.2 The user must include their username, full name, email address, and their queries. [1]
 9.2.3 User’s emails will receive a response within 24 hours. [3]
 
-**10. Member Collaboration**s 
+**10. Member Collaboration** 
 
 10.1 A user will be able to connect with other account members. By following other account members. [2]
 10.2 If a user unfollows a member with a private account, they will lose access to viewing their profile. [2]
