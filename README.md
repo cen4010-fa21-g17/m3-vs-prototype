@@ -41,7 +41,7 @@
 &nbsp;
 
 <p align = "center" font-size>
-	Metaspace
+	MetaSpace
 </p>
 
 &nbsp;
@@ -82,11 +82,11 @@
 &nbsp;
 &nbsp;
 
- Carlos Fonseca &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  cfonseca2018@fau.edu  
- Ignacio Albornoz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ialbornoz2016@fau.edu  
- Thiago Goncalves Vasconcelos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  tgoncalvesva2020@fau.edu  
- David Moore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  davidmoore2014@fau.edu  
- Laura Casals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  lcasals2014@fau.edu  
+ Carlos Fonseca | cfonseca2018@fau.edu  
+ Ignacio Albornoz | ialbornoz2016@fau.edu  
+ Thiago Goncalves Vasconcelos | tgoncalvesva2020@fau.edu  
+ David Moore | davidmoore2014@fau.edu  
+ Laura Casals | lcasals2014@fau.edu  
  
  
 &nbsp;
@@ -335,7 +335,7 @@ During the account creation process, the user will create two-factor authenticat
 
 #### 4. Account confirmation (Priority: 3)
 
-When the user is successfully registered, they will receive an email confirmation  
+When the user is successfully registered, they will receive an email confirmation. 
 
 
 
@@ -380,7 +380,7 @@ The user will receive notifications regarding new followers, messages, and remin
 The user will have the ability to block an account member from viewing and messaging their profile or report an account member. 
 
 
- 
+ #### [Core Feature UML Diagram: Journey](https://lucid.app/documents/edit/75ac5c2c-5d62-4a4e-a36e-a8055055c0e5/0?callback=close&name=docs&callback_type=back&v=1366&s=612)
 
 ---
 # **List of non-functional requirements**
@@ -503,14 +503,14 @@ CSS will be used to style web pages and enhance the user interface and user
 experience.
 
 3. Bootstrap:  
-Bootstrap is the CSS framework that will be used to provide mobile-first and responsiveness for the WebPages and templates for components, like forms, buttons, and navigation. License: https://github.com/twbs/bootstrap/blob/main/LICENSE
+Bootstrap is the CSS framework that will be used to provide mobile-first and responsiveness for the WebPages and templates for components, like forms, buttons, and navigation. [License:](https://github.com/twbs/bootstrap/blob/main/LICENSE)
 
 4. JavaScript:  
 The JavaScript language will be used to program the web pages’ behavior and
 functionality and define how the data flows and is stored on the client side.
 
 5. ReactJS:  
-A JavaScript framework will be used for modern, scalable, and modular web app development with the use of interactive and reusable components. License: https://github.com/facebook/react/blob/main/LICENSE
+A JavaScript framework will be used for modern, scalable, and modular web app development with the use of interactive and reusable components. [License:](https://github.com/facebook/react/blob/main/LICENSE)
 
 #### **Backend Technologies:**
 
@@ -519,14 +519,14 @@ The Fall 2021 CEN4010 term project will be temporarily hosted on a Florida
 Atlantic University server.
 
 7. NodeJS:  
-A JavaScript runtime environment that will be used to develop and run our web application using JavaScript. It will also provide tools to facilitate and automate the development process. License: https://github.com/nodejs/node/blob/master/LICENSE 
+A JavaScript runtime environment that will be used to develop and run our web application using JavaScript. It will also provide tools to facilitate and automate the development process. [License:](https://github.com/nodejs/node/blob/master/LICENSE )
 
 8. ExpressJS:  
 This will be used to facilitate the development of the backend API and interfacing
-with the database. License: https://github.com/expressjs/express/blob/master/LICENSE 
+with the database. [License:](https://github.com/expressjs/express/blob/master/LICENSE )
 
 9. MongoDB:  
-This is a NoSQL database system that will be used to build an easily scalable database with flexible and evolving data schemas.License: https://github.com/mongodb/mongo/blob/master/LICENSE-Community.txt 
+This is a NoSQL database system that will be used to build an easily scalable database with flexible and evolving data schemas. [License:](https://github.com/mongodb/mongo/blob/master/LICENSE-Community.txt )
 
 #### **Other Technologies**
 
@@ -625,24 +625,24 @@ The competitors’ websites/platforms analysis will focus on six main features (
 
 The MetaSpace homepage will be very user-friendly. It will explain to the user what our platform is about and a breakdown and walkthrough on starting. Our design should have little to no blank spaces, be very informative, and catch users’ attention. MetaSpace will allow users with common interests/professions to connect and exchange information (their experiences etc.) to develop professional and social contracts. The journey and personality feature will give that freedom and connection to the users that other platforms do not offer. They will feel invested and interested in the profile they are creating.
 
-#### LinkedIn (3.33) https://www.linkedin.com/ 
+#### [LinkedIn (3.33)](https://www.linkedin.com/ )
 
 LinkedIn seems not to have a very informative homepage (from a new user standpoint). However, the design is clean, simple, and cut up in small sections with clickable text, links, and bubbles/buttons, but it does not quickly inform a person what they need to accomplish to get up and running on their profile quickly. It has good usability because it allows users to add additional information, but it seems tedious and challenging to figure out how to add information. As for journey and personality, this platform seems not to encourage the user to become invested. On the other hand, networking on this platform is outstanding. It allows the user to search fellow users, lets you message them, and it lets you look for jobs. So, from a networking standpoint, it seems like an all-in-one. 
 
-#### Handshake (3.67) https://joinhandshake.com/ 
+#### [Handshake (3.67)](https://joinhandshake.com/ )
 
 The Handshake homepage (as a new user) is well-built. It is informative, and the design has high appeal. Sub-pages are not as attractive as the front page of the site. The students can access this platform, meaning a .edu profile is required. The profile building is not as elaborate and visually pleasing as LinkedIn and the designs planned for MetaSpace. Networking is fair because it allows communication directly with companies about jobs. However, it does not facilitate user collaboration and connectivity. There is no method to showcase a finished product and its connection to what users have learned.
 
-#### Indeed (1.83) https://www.indeed.com/
+#### [Indeed (1.83)](https://www.indeed.com/)
 
 The homepage has many excess whitespaces. It does not guide the user to create a user profile properly and does not feel user-friendly. Design is poor and lackluster, and uninviting. Anyone can join, and page transitions are quick. It is challenging to begin profile building. The site coerces users to create a resume. New users who are inexperienced or at a pre-professional stage of learning may be confused about making a resume/Usability is poor because it is not user-friendly. For the last two features, it doesn't seem to be present here. You’re just adding info for a job instead of connecting your knowledge with your work.
 
-#### Sumry (3.67) https://sumry.me/# 
+#### [Sumry (3.67)](https://sumry.me/#) 
 
 The user interface is somewhat user-friendly, explains briefly how the platform works and has some graphics and color. However, some images are hard to see unless you click on them, they seem cluttered, and there are some big white spaces. Anyone
 can join, and the pages transition quickly. Users can find other user profiles, but direct messaging appears to be absent. As for the last two features, it seems you can talk about your experiences and skills and how you have applied them in the real world. You can see the personality in some examples, like http://www.dayoolopade.com
 
-#### AngelList (2.00) https://angel.co/ 
+#### [AngelList (2.00)](https://angel.co/ )
 
 The homepage has many white blank spaces, does not guide the user properly to create a profile, and does not feel user-friendly. Design is poor, lackluster, and it seems it would steer away users than bring them in. Anyone can join, and the pages transition quickly. Just like Handshake, it focuses more on connecting you to jobs instead of colleagues. The site only allows the user and the company to connect and message. For the last two features, it does not seem to be present here. You're just adding info for a job instead of connecting your knowledge with your work.
     
@@ -667,7 +667,7 @@ MetaSpace allows its users to bridge the gap from start to finish. It is a holis
    * Ignacio Albornoz
 
 # Working with GitHub
-* https://github.com/cen4010-fa21-g17/m3-vs-prototype/commits/main/Milestone%203/README.md
+* [Commit History](https://github.com/cen4010-fa21-g17/m3-vs-prototype/commits/main/Milestone%203/README.md)
 
 ---
 # Checklist
