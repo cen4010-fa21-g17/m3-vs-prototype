@@ -438,7 +438,7 @@ The system will operate on various types of operating systems, including Windows
 #### Security Requirements:
 
 1. Login/Password System:  
-The system will have a login and password system to maintain user preferences, Journey, accomplishments, and collaborators. Security will be implemented with account creation and email confirmation. In addition, there will be a password retrieval system via security questions if the user forgets their password. It will permit the user to retrieve and reset their login credentials.
+The system will have a login and password system to maintain user preferences, Journey, accomplishments, and collaborators. Security will be implemented with account creation and email confirmation. In addition, there will be a password retrieval system via email if the user forgets their password. It will permit the user to retrieve and reset their login credentials.
 
 2. Encryption:  
 The website will not include end-to-end encryption at the stage of initial system delivery. Users are not encouraged to store personally identifying information on the platform. Moreover, there will be no sensitive information data storage features.
@@ -451,7 +451,7 @@ The development team will have frontend and backend access. Users and visitors w
 The site will ask users to enter a string of characters shown in a picture to create an account to prevent bots from creating false user accounts.
 
 5. Resource Utilization:  
-Resources such as the MySQL database will be accessed through the usernames and passwords provided by Florida Atlantic University on-campus servers. With appropriate documentation and licensing, the system tools for use and access are Bootstrap, React, Express, Node.js, and MongoDB. 
+Resources such as the MySQL database will be accessed through the usernames and passwords provided by Florida Atlantic University on-campus servers. With appropriate documentation and licensing, the system tools for use and access are Next.js, React, Node.js, and MongoDB. 
 
 #### Portability Requirements:
 
@@ -467,10 +467,10 @@ This version of the system will have 0% of target-dependent statements. In a fut
 The system will be developed in a range of 75-80% of coding standards for HTML 5 and CSS3. The code will be produced, reviewed, tested, and reviewed again for efficiency purposes.
 
 2. Naming Conventions:  
-HTML classes and id tags will be coded in lowercase except in situations where there is more than one word in a name; then camelCase will be used. The team will agree on SQL tables and data names. First letter capitalization and lowercase followed by lowercase letters will be the standard.
+HTML classes and id tags will be coded in lowercase except in situations where there is more than one word in a name; then camelCase will be used. The team will agree on NoSQL schemas and data names. First letter capitalization and lowercase followed by lowercase letters will be the standard.
 
 #### Storage Requirements:
-1. The storage for our system will be on FAU Lamp servers holding our MySQL databases within an unknown capacity and holding our files for the actual website.
+1. The storage for our system will be on MongoDB holding our MongoDB databases within an unknown capacity and holding our files for the actual website.
 
 #### Survivability:
 
