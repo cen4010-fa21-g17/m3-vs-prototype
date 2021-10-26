@@ -336,8 +336,9 @@ The user will start an experience.
 #### 3. Recovering Access  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 The user can recover their account through email verification. [1]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.1 When a user forgets their username or password, the system uses the user’s email address for login recovery. [1]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.2 The system will initiate the login recovery process without revealing any login information, to include the email address. [2]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.1 When a user forgets their username or password, the system uses the user’s email address for login recovery. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.2 The system will initiate the login recovery process without revealing any login information, to include the email address. [2]  
+
 
 
 #### 4. Account confirmation
