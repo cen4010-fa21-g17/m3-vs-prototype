@@ -688,9 +688,9 @@ MetaSpace allows its users to bridge the gap from start to finish. It is a holis
 ## Checklist
 
 ### Communication 
-   * For verbal communication: Microsoft Teams
-   * For messaging purposes: Jira, WhatsApp
-   * For taking and keeping track of meeting notes: Jira Confluence
+   * Meetings: Microsoft Teams
+   * Messaging: Jira, WhatsApp
+   * Meeting Notes: Jira Confluence
    * GitHub
 
 ### Meeting: 
