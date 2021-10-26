@@ -324,66 +324,67 @@ MetaSpace Sitemap: https://octopus.do/h63ddpkldbm
 # **High level functional requirements**
 ## Non-Member expectation 
 
-#### 1. Creating an account. 
+#### 1. Creating an account (Priority: 1) 
 
-The user will be able to register for an account. The system will complete this by storing the user’s preferred username and password. Next, the user will input their first name, last name, date of birth, phone number, and email address.  
+The user will be able to register for an account. The system will complete this by storing the user’s preferred username and password. Next, the user will input their first name, last name, date of birth, and email address.  
 If the username entered is already in use, the system will tell the user that the ID already exists and prompt them to enter a different one. 
 
-#### 2. Account Access 
+#### 2. Account Access (Priority: 1)
 
 The user gains immediate access to their account when they register. The user can log in and out of the account.
 
-#### 3. Account confirmation 
-
-When the user is successfully registered, they will receive an email confirmation  
-
-#### 4. Recovering Access 
+#### 3. Recovering Access (Priority: 1)
 
 During the account creation process, the user will create two-factor authentication security questions. When a user forgets their username or password, the system uses the security questions for login recovery.
 
- 
+#### 4. Account confirmation (Priority: 3)
+
+When the user is successfully registered, they will receive an email confirmation  
+
+
 
  
 ---
 ## Member expectation 
 
- 
-
-#### 5. Journey 
-
-The user will receive a journey or workspace and an option to create a new path to connect their experiences. Each experience will be a point on the timeline, and they can provide personal insights about why they decided to learn a subject, what they will learn, and what they produce. The user will also have the option to upload projects that showcase their knowledge of the material. 
-
-#### 6. Timeline 
-
-The system will generate a “triple graph,” similar to a timeline to illustrate the user’s journey on their profile. It presents their work, courses taken, accomplishments, etc., which the user achieved in chronological order. Thus, providing them with a visual representation of what they finished and are currently working on. If they do not want time constraints on their graph, they can turn off the feature. 
-
-#### Profile 
+#### 1. Profile (Priority: 1)
 
 The user will be able to update and edit their profile, entailing standard account information: first name, last name, date of birth, personal summary, and profile picture.
 
-#### 8. Search 
+#### 2. Journey  (Priority: 1)
+
+The user will receive a journey or workspace and an option to create a new path to connect their experiences. Each experience will be a point on the timeline, and they can provide personal insights about why they decided to learn a subject, what they will learn, and what they produce. The user will also have the option to upload projects that showcase their knowledge of the material. 
+
+#### 3. Timeline (Priority: 1)
+
+The system will generate a “triple graph,” similar to a timeline to illustrate the user’s journey on their profile. It presents their work, courses taken, accomplishments, etc., which the user achieved in chronological order. Thus, providing them with a visual representation of what they finished and are currently working on. If they do not want time constraints on their graph, they can turn off the feature. 
+
+#### 4. Search (Priority: 1)
 
 The user will be able to search for other account members. Each account is private by default unless the account’s visibility is set to public. If the account they are searching for is private, the user must request to connect to see the member’s journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately.
 
-#### 9. Member Collaborations
+#### 5. Help desk (Priority: 1)
+
+There will be a FAQ page with the most common issues and ways to fix them. Users can email MetaSpace directly for assistance when solutions are not in the FAQ. The user must include their username, full name, email address, and their queries. User help emails will receive a response within 24 hours.
+
+#### 6. Member Collaborations (Priority: 2)
 
 A user will be able to connect with other account members. By following other account members, users can collaborate to share experiences and work together on real-world problems. If a user unfollows a member with a private account, they will lose access to viewing their profile.
 
-#### 10. Messaging  
+#### 7. Messaging  (Priority: 2)
 
 The user will be able to message account members that they follow. 
 
-#### 11. Block 
+#### 8. Notifications (Priority: 2)
+
+The user will receive notifications regarding new followers, messages, and reminders to visit their account if a specific amount of time has passed since their last login. The user will be able to manage how they want to receive notifications.
+
+#### 9. Block (Priority: 3)
 
 The user will have the ability to block an account member from viewing and messaging their profile or report an account member. 
 
-#### 12. Notifications 
 
-The user will receive notifications regarding new followers, messages, and reminders to visit their account if a specific amount of time has passed since their last login. The user will be able to manage how they want to receive notifications.
  
-#### 13. Help desk 
-
-There will be a FAQ page with the most common issues and ways to fix them. Users can email MetaSpace directly for assistance when solutions are not in the FAQ. The user must include their username, full name, email address, and their queries. User help emails will receive a response within 24 hours.
 
 ---
 # **List of non-functional requirements**
