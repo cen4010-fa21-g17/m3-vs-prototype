@@ -322,10 +322,10 @@ The user will start an experience.
 
 **1. Creating an account**
 
-1.1 The user will be able to register for an account. [1]
-1.2 The system will register an account via a unique username and password. [1]
-1.2.1 If the username entered is already in use, the system will tell the user that    the ID already exists and prompt them to enter a different one. [2]
-1.3 The user will input their first name, last name, date of birth, and email address. [1]
+1.1 The user will be able to register for an account. [1]  
+1.2 The system will register an account via a unique username and password. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2.1 If the username entered is already in use, the system will tell the user that the ID already exists and prompt them to enter a different one. [2]  
+1.3 The user will input their first name, last name, date of birth, and email address. [1]  
  
 
 **2. Account Access**
@@ -334,9 +334,9 @@ The user will start an experience.
 
 **3. Recovering Access** 
 
-3.1 The user can recover their account through email verification. [1]
-3.1.1 When a user forgets their username or password, the system uses the user’s email address for login recovery. [1]
-3.1.2 The system will initiate the login recovery process without revealing any login information, to include the email address. [2]
+3.1 The user can recover their account through email verification. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.1 When a user forgets their username or password, the system uses the user’s email address for login recovery. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1.2 The system will initiate the login recovery process without revealing any login information, to include the email address. [2]
 
 **4. Account confirmation**
 
@@ -347,43 +347,43 @@ The user will start an experience.
 
 **5. Profile** 
 
-5.1 The user will be able to update and edit their profile [1]
-5.1.1 Update standard account information: first name, last name, date of birth, personal summary, and profile picture. [1]
+5.1 The user will be able to update and edit their profile [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.1.1 Update standard account information: first name, last name, date of birth, personal summary, and profile picture. [1]
 
 **6. Journey** 
 
-6.1 The user will receive a Journey workspace. [1]
-6.2 The user can create multiple Experience nodes that appear in their Research Graph. [1]
-6.3 The user can create a new path to connect any two Experience nodes. [1]
-6.4 Each Experience will be a point on the timeline within the graph [1]
-6.4.1 Skill The Experience will facilitate skills tracking in terms of what they are or will learn and the source. [2]
-6.4.2 Build The Experience will facilitate showcasing what the user builds as a product of skills learned. The user can upload projects that showcase their application of the material. [2]
-6.4.3 Document The Experience will facilitate documenting how the user applied and implemented skills to build their product. The Document module enables media-rich options to provide project details and instructions for potential users and collaborators to understand the user’s work. [2] 
+6.1 The user will receive a Journey workspace. [1]  
+6.2 The user can create multiple Experience nodes that appear in their Research Graph. [1]  
+6.3 The user can create a new path to connect any two Experience nodes. [1]  
+6.4 Each Experience will be a point on the timeline within the graph [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.1 Skill The Experience will facilitate skills tracking in terms of what they are or will learn and the source. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.2 Build The Experience will facilitate showcasing what the user builds as a product of skills learned. The user can upload projects that showcase their application of the material. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4.3 Document The Experience will facilitate documenting how the user applied and implemented skills to build their product. The Document module enables media-rich options to provide project details and instructions for potential users and collaborators to understand the user’s work. [2] 
 
 **7. Timeline**
 
-7.1 The system will generate a chronological graph similar to a timeline [1]
-7.1.1 The Presentation Graph presents the user’s work, courses taken, accomplishments, etc. [1]
-7.2 If they do not want time constraints on their graph, they can turn off the feature.[3]
+7.1 The system will generate a chronological graph similar to a timeline [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.1.1 The Presentation Graph presents the user’s work, courses taken, accomplishments, etc. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.2 If they do not want time constraints on their graph, they can turn off the feature.[3]
 
 
 **8. Search**
 
-8.1 The user will be able to search for other account members. [1]
-8.1.1 Each account is private by default unless the account’s visibility is set to public. [2]
-8.1.2 If the account they are searching for is private, the user must request to connect to see the member’s Journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately. [2]
+8.1 The user will be able to search for other account members. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.1 Each account is private by default unless the account’s visibility is set to public. [2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.2 If the account they are searching for is private, the user must request to connect to see the member’s Journey. Once the request is accepted, they will be able to view the member’s profile. If the account is public, they can view the profile immediately. [2]
 
 **9. Help desk**
 
-9.1 There will be a FAQ page with the most common issues and ways to fix them. [1]
-9.2 Users can email MetaSpace directly for assistance when solutions are not in the FAQ. [1]
-9.2.2 The user must include their username, full name, email address, and their queries. [1]
-9.2.3 User’s emails will receive a response within 24 hours. [3]
+9.1 There will be a FAQ page with the most common issues and ways to fix them. [1]  
+9.2 Users can email MetaSpace directly for assistance when solutions are not in the FAQ. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2.2 The user must include their username, full name, email address, and their queries. [1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.2.3 User’s emails will receive a response within 24 hours. [3]
 
 **10. Member Collaboration** 
 
-10.1 A user will be able to connect with other account members. By following other account members. [2]
-10.2 If a user unfollows a member with a private account, they will lose access to viewing their profile. [2]
+10.1 A user will be able to connect with other account members. By following other account members. [2]  
+10.2 If a user unfollows a member with a private account, they will lose access to viewing their profile. [2]  
 
 **11. Messaging** 
 
@@ -391,7 +391,7 @@ The user will start an experience.
 
 **12. Notifications**
 
-12.1 The user will receive notifications regarding new followers, messages, and reminders. [2]
+12.1 The user will receive notifications regarding new followers, messages, and reminders. [2]  
 12.2 The user will be able to manage how they want to receive notifications. [3]
 
 **13. Block** 
@@ -466,7 +466,7 @@ The development team will have frontend and backend access. Users and visitors w
 **4. Spam Protection:**  
 The site will ask users to enter a string of characters shown in a picture to create an account to prevent bots from creating false user accounts.
 
-5. Resource Utilization:  
+5. Resource Utilization:
 Resources such as the MySQL database will be accessed through the usernames and passwords provided by Florida Atlantic University on-campus servers. With appropriate documentation and licensing, the system tools for use and access are Next.js, React, Node.js, and MongoDB. 
 
 ### Portability Requirements:
@@ -536,7 +536,7 @@ A [JavaScript framework](https://github.com/facebook/react/blob/main/LICENSE) wi
 
 ### **Backend Technologies:**
 
-7. Vercel:  
+**7. Vercel:**
 The Fall 2021 CEN4010 term project will be hosted on the Vercel platform.
 
 **8. Node.js:** 
@@ -710,7 +710,7 @@ MetaSpace allows its users to bridge the gap from start to finish. It is a holis
 
 ### Skills: 
    * @David Moore
-        * Frontend: HTML, CSS, JavaScript, SQL, Database
+        * Strong: HTML, CSS, JavaScript, SQL, Database
         * Grow: Connecting the backend stack
    * @Carlos Fonseca
         * Strong: C++, C, JavaScript, Python
