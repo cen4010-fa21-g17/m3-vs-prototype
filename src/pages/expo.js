@@ -1,8 +1,8 @@
 import React from 'react';
-import Expo from 'views/Expo';
+//import Expo from 'views/Expo';
 
 const ExpoPage = () => {
-  return <Expo />;
+ // return <Expo />;
 };
 
 export default ExpoPage;

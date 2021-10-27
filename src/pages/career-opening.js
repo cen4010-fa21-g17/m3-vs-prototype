@@ -1,8 +1,8 @@
 import React from 'react';
-import CareerOpening from 'views/CareerOpening';
+//import CareerOpening from 'views/CareerOpening';
 
 const CareerOpeningPage = () => {
-  return <CareerOpening />;
+  //return <CareerOpening />;
 };
 
 export default CareerOpeningPage;
