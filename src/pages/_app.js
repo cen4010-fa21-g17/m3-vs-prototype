@@ -4,6 +4,8 @@ import Head from 'next/head';
 
 import Page from '../components/Page';
 
+import RouteGuard from '../components/RouteGuard'
+
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -20,9 +22,11 @@ export default function App({ Component, pageProps }) {
         />
         <title>MetaSpace</title>
       </Head>
-      <Page>
-        <Component {...pageProps} />
-      </Page>
+        <RouteGuard>
+          <Page>
+              <Component {...pageProps} />
+          </Page>
+        </RouteGuard>
     </React.Fragment>
   );
 }

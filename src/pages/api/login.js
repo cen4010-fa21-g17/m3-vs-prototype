@@ -17,7 +17,13 @@ export default async function handler(req, res) {
         try {
             const account =  await AccountModel.findOne({ email: req.body.email, password: req.body.password })
             if (account)
-              res.status(202).json({ email: account.email, message: "Login successful" })
+              res.status(202).json({ 
+                _id: account.user_id,
+                email: account.email, 
+                firstName: account.firstName,
+                lastName: account.lastName,
+                message: "Login successful" 
+              })
             else 
               res.status(401).json({ message: "Incorrect credentials" })
         } catch (err) {

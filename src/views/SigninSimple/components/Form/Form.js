@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 import axios from 'axios'
+import { useRouter } from 'next/router'
 
 const validationSchema = yup.object({
   email: yup
@@ -24,17 +25,23 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
+  const router = useRouter()
+
   const initialValues = {
     email: '',
     password: '',
   };
 
   const onSubmit = (values) => {
-    axios.post('http://localhost:3000/api/login', {
+    axios.post('/api/login', {
       email: values.email,
       password: values.password
     }).then(response => {
       console.log(response)
+      if (response.status == 202)
+        //userService.userValue = response.data
+        window.localStorage.setItem('user', JSON.stringify(response.data))
+        router.push('/home')
     })
     //return values;
   };

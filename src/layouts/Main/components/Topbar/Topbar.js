@@ -14,6 +14,10 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     supports: supportPages
   } = pages;
 
+  const logOut = () => {
+    window.localStorage.removeItem('user')
+  }
+
   return (
     // Page Content Container
     <Box
@@ -71,6 +75,32 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         </Box>
         {/* Signup Button */}
         <Box marginLeft={4}>
+          { window.localStorage.getItem('user') ?
+          <span>
+            <Button
+            variant="contained"
+            color="primary"
+            component="a"
+            target="blank"
+            href="/account-general"
+            size="large"
+            >
+            My Account
+          </Button>
+          <span>  </span>
+          <Button
+          onClick={logOut}
+          variant="outlined"
+          color="primary"
+          component="a"
+          target="blank"
+          href="/"
+          size="small"
+          >
+          Log out
+          </Button>
+            </span>
+          :
           <Button
             variant="contained"
             color="primary"
@@ -81,6 +111,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           >
             Sign Up
           </Button>
+          }
         </Box>
       </Box>
       {/*  END site navigation */}

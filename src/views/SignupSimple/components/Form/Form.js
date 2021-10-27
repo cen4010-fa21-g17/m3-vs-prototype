@@ -44,7 +44,7 @@ const Form = () => {
   };
 
   const onSubmit = (values) => {
-    axios.post('http://localhost:3000/api/register', {
+    axios.post('/api/register', {
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email,

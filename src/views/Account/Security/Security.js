@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
@@ -14,27 +15,42 @@ import Switch from '@mui/material/Switch';
 import Page from '../components/Page';
 import Main from 'layouts/Main';
 
+import axios from 'axios'
+
 const validationSchema = yup.object({
-  currentPassword: yup.string().required('Please specify your password'),
+  // currentPassword: yup.string().required('Please specify your password'),
   newPassword: yup
     .string()
     .required('Please specify your password')
     .min(8, 'The password should have at minimum length of 8'),
-  repeatPassword: yup
-    .string()
-    .required('Please specify your password')
-    .min(8, 'The password should have at minimum length of 8'),
+  // repeatPassword: yup
+  //   .string()
+  //   .required('Please specify your password')
+  //   .min(8, 'The password should have at minimum length of 8'),
 });
 
 const Security = () => {
   const initialValues = {
-    currentPassword: '',
+    // currentPassword: '',
     newPassword: '',
-    repeatPassword: '',
+    // repeatPassword: '',
   };
 
+  const router = useRouter()
+
+  const logOut = () => {
+    window.localStorage.removeItem('user')
+    router.push('/')
+  }
+
   const onSubmit = (values) => {
-    return values;
+    const user = JSON.parse(localStorage.getItem('user'))
+    axios.put(`http://localhost:3000/api/user/${user._id}/account`, {
+      password: values.newPassword
+    }).then(response => {
+      console.log(response.data)
+    })
+    //return values;
   };
 
   const formik = useFormik({
@@ -57,6 +73,7 @@ const Security = () => {
               Change your password
             </Typography>
             <Button
+              onClick={logOut}
               size={'large'}
               variant={'outlined'}
               sx={{ marginTop: { xs: 2, md: 0 } }}
@@ -69,7 +86,7 @@ const Security = () => {
           </Box>
           <form onSubmit={formik.handleSubmit}>
             <Grid container spacing={4}>
-              <Grid item xs={12}>
+              {/* <Grid item xs={12}>
                 <Typography
                   variant={'subtitle2'}
                   sx={{ marginBottom: 2 }}
@@ -93,7 +110,7 @@ const Security = () => {
                     formik.errors.currentPassword
                   }
                 />
-              </Grid>
+              </Grid> */}
               <Grid item xs={12}>
                 <Typography
                   variant={'subtitle2'}
@@ -118,7 +135,7 @@ const Security = () => {
                   }
                 />
               </Grid>
-              <Grid item xs={12}>
+              {/* <Grid item xs={12}>
                 <Typography
                   variant={'subtitle2'}
                   sx={{ marginBottom: 2 }}
@@ -142,7 +159,7 @@ const Security = () => {
                     formik.errors.repeatPassword
                   }
                 />
-              </Grid>
+              </Grid> */}
               <Grid item xs={12}>
                 <Divider />
               </Grid>

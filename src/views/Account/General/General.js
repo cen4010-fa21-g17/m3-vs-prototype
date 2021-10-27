@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
@@ -12,53 +13,74 @@ import Link from '@mui/material/Link';
 import Page from '../components/Page';
 import Main from 'layouts/Main';
 
+import axios from 'axios'
+
+
 const validationSchema = yup.object({
-  fullName: yup
+  firstName: yup
     .string()
     .trim()
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your first name'),
+  lastName: yup
+    .string()
+    .trim()
+    .min(2, 'Please enter a valid name')
+    .max(50, 'Please enter a valid name')
+    .required('Please specify your last name'),
   email: yup
     .string()
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
-  bio: yup
-    .string()
-    .trim()
-    .max(500, 'Should be less than 500 chars'),
-  country: yup
-    .string()
-    .trim()
-    .min(2, 'Please enter a valid name')
-    .max(80, 'Please enter a valid name')
-    .required('Please specify your country name'),
-  city: yup
-    .string()
-    .trim()
-    .min(2, 'Please enter a valid name')
-    .max(80, 'Please enter a valid name')
-    .required('Please specify your city name'),
-  address: yup
-    .string()
-    .required('Please specify your address')
-    .min(2, 'Please enter a valid address')
-    .max(200, 'Please enter a valid address'),
+  // bio: yup
+  //   .string()
+  //   .trim()
+  //   .max(500, 'Should be less than 500 chars'),
+  // country: yup
+  //   .string()
+  //   .trim()
+  //   .min(2, 'Please enter a valid name')
+  //   .max(80, 'Please enter a valid name')
+  //   .required('Please specify your country name'),
+  // city: yup
+  //   .string()
+  //   .trim()
+  //   .min(2, 'Please enter a valid name')
+  //   .max(80, 'Please enter a valid name')
+  //   .required('Please specify your city name'),
+  // address: yup
+  //   .string()
+  //   .required('Please specify your address')
+  //   .min(2, 'Please enter a valid address')
+  //   .max(200, 'Please enter a valid address'),
 });
 
 const General = () => {
   const initialValues = {
-    fullName: '',
-    bio: '',
+    firstName: '',
+    lastName: '',
+    // bio: '',
     email: '',
-    country: '',
-    city: '',
-    address: '',
+    // country: '',
+    // city: '',
+    // address: '',
   };
 
   const onSubmit = (values) => {
-    return values;
+
+    console.log(values.firstName)
+    //return values;
+    const user = JSON.parse(window.localStorage.getItem('user'))
+    
+    axios.put(`/api/user/${user._id}/account`, {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      email: values.email
+    }).then(response => {
+      console.log(response.data)
+    })
   };
 
   const formik = useFormik({
@@ -97,16 +119,40 @@ const General = () => {
                 <TextField
                   label="First name *"
                   variant="outlined"
-                  name={'fullName'}
+                  name={'firstName'}
                   fullWidth
-                  value={formik.values.fullName}
+                  value={formik.values.firstName}
                   onChange={formik.handleChange}
                   error={
-                    formik.touched.fullName && Boolean(formik.errors.fullName)
+                    formik.touched.firstName && Boolean(formik.errors.firstName)
                   }
-                  helperText={formik.touched.fullName && formik.errors.fullName}
+                  helperText={formik.touched.firstName && formik.errors.firstName}
                 />
               </Grid>
+
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant={'subtitle2'}
+                  sx={{ marginBottom: 2 }}
+                  fontWeight={700}
+                >
+                  Enter your last name
+                </Typography>
+                <TextField
+                  label="Last name *"
+                  variant="outlined"
+                  name={'lastName'}
+                  fullWidth
+                  value={formik.values.lastName}
+                  onChange={formik.handleChange}
+                  error={
+                    formik.touched.lastName && Boolean(formik.errors.lastName)
+                  }
+                  helperText={formik.touched.lastName && formik.errors.lastName}
+                />
+              </Grid>
+
+
               <Grid item xs={12} sm={6}>
                 <Typography
                   variant={'subtitle2'}
@@ -126,15 +172,15 @@ const General = () => {
                   helperText={formik.touched.email && formik.errors.email}
                 />
               </Grid>
-              <Grid item xs={12}>
-                <Typography
+              {/* <Grid item xs={12}> */}
+                {/* <Typography
                   variant={'subtitle2'}
                   sx={{ marginBottom: 2 }}
                   fontWeight={700}
                 >
                   Bio
-                </Typography>
-                <TextField
+                </Typography> */}
+                {/* <TextField
                   label="Bio"
                   variant="outlined"
                   name={'bio'}
@@ -145,12 +191,12 @@ const General = () => {
                   onChange={formik.handleChange}
                   error={formik.touched.bio && Boolean(formik.errors.bio)}
                   helperText={formik.touched.bio && formik.errors.bio}
-                />
-              </Grid>
+                /> */}
+              {/* </Grid> */}
               <Grid item xs={12}>
                 <Divider />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              {/* <Grid item xs={12} sm={6}>
                 <Typography
                   variant={'subtitle2'}
                   sx={{ marginBottom: 2 }}
@@ -210,7 +256,7 @@ const General = () => {
                   }
                   helperText={formik.touched.address && formik.errors.address}
                 />
-              </Grid>
+              </Grid> */}
               <Grid item container xs={12}>
                 <Box
                   display="flex"

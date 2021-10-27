@@ -1,5 +1,5 @@
-import dbConnect from '../../../../utils/dbConnect'
-import profileModel from '../../../../models/profile'
+import dbConnect from '../../../../../utils/dbConnect'
+import ProfileModel from '../../../../../models/profile'
 
 // Request handler function
 export default async function handler(req, res) {
@@ -13,8 +13,8 @@ export default async function handler(req, res) {
       // Get profile info for a single user from the database
       case 'GET':
         try {
-          const allprofile = await profileModel.findOne({userid: `${req.query.id}`})
-          res.json(allprofile)
+          const profile = await ProfileModel.findOne({userid: `${req.query.id}`})
+          res.json(profile)
         } catch (err) {
           res.status(500).json({ message: err.message })
         }
