@@ -45,7 +45,7 @@ const Security = () => {
 
   const onSubmit = (values) => {
     const user = JSON.parse(localStorage.getItem('user'))
-    axios.put(`http://localhost:3000/api/user/${user._id}/account`, {
+    axios.put(`/api/user/${user._id}/account`, {
       password: values.newPassword
     }).then(response => {
       console.log(response.data)
