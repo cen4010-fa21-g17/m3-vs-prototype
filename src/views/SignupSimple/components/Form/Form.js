@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import { useRouter } from 'next/router'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
@@ -36,6 +37,8 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
+  const router = useRouter()
+
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -51,6 +54,10 @@ const Form = () => {
       password: values.password
     }).then(response => {
       console.log(response)
+      if (response.status == 201) {
+        console.log('registration successful')
+        router.push('/signin-simple')
+      }
     })
     //return values;
   };
