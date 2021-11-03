@@ -5,8 +5,11 @@ import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavItem, SearchBar } from './components';
+import { ThemeModeToggler } from '../../components';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
+import Container from 'components/Container';
+
+const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transparent' }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   const {
@@ -46,12 +49,13 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           width={1}
         />
         {/*  END site logo */}
+
         {/*  Search Bar */}
       </Box>
       {/*  END site logo container */}
 
       {/*  Search Bar */}
-      <Box>
+      <Box mt={0}>
         <SearchBar />
       </Box>
 
@@ -113,6 +117,19 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           </Button>
           }
         </Box>
+        <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
+          <Container
+            paddingTop={'8px !important'}
+            paddingBottom={'0 !important'}
+          >
+          <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+            {/*  Dark/Light Mode Toggler */}
+            <Box>
+              <ThemeModeToggler />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
       </Box>
       {/*  END site navigation */}
       {/*  Alternate Navigation on smaller displays */}
@@ -139,6 +156,7 @@ Topbar.propTypes = {
   onSidebarOpen: PropTypes.func,
   pages: PropTypes.object,
   colorInvert: PropTypes.bool,
+  bgcolor: PropTypes.string,
 };
 
 export default Topbar;

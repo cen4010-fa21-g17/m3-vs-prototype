@@ -38,19 +38,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
 
   return (
     <Box>
-      <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
-        <Container
-          paddingTop={'8px !important'}
-          paddingBottom={'0 !important'}
-        >
-          <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-            {/*  Dark/Light Mode Toggler */}
-            <Box>
-              <ThemeModeToggler />
-            </Box>
-          </Box>
-        </Container>
-      </Box>
+      
       <AppBar
         position={'sticky'}
         sx={{
