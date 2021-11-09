@@ -53,7 +53,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
       </Box>
       {/*  Search Bar */}
       <Box>
-        <SearchBar />
+        <SearchBar 
+          style={{zIndex:1}}
+        />
       </Box>
 
       {/*  Site Navigation */}
@@ -88,20 +90,22 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
             >
             My Account
           </Button>
-          <span>  </span>
-          <Button
-          onClick={logOut}
-          variant="outlined"
-          color="primary"
-          component="a"
-          target="blank"
-          href="/"
-          size="small"
-          >
-          Log out
-          </Button>
+          {/* Log-out Button */}
+          <span> </span>
+            <Button
+              onClick={logOut}
+              variant="outlined"
+              color="primary"
+              component="a"
+              target="blank"
+              href="/"
+              size="small"
+            >
+            Log out
+            </Button>
             </span>
           :
+          // Sign-up Button
           <Button
             variant="contained"
             color="primary"
