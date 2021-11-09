@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import Link from 'next/link';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
@@ -6,17 +7,40 @@ import SearchIcon from '@mui/icons-material/Search';
 import Card from  '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import { CardContent } from '@mui/material';
-import { CardMedia } from '@mui/material';
-import { Button } from '@mui/material';
-import { Typography } from '@mui/material';
-import { Avatar } from '@mui/material';
-import { AddCircleOutlineOutlinedIcon } from '@mui/icons-material/AddCircleOutlineOutlined';
+import { Typography } from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
 
-import { Box } from '@mui/material/Box';
+import profiles from './profiles-mock';
 
-const profiles = ['David','Laura','Ignacio','Carlos','Thiago'];
+
 
 const ariaLabel = { 'aria-label': 'description' };
+
+  const SearchProfile = results.map(function(profile) {
+      return (
+        <div>
+          <Link href={profile.href}>
+            <ListItem
+            key={profile.id}
+            >
+              <ListItemAvatar>
+                {profile.avatar}
+              </ListItemAvatar>
+              <Typography
+                variant="subtitle1"
+                noWrap
+                >
+                {profile.about}
+              </Typography>
+            </ListItem>
+          </Link>
+          <Divider />
+        </div>
+      );
+    })
 
 export default function SearchBar() {
   const [results, setResults] = useState();
@@ -37,7 +61,10 @@ export default function SearchBar() {
           const { value } = e.currentTarget;
           // Dynamically load fuse.js
           const Fuse = (await import('fuse.js')).default;
-          const fuse = new Fuse(profiles);
+          const options = {
+            keys: ['name']
+          }
+          const fuse = new Fuse(profiles,options);
           setResults(fuse.search(value));
         }}
       />
@@ -60,10 +87,16 @@ export default function SearchBar() {
         >
           {/* Card Content */}
           <CardContent>
-
-            <Typography>
-              Results: {JSON.stringify(results, null, 2)}
-            </Typography>
+            <List
+              sx={{
+                width: 400,
+                maxWidth: 400,
+                bgcolor: 'Background.paper',
+              }}
+            >
+              {results != null ? <SearchProfile/> : ''}
+            </List>
+            {/* {JSON.stringify(results, null,2)} */}
           </CardContent>
           {/* End Card Content */}
           
