@@ -50,12 +50,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
         />
         {/*  END site logo */}
 
-        {/*  Search Bar */}
       </Box>
-      {/*  END site logo container */}
-
       {/*  Search Bar */}
-      <Box mt={0}>
+      <Box>
         <SearchBar />
       </Box>
 
@@ -117,19 +114,17 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
           </Button>
           }
         </Box>
+        {/* Theme mode toggle button: Light Mode or Dark Mode */}
         <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
-          <Container
-            paddingTop={'8px !important'}
-            paddingBottom={'0 !important'}
-          >
-          <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-            {/*  Dark/Light Mode Toggler */}
-            <Box>
-              <ThemeModeToggler />
+          <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>
+            <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+              {/*  Dark/Light Mode Toggler */}
+              <Box>
+                <ThemeModeToggler />
+              </Box>
             </Box>
-          </Box>
-        </Container>
-      </Box>
+          </Container>
+        </Box>
       </Box>
       {/*  END site navigation */}
       {/*  Alternate Navigation on smaller displays */}
