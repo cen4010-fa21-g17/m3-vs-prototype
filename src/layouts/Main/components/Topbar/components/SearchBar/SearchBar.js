@@ -1,50 +1,27 @@
 import { React, useState } from 'react';
-import Link from 'next/link';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Card from  '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
-import { CardContent } from '@mui/material';
-import { Typography } from '@mui/material/Typography';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemText from '@mui/material/ListItemText';
 
 import profiles from './profiles-mock';
-
-
+import { Avatar } from '@mui/material';
 
 const ariaLabel = { 'aria-label': 'description' };
-
-  const SearchProfile = results.map(function(profile) {
-      return (
-        <div>
-          <Link href={profile.href}>
-            <ListItem
-            key={profile.id}
-            >
-              <ListItemAvatar>
-                {profile.avatar}
-              </ListItemAvatar>
-              <Typography
-                variant="subtitle1"
-                noWrap
-                >
-                {profile.about}
-              </Typography>
-            </ListItem>
-          </Link>
-          <Divider />
-        </div>
-      );
-    })
 
 export default function SearchBar() {
   const [results, setResults] = useState();
 
+  
   return (
     // Card Container
     <Paper
@@ -59,8 +36,11 @@ export default function SearchBar() {
         inputProps={ariaLabel}
         onChange={async (e) => {
           const { value } = e.currentTarget;
+
           // Dynamically load fuse.js
           const Fuse = (await import('fuse.js')).default;
+
+          // Search by user's first and last name
           const options = {
             keys: ['name']
           }
@@ -78,7 +58,6 @@ export default function SearchBar() {
           style={{position: 'absolute',
           top: 60,
           left: 1
-
         }}
         sx={{
           width: 400,
@@ -94,7 +73,19 @@ export default function SearchBar() {
                 bgcolor: 'Background.paper',
               }}
             >
-              {results != null ? <SearchProfile/> : ''}
+              {results !== undefined ? results.map((user) => (
+                <ListItem
+                  key={user.item.id}
+                  component={'a'}
+                  href={user.item.href}
+                >
+                  <ListItemAvatar>
+                    <Avatar />
+                  </ListItemAvatar>
+                  <ListItemText primary={user.item.name} secondary={user.item.about} />
+                </ListItem>
+              )) : ''
+            }
             </List>
             {/* {JSON.stringify(results, null,2)} */}
           </CardContent>
@@ -109,8 +100,6 @@ export default function SearchBar() {
         // End Card
       }
     </Paper>
-    
-      
   );
 }
 
