@@ -1,0 +1,72 @@
+
+
+
+
+import React from 'react';
+import Main from 'layouts/Main'
+
+import Typography from '@mui/material/Typography'
+import CssBaseline from '@mui/material/CssBaseline';
+import Toolbar  from '@mui/material/Toolbar';
+import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
+
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import InboxIcon from '@mui/icons-material/Inbox'
+import MailIcon from '@mui/icons-material/Mail'
+import Drawer from '@mui/material/Drawer';
+import ListItemText from '@mui/material/ListItemText'
+
+import Fab from '@mui/material/Fab'
+import AddIcon from '@mui/icons-material/Add'
+
+const drawerWidth = 240
+
+const JourneySideBar = () => {
+  return (
+    <Drawer
+    display="block"
+    variant="permanent"
+    sx={{
+      zIndex: 0,
+      width: drawerWidth,
+      flexShrink: 0,
+      [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+    }}
+  >
+    <Toolbar/>
+    <Toolbar/>
+
+    <Typography variant="h3">
+      Journey
+    </Typography>
+
+    <Divider/>
+    
+    <Box sx={{ overflow: 'auto' }}>
+
+        <Box 
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContetn="center"
+        >
+
+            <Typography>
+                Add experience
+            </Typography>
+            
+            <Fab href="./experience" color="primary">
+                <AddIcon />
+            </Fab>
+
+        </Box>
+        
+    </Box>
+  </Drawer>
+  );
+};
+
+export default JourneySideBar;
