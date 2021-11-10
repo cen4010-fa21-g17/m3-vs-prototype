@@ -67,7 +67,7 @@
 
 
 import React from 'react';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
@@ -104,50 +104,85 @@ import Form from './components/Form'
 
 import JourneySideBar from 'components/JourneySideBar';
 
+import axios from 'axios'
+import { Category, ConstructionRounded } from '@mui/icons-material';
+
 const Home = () => {
-  const theme = useTheme();
-  const [shouldRenderForm, setShouldRenderForm] = useState(false)
-  
-  const addExperience = () => {
-    setShouldRenderForm(true)
-    // call api
+  const [experiences, setExperiences] = useState([])
+
+  useEffect(async () => {
+    const userData = JSON.parse(window.localStorage.getItem('user'))
+    const res = await axios.get(`/api/user/${userData._id}/experience`)
+    
+    setExperiences(res.data)
+  }, [])
+
+  console.log(experiences)
+
+  class Category {
+    constructor(name) {
+      this.name = name
+      this.experiences = []
+    }
   }
 
-  const categories = [
-    {
-      name: 'HTML',
-      experiences: [
-        {
-          name: 'experience 1',
-          preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
-        },
-        {
-          name: 'experience 2',
-          preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
+  function getAllCategories() {
+    const categories = []
+    experiences.forEach((experience, index) => {
+      const category = new Category(experience.category)
+      if (!(category in categories)) {
+        categories.push(category)
+        console.log(category.name)
+
+      }
+    })
+
+    categories.forEach((category, i) => {
+      experiences.forEach((experience, j) => {
+        if (experience.category == category.name) {
+          category.experiences.push(experience)
         }
-      ]
-    },
-    {
-      name: 'C++',
-      experiences: [
-        {
-          name: 'experience 1',
-          preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
-        },
-        {
-          name: 'experience 2',
-          preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
-        },
-        {
-          name: 'experience 3',
-          preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
-        }
-      ]
-    }
-  ]
+      })
+    })
+    return categories
+  }
+
+  const categories = getAllCategories()
+  console.log(categories)
+  // const categories = [
+  //   {
+  //     name: 'HTML',
+  //     experiences: [
+  //       {
+  //         name: 'experience 1',
+  //         preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
+  //       },
+  //       {
+  //         name: 'experience 2',
+  //         preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     name: 'C++',
+  //     experiences: [
+  //       {
+  //         name: 'experience 1',
+  //         preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
+  //       },
+  //       {
+  //         name: 'experience 2',
+  //         preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
+  //       },
+  //       {
+  //         name: 'experience 3',
+  //         preview: 'this is a descriptsadfsadfdsafasdfasfasdion/preview of the details of the experience'
+  //       }
+  //     ]
+  //   }
+  // ]
 
   const drawerWidth = 240;
-
 
   return (
     <Main>
@@ -159,35 +194,36 @@ const Home = () => {
 
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <Toolbar />
+        
 
 
-        {categories.map(category => (
+        {/* {categories.map(category => (
           <div>
-          <h1>{category.name}</h1>
+          <h1>{category.name}</h1> */}
 
-          {console.log(category.name)}
 
           <Box
           display="flex"
           flexDirection="row"
+          justifyContent="space-between"
+          flexWrap="wrap"
           
           >
 
 
-          {category.experiences.map((experience, index) => (
-            <Card variant="outlined" sx={{ minWidth: 275 }}>
+          {experiences.map((experience, index) => (
+            <Card variant="outlined" sx={{ minWidth: 275, margin: 1}}>
             <CardContent>
               <Typography variant="h5" component="div">
-                {experience.name}
+                {experience.title}
               </Typography>
               <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                adjective
+                {/* adjective */}
               </Typography>
               <Typography variant="body2">
-                well meaning and kindly.
+                {experience.content}
                 <br />
-                {'"a benevolent smile"'}
+                {/* {'"a benevolent smile"'} */}
               </Typography>
             </CardContent>
             <CardActions>
@@ -199,15 +235,17 @@ const Home = () => {
         </Box>
         <Toolbar/>
         <Divider/>
-        </div>
+        {/* </div>
 
-        ))}
-
+        ))} */}
+      {console.log(experiences.length)}
+        {experiences.length == 0 ? 
+        
         <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
         >
           <Typography>
             Add your first experience
@@ -218,6 +256,11 @@ const Home = () => {
           </Fab>
         
         </Box>
+        
+        :
+        
+        <></>
+        }
 
 
 
@@ -231,3 +274,10 @@ const Home = () => {
 };
 
 export default Home;
+
+async function getExperiences() {
+  const userData = JSON.parse(window.localStorage.getItem('user'))
+  const experiences = await axios.get(`/api/user/${userData._id}/experience`)
+
+  return experiences.data
+}

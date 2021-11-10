@@ -39,14 +39,18 @@ const JourneySideBar = () => {
     <Toolbar/>
     <Toolbar/>
 
-    <Typography variant="h3">
-      Journey
-    </Typography>
+    <Box 
+        
+    >
+        <Typography textAlign="center" variant="h3">
+        Journey
+        </Typography>
+    </Box>
 
     <Divider/>
     
     <Box sx={{ overflow: 'auto' }}>
-
+        <Toolbar />
         <Box 
             display="flex"
             flexDirection="column"
