@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
@@ -15,12 +15,21 @@ import ListItemText from '@mui/material/ListItemText';
 
 import profiles from './profiles-mock';
 import { Avatar } from '@mui/material';
+import axios from 'axios';
 
 const ariaLabel = { 'aria-label': 'description' };
 
 export default function SearchBar() {
-  const [results, setResults] = useState();
+  // const [results, setResults] = useState();
+  const [users, setUsers] = useState([])
 
+  useEffect(async () => {
+    const res = await axios.get('/api/user')
+
+    setUsers(res.data)
+  },[])
+
+  console.log(users)
   
   return (
     // Card Container
@@ -66,28 +75,8 @@ export default function SearchBar() {
         >
           {/* Card Content */}
           <CardContent>
-            <List
-              sx={{
-                width: 400,
-                maxWidth: 400,
-                bgcolor: 'Background.paper',
-              }}
-            >
-              {results !== undefined ? results.map((user) => (
-                <ListItem
-                  key={user.item.id}
-                  component={'a'}
-                  href={user.item.href}
-                >
-                  <ListItemAvatar>
-                    <Avatar />
-                  </ListItemAvatar>
-                  <ListItemText primary={user.item.name} secondary={user.item.about} />
-                </ListItem>
-              )) : ''
-            }
-            </List>
-            {/* {JSON.stringify(results, null,2)} */}
+     
+             {JSON.stringify(profiles, null,2)} 
           </CardContent>
           {/* End Card Content */}
           
