@@ -13,7 +13,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 
-import profiles from './profiles-mock';
+//import profiles from './profiles-mock';
 import { Avatar } from '@mui/material';
 import axios from 'axios';
 
@@ -76,7 +76,7 @@ export default function SearchBar() {
           {/* Card Content */}
           <CardContent>
      
-             {JSON.stringify(profiles, null,2)} 
+             {/* {JSON.stringify(profiles, null,2)}  */}
           </CardContent>
           {/* End Card Content */}
           
