@@ -1,124 +1,118 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
 import Avatar from '@mui/material/Avatar';
+import { colors } from '@mui/material';
+import CardContent from '@mui/material/CardContent';
+
+const mock = {
+  biography: {
+    title: 'Biography',
+    items: [
+      {
+        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        
+      },
+      
+    ],
+  },
+  goals: {
+    title: 'Goals',
+    items: [
+      {
+        title: 'Goal 1',
+        updated: '1 week ago',
+      },
+      {
+        title: 'Goal 2',
+        updated: 'a day ago',
+      },
+      {
+        title: 'Goal 3',
+        updated: '2 month ago',
+      },
+      {
+        title: 'Goal 4',
+        updated: '4 days ago',
+      },
+    ],
+  },
+};
+
 
 const Features = () => {
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
-
+  const renderFaqBox = (title = '', subtitle = '') => (
+    <Box
+      component={Card}
+      variant={'outlined'}
+      bgcolor={'transparent'}
+      sx={{
+        cursor: 'pointer',
+        '&:hover': {
+          boxShadow: 2,
+        },
+      }}
+    >
+      <CardContent>
+        <Box
+          display={'flex'}
+          flexDirection={{ xs: 'column', sm: 'row' }}
+          flex={'1 1 100%'}
+          justifyContent={{ sm: 'space-between' }}
+          alignItems={{ sm: 'center' }}
+        >
+          <Typography fontWeight={700} sx={{ marginBottom: { xs: 1, sm: 0 } }}>
+            {title}
+          </Typography>
+        </Box>
+      </CardContent>
+    </Box>
+  );
   return (
     <Box>
-      <Grid
-        container
-        spacing={4}
-        flexDirection={isMd ? 'row' : 'column-reverse'}
-      >
-        <Grid
-          item
-          container
-          justifyContent="center"
-          alignItems="center"
-          xs={12}
-          md={6}
-        >
-          <Box maxWidth={450} width={1}>
-            <Box
-              component={'img'}
-              src="https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration2.svg"
-              alt="Image Description"
-              sx={{
-                width: 1,
-                height: 1,
-              }}
-            />
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
+          <Box marginBottom={2}>
+            
+            <Typography variant={'h6'} fontWeight={700} gutterBottom>
+              {mock.biography.title}
+            </Typography>
+           
           </Box>
+          <Grid container spacing={2}>
+            {mock.biography.items.map((item, index) => (
+              <Grid item xs={12} key={index}>
+                {renderFaqBox(item.title, `Last updated ${item.updated}`)}
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          alignItems={'center'}
-          xs={12}
-          md={6}
-          data-aos={'fade-up'}
-        >
-          <Box>
-            <Box marginBottom={2}>
-              <Typography
-                variant={'h4'}
-                sx={{ fontWeight: 700, color: 'common.white' }}
-                gutterBottom
-              >
-                Monitor and analyze usage patterns.
-              </Typography>
-              <Typography sx={{ color: 'common.white' }} variant={'h6'}>
-                Keep track of what's happening with your data, change
-                permissions, and run reports against your data anywhere in the
-                world.
-              </Typography>
-            </Box>
-            <Grid container spacing={1}>
-              {[
-                'Affordable, scalable and performant. The perfect solution for small apps.',
-                'A mid-sized solution for businesses undergoing rapid user growth.',
-                'A farm of machines entirely dedicated to your company\'s storage needs.',
-                'A mid-sized solution for businesses undergoing rapid user growth.',
-              ].map((item, i) => (
-                <Grid item xs={12} key={i}>
-                  <Box
-                    component={ListItem}
-                    disableGutters
-                    width={'auto'}
-                    padding={0}
-                  >
-                    <Box
-                      component={ListItemAvatar}
-                      minWidth={'auto !important'}
-                      marginRight={2}
-                    >
-                      <Box
-                        component={Avatar}
-                        bgcolor={theme.palette.secondary.main}
-                        width={20}
-                        height={20}
-                      >
-                        <svg
-                          width={12}
-                          height={12}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </Box>
-                    </Box>
-                    <ListItemText
-                      primary={item}
-                      primaryTypographyProps={{ color: 'common.white' }}
-                    />
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
+        <Grid item xs={12} md={6}>
+          <Box marginBottom={2}>
+            
+            <Typography variant={'h6'} fontWeight={700} gutterBottom>
+              {mock.goals.title}
+            </Typography>
           </Box>
+          <Grid container spacing={2}>
+            {mock.goals.items.map((item, index) => (
+              <Grid item xs={12} key={index}>
+                {renderFaqBox(item.title, `Last updated ${item.updated}`)}
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
-      </Grid>
+    
+          </Grid>
     </Box>
   );
 };
+
 
 export default Features;

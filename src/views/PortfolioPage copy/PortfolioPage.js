@@ -7,20 +7,20 @@ import { Features, Folio, Gallery, Hero, Services } from './components';
 
 const PortfolioPage = () => (
   <Main colorInvert={true}>
-    <Box bgcolor ={'alternate.main'}>
     <Hero />
-    </Box>
-    <Box bgcolor={'primary'}>
+    <Container>
+      <Folio />
+    </Container>
+    <Box bgcolor={'alternate.main'}>
       <Container>
         <Services />
       </Container>
     </Box>
-    <Box >
+    <Box bgcolor={'primary.main'}>
       <Container>
         <Features />
       </Container>
     </Box>
-
   </Main>
 );
 
