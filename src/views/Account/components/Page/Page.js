@@ -14,11 +14,6 @@ import Container from 'components/Container';
 //  profile in its place.
 const pages = [ 
   {
-    id: 'profile',
-    href: '/user-profile',
-    title: 'Profile',
-  },
-  {
     id: 'general',
     href: '/account-general',
     title: 'General',

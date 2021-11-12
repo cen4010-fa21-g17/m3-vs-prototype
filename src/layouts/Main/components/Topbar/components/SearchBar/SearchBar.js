@@ -12,26 +12,16 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import profiles from './profiles-mock';
+// import profiles from './profiles-mock';
 import { Avatar } from '@mui/material';
 import Box from '@mui/material/Box';
 
+import profiles from '../../../../../../models/user';
+
 const ariaLabel = { 'aria-label': 'description' };
-
-
-
 
 export default function SearchBar() {
   const [results, setResults] = useState();
-  const [open, setOpen] = useState();
-  const handleClick =() => {
-    setOpen((prev) => !prev);
-  };
-  const handleClickAway = () => {
-    setOpen(false);
-  };
-  
-  
   return (
     // Card Container
     <Paper
@@ -46,6 +36,7 @@ export default function SearchBar() {
         inputProps={ariaLabel}
         onChange={async (e) => {
           const { value } = e.currentTarget;
+
           // Dynamically load fuse.js
           const Fuse = (await import('fuse.js')).default;
 
@@ -56,69 +47,60 @@ export default function SearchBar() {
           const fuse = new Fuse(profiles,options);
           setResults(fuse.search(value));
         }}
-        onClick={handleClick}
       />
       {/* Search Icon (Outlined) */}
-      <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+      <IconButton sx={{ p: '10px' }} aria-label="search">
         <SearchIcon />
       </IconButton>
       {/* Card */}
-      {
-        // Close card on click
-      <ClickAwayListener onClickAway={handleClickAway}>
-        {open ? (
-          <Box>
-
-            <Card
-              style={{position: 'absolute',
-              top: 60,
-              left: 1,
-            }}
-            sx={{
-              width: 400,
-              alignItems: 'center',
-            }}  
+      { results !== [] ?
+        <Card
+          style={{position: 'absolute',
+          top: 60,
+          left: 1,
+        }}
+          sx={{
+            width: 400,
+            alignItems: 'center',
+        }}  
+        >
+          {/* Card Content */}
+          <CardContent>
+            <List
+              sx={{
+                width: '100%',
+                maxWidth: 400,
+                bgcolor: 'Background.paper',
+              }}
             >
-              {/* Card Content */}
-              <CardContent>
-                <List
-                  sx={{
-                    width: '100%',
-                    maxWidth: 400,
-                    bgcolor: 'Background.paper',
-                  }}
+              {results !== undefined ? results.map((user) => (
+                <div>
+                <ListItem
+                  key={user.item.id}
+                  component={'a'}
+                  href={user.item.href}
+                  button
                 >
-                  {results !== undefined ? results.map((user) => (
-                    <div>
-                    <ListItem
-                      key={user.item.id}
-                      component={'a'}
-                      href={user.item.href}
-                      button
-                    >
-                      <ListItemAvatar>
-                        <Avatar />
-                      </ListItemAvatar>
-                      <ListItemText primary={user.item.name} secondary={user.item.about} />
-                    </ListItem>
-                    <Divider component="li"/>
-                    </div>
-                  )) : ''
-                }
-                </List>
-              </CardContent>
-              {/* End Card Content */}
-              
-              {/* Card Actions */}
-              <CardActions>
-    
-              </CardActions>
-              {/* End Card Actions */}
-            </Card> 
-            {/* End Card  */}
-          </Box>
-        ) : ''}
-      </ClickAwayListener>
+                  <ListItemAvatar>
+                    <Avatar />
+                  </ListItemAvatar>
+                  <ListItemText primary={user.item.name} secondary={user.item.about} />
+                </ListItem>
+                <Divider component="li"/>
+                </div>
+              )) : 'transparent'
+            }
+            </List>
+          </CardContent>
+          {/* End Card Content */}
+          
+          {/* Card Actions */}
+          <CardActions>
+
+          </CardActions>
+          {/* End Card Actions */}
+        </Card> : 'transparent'
+        // End Card  
       }
     </Paper>
   );
