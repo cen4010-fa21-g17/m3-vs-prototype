@@ -17,7 +17,7 @@ export default async function handler(req, res) {
             const user = new UserModel({ 
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
-                profileContent: 'My Profile'
+                profileContent: 'My Profile',
             })
             const account = new AccountModel({ 
                 user_id: user._id,
