@@ -12,16 +12,19 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-// import profiles from './profiles-mock';
 import { Avatar } from '@mui/material';
 import Box from '@mui/material/Box';
 
-import profiles from '../../../../../../models/user';
+import { SearchData } from '..';
+
 
 const ariaLabel = { 'aria-label': 'description' };
 
 export default function SearchBar() {
-  const [results, setResults] = useState();
+  
+const data = SearchData();
+const [results,setResults] = useState();
+
   return (
     // Card Container
     <Paper
@@ -42,9 +45,9 @@ export default function SearchBar() {
 
           // Search by user's first and last name
           const options = {
-            keys: ['name']
+            keys: ['firstName','lastName']
           }
-          const fuse = new Fuse(profiles,options);
+          const fuse = new Fuse(data.users, options);
           setResults(fuse.search(value));
         }}
       />
@@ -53,7 +56,7 @@ export default function SearchBar() {
         <SearchIcon />
       </IconButton>
       {/* Card */}
-      { results !== [] ?
+      { 
         <Card
           style={{position: 'absolute',
           top: 60,
@@ -66,6 +69,7 @@ export default function SearchBar() {
         >
           {/* Card Content */}
           <CardContent>
+            {JSON.stringify(results,null,2)}
             <List
               sx={{
                 width: '100%',
@@ -73,22 +77,22 @@ export default function SearchBar() {
                 bgcolor: 'Background.paper',
               }}
             >
-              {results !== undefined ? results.map((user) => (
+              {results !== undefined ? results.map((user) =>(
                 <div>
-                <ListItem
-                  key={user.item.id}
-                  component={'a'}
-                  href={user.item.href}
-                  button
-                >
-                  <ListItemAvatar>
-                    <Avatar />
-                  </ListItemAvatar>
-                  <ListItemText primary={user.item.name} secondary={user.item.about} />
-                </ListItem>
-                <Divider component="li"/>
+                  <ListItem
+                    key={user.item._id}
+                    component={'a'}
+                    // href={user.item.href}
+                    button
+                  >
+                    <ListItemAvatar>
+                      <Avatar />
+                    </ListItemAvatar>
+                    <ListItemText primary={user.item.firstName + " " + user.item.lastName} secondary={user.item.profileContent} />
+                  </ListItem>
+                  <Divider component="li"/>
                 </div>
-              )) : 'transparent'
+              )) : ""
             }
             </List>
           </CardContent>
@@ -99,7 +103,7 @@ export default function SearchBar() {
 
           </CardActions>
           {/* End Card Actions */}
-        </Card> : 'transparent'
+        </Card> 
         // End Card  
       }
     </Paper>

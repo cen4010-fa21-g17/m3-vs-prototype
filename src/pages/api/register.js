@@ -15,7 +15,8 @@ export default async function handler(req, res) {
         // Create a new user and store account information in the database
         case 'POST':
             const user = new UserModel({ 
-                profileName: req.body.firstName + req.body.lastName,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
                 profileContent: 'My Profile'
             })
             const account = new AccountModel({ 
