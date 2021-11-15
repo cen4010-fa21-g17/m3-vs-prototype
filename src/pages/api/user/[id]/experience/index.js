@@ -26,10 +26,10 @@ export default async function handler(req, res) {
         const experience = new ExperienceModel({
           title: req.body.title,
           content: req.body.content,
-          category: req.body.category,
+          summary: req.body.summary,
           skills: req.body.skills
         })
-    
+        console.log(experience)
         try {
           console.log('tried saving')
           const newExperience = await experience.save()

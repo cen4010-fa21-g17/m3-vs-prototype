@@ -41,17 +41,18 @@ import axios from 'axios'
 import { Category, ConstructionRounded } from '@mui/icons-material';
 
 import { useContext } from 'react'
+import { useRouter } from 'next/router'
 import { SnackBarContext } from 'contexts/SnackBarContext'
 import { SnackbarContent } from '@mui/material';
 
 const Home = () => {
   const [experiences, setExperiences] = useState([])
+  const router = useRouter()
 
   const snackbar = useContext(SnackBarContext)
 
   useEffect(async () => {
-    const userData = JSON.parse(window.localStorage.getItem('user'))
-    const res = await axios.get(`/api/user/${userData._id}/experience`)
+    const res = await axios.get(`/api/user/${router.query.id}/experience`)
     
     setExperiences(res.data)
   }, [])
@@ -59,22 +60,7 @@ const Home = () => {
   console.log(experiences)
 
 
-  const drawerWidth = 240;
-
-  const deleteExperience = (id) => {
-    const userData = JSON.parse(window.localStorage.getItem('user'))
-    axios.delete(`/api/user/${userData._id}/experience/${id}`).then(response => {
-      console.log(response.data)
-      if (response.statusText == "OK") {
-        setExperiences(experiences.filter(experience => experience._id !== id ))
-        console.log(experiences)
-        snackbar.showAlert('success', 'Experience successfully deleted')
-      }
-    }).catch(error => {
-      console.log(error)
-      snackbar.showAlert('error', 'Could not delete experience')
-    })
-  }
+  const drawerWidth = 240
 
   return (
     <Main>
@@ -105,7 +91,7 @@ const Home = () => {
 
           {experiences.map((experience, index) => (
             <Card variant="outlined" sx={{ minWidth: 275, margin: 1}}>
-              <Button onClick={() => {deleteExperience(experience._id)}} color="error" sx={{ float: 'right' }}> <DeleteForeverRoundedIcon></DeleteForeverRoundedIcon></Button>
+              
             <CardContent>
               <Typography variant="h4" component="div">
                 {experience.title}
@@ -138,7 +124,7 @@ const Home = () => {
         flexDirection="column"
         >
           <Typography>
-            Add your first experience
+            User did not share any experiences
           </Typography>
            
           <Fab href='/experience' color="primary">

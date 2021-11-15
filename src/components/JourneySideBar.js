@@ -21,6 +21,7 @@ import ListItemText from '@mui/material/ListItemText'
 
 import Fab from '@mui/material/Fab'
 import AddIcon from '@mui/icons-material/Add'
+import Button from '@mui/material/Button'
 
 const drawerWidth = 240
 
@@ -42,9 +43,11 @@ const JourneySideBar = () => {
     <Box 
         
     >
+      <Button href="/home" fullWidth variant="text">
         <Typography textAlign="center" variant="h3">
-        Journey
+          Journey
         </Typography>
+      </Button>
     </Box>
 
     <Divider/>

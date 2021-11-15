@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import { useContext } from 'react'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
@@ -11,6 +12,8 @@ import Link from '@mui/material/Link';
 
 import axios from 'axios'
 import { useRouter } from 'next/router'
+
+import { SnackBarContext } from 'contexts/SnackBarContext'
 
 const validationSchema = yup.object({
   email: yup
@@ -26,6 +29,7 @@ const validationSchema = yup.object({
 
 const Form = () => {
   const router = useRouter()
+  const snackbar = useContext(SnackBarContext)
 
   const initialValues = {
     email: '',
@@ -38,10 +42,14 @@ const Form = () => {
       password: values.password
     }).then(response => {
       console.log(response)
-      if (response.status == 202)
-        //userService.userValue = response.data
+      if (response.status === 202) {
         window.localStorage.setItem('user', JSON.stringify(response.data))
+        snackbar.showAlert('success', 'Logged in successfully')
         router.push('/home')
+      }
+    }).catch(error => {
+      console.log(error)
+      snackbar.showAlert('error', 'Invalid credentials')
     })
     //return values;
   };

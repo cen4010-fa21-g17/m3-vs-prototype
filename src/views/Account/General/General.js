@@ -14,7 +14,8 @@ import Page from '../components/Page';
 import Main from 'layouts/Main';
 
 import axios from 'axios'
-
+import { useContext } from 'react'
+import { SnackBarContext } from 'contexts/SnackBarContext'
 
 const validationSchema = yup.object({
   firstName: yup
@@ -58,6 +59,9 @@ const validationSchema = yup.object({
 });
 
 const General = () => {
+
+  const snackbar = useContext(SnackBarContext)
+
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -80,6 +84,13 @@ const General = () => {
       email: values.email
     }).then(response => {
       console.log(response.data)
+      if (response.status >= 200 && response.status < 300) {
+        console.log('info updated successfully')
+        snackbar.showAlert('success', 'Information updated successfully')
+      }
+    }).catch(error => {
+      console.log(error)
+      snackbar.showAlert('error', 'Could not update information')
     })
   };
 

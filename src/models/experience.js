@@ -7,18 +7,18 @@ const experienceSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    summary: {
+        type: String,
+        required: true
+    },
     content: {
         type: String,
         required: true
     },
-    category: {
+    skills: {
         type: String,
         required: true
-    },
-    skills: [{
-        type: String,
-        required: true
-    }]
+    }
 })
 
 const ExperienceModel = mongoose.models.Experience || mongoose.model('Experience', experienceSchema)

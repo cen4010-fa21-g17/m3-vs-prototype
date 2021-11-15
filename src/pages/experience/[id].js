@@ -14,6 +14,8 @@ import Button from '@mui/material/Button'
 import JourneySideBar from 'components/JourneySideBar'
 
 import axios from 'axios'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 import { useContext } from 'react'
 import { SnackBarContext } from 'contexts/SnackBarContext'
@@ -22,44 +24,68 @@ import { SnackBarContext } from 'contexts/SnackBarContext'
 const drawerWidth = 240
 
 const ExperiencePage = () => {
+    const snackbar = useContext(SnackBarContext)
+    const router = useRouter()
 
-  const snackbar = useContext(SnackBarContext)
+    const [state, setState] = React.useState({
+      title: "",
+      skills: "",
+      content: "",
+      summary: ""
+    });
 
-  const [state, setState] = React.useState({
-    title: "",
-    skills: "",
-    content: "",
-    summary: ""
-  });
+    useEffect(async () => {
+        try {
+            const userData = JSON.parse(window.localStorage.getItem('user'))
+            const res = await axios.get(`/api/user/${userData._id}/experience/${router.query.id}`)
+            console.log(res)
+            setState(res.data)
+        } catch (err) {
+            console.log(err)
+        }
+    }, [])
+
+    console.log(state)
+
+
 
   function handleChange(e) {
     setState({ ...state, [e.target.name]: e.target.value });
     console.log(state)
   }
 
-  // Create a new experience and store it in the database
-  const saveExperience = () => {
 
-    // Retrieve user data from browser local storage
+  const saveExperience = () => {
+    console.log('saved')
     const userData = window.localStorage.getItem('user')
+    console.log(userData)
     const jsonUserData = JSON.parse(userData)
 
-    // Make a POST request to the server with the correspondent 
-    // experience data to be stored in the database
-    axios.post(`/api/user/${jsonUserData._id}/experience`, {
+    let formData = new FormData();
+
+    for (let [key, value] of Object.entries(state)) {
+      formData.append(key, value);
+    }
+    console.log({
+      title: state.title,
+       summary: state.summary,
+       content: state.content,
+       skills: state.skills
+    })
+
+    axios.put(`/api/user/${jsonUserData._id}/experience/${router.query.id}`, {
        title: state.title,
        summary: state.summary,
        content: state.content,
        skills: state.skills
     }).then(response => {
-      // If the experience was successfully created, then notify the user
-      if (response.statusText == "Created") {
-        snackbar.showAlert('success', 'Experience created successfully')
+      console.log(response.data)
+      if (response.statusText == "OK") {
+          snackbar.showAlert('success', 'Experience updated successfully')
       }
     }).catch(error => {
-      // Notify the user if an error occured
       console.log(error)
-      snackbar.showAlert('error', 'Error creating experience')
+      snackbar.showAlert('error', 'Error updating experience')
     })
   }
     
@@ -91,7 +117,7 @@ const ExperiencePage = () => {
           >
          
           <Typography variant="h4">
-            Add Experience
+            Edit Your Experience
           </Typography>
 
             <Toolbar/>
