@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
 import Grid from '@mui/material/Grid';
-import { ProfileTimeline } from '..';
 
+import axios from "axios";
+import { useFormik } from 'formik';
+import { useRouter } from 'next/router'
   
 function App() {
   const [value, setValue] = useState(0);
@@ -10,12 +12,35 @@ function App() {
   
 
   
+  const Form = () => {
+    const router = useRouter()
   
+    const initialValues = {
+      dates: '',
+    };
+
   // Values should be only date
-  //const EVENT_DATES = ["2021/01/01", "2021/01/15", "2021/02/15", "2021/03/15", "2021/04/15", "2021/03/22"];
-  const EVENT_DATES = {
-    keys: ['dates']
-  }
+  const EVENT_DATES = (values) => {
+    axios.post('api/user/[id]/experience', {
+      dates: values.dates
+    }).then(response => {
+      console.log(response)
+      if (response.status == 202)
+        //userService.userValue = response.data
+        window.localStorage.setItem('USER', JSON.stringify(response.data))
+        //router.push('/home')
+    })
+  };
+
+  const formik = useFormik({
+    initialValues,
+    EVENT_DATES,
+  });
+ 
+  
+
+
+
   // Description array corresponding to values
   const EVENT_TITLES = [
     "1 The event of 1 Jan 2021 : Happy New Year",
@@ -54,7 +79,7 @@ function App() {
                 setValue(index);
                 setPrevious(value);
               }}
-              values={EVENT_DATES}
+              value={formik.values.dates}
             />
           </div>
           <div style={{
@@ -74,7 +99,35 @@ function App() {
       </Grid>  
     </box>
   );
+  
+  }
 }
+
+// return (
+//   <div>
+//     <h1 className="title">Timeline</h1>
+//     <VerticalTimeline>
+//       {timelineElements.map(element => {
+//         return (
+//           <VerticalTimelineElement
+//             key={element.key}
+//             date={element.date}
+//             dateClassName="date"
+//           >
+//             <h3 className="vertical-timeline-element-title">
+//               {element.title}
+//             </h3>
+//             <h5 className="vertical-timeline-element-subtitle">
+//               {element.location}
+//             </h5>
+//             <p id="description">{element.description}</p>
+//           </VerticalTimelineElement>
+//         )
+//       })}
+//     </VerticalTimeline>
+//   </div>
+// )
+
   
 export default App;
 

@@ -12,9 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 
 import Container from 'components/Container';
-import ProfilePicChanger from './ProfilePicChanger';
-import pic1 from "../Pics/pic1.jpg";
-import pic2 from "../Pics/pic2.jpg";
+
 
 const mock = [
   {
