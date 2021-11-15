@@ -8,8 +8,9 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Avatar from '@mui/material/Avatar';
-import { colors } from '@mui/material';
+import { CardHeader, colors, IconButton } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
+import EditIcon from '@mui/icons-material/Edit';
 
 const mock = {
   biography: {
@@ -47,7 +48,7 @@ const mock = {
 
 
 const Features = () => {
-  const renderFaqBox = (title = '', subtitle = '') => (
+  const renderFeaturesBox = (title = '', subtitle = '') => (
     <Box
       component={Card}
       variant={'outlined'}
@@ -60,6 +61,13 @@ const Features = () => {
       }}
     >
       <CardContent>
+      <CardHeader
+              action={
+              <IconButton onClick={() => console.log('edit', mock.biography.title )}>
+                <EditIcon />
+               </IconButton>  
+          }
+          />
         <Box
           display={'flex'}
           flexDirection={{ xs: 'column', sm: 'row' }}
@@ -82,13 +90,15 @@ const Features = () => {
             
             <Typography variant={'h6'} fontWeight={700} gutterBottom>
               {mock.biography.title}
+            
             </Typography>
-           
+
+          
           </Box>
           <Grid container spacing={2}>
-            {mock.biography.items.map((item, index) => (
-              <Grid item xs={12} key={index}>
-                {renderFaqBox(item.title, `Last updated ${item.updated}`)}
+            {mock.biography.items.map((item) => (
+              <Grid item xs={12}>
+                {renderFeaturesBox(item.title, `Last updated ${item.updated}`)}
               </Grid>
             ))}
           </Grid>
@@ -103,7 +113,7 @@ const Features = () => {
           <Grid container spacing={2}>
             {mock.goals.items.map((item, index) => (
               <Grid item xs={12} key={index}>
-                {renderFaqBox(item.title, `Last updated ${item.updated}`)}
+                {renderFeaturesBox(item.title, `Last updated ${item.updated}`)}
               </Grid>
             ))}
           </Grid>

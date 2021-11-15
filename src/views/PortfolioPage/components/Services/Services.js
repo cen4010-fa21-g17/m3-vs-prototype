@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
-import { useTheme } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import Box from '@mui/material/Box';
-import CardContent from '@mui/material/CardContent';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
+import { ProfileTimeline } from '..';
 
   
 function App() {
   const [value, setValue] = useState(0);
   const [previous, setPrevious] = useState(0);
   
-  // Values should be only date
-  const EVENT_DATES = ["2021/01/01", "2021/01/15", "2021/02/15", "2021/03/15", "2021/04/15", "2021/03/22"];
 
+  
+  
+  // Values should be only date
+  //const EVENT_DATES = ["2021/01/01", "2021/01/15", "2021/02/15", "2021/03/15", "2021/04/15", "2021/03/22"];
+  const EVENT_DATES = {
+    keys: ['dates']
+  }
   // Description array corresponding to values
   const EVENT_TITLES = [
     "1 The event of 1 Jan 2021 : Happy New Year",
@@ -38,6 +35,9 @@ function App() {
     "6 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   ];
   
+  
+
+
   return (
     <box>
       <Grid item xs={12} md={12} >   

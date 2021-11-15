@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {Component} from 'react';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
@@ -11,6 +12,9 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 
 import Container from 'components/Container';
+import ProfilePicChanger from './ProfilePicChanger';
+import pic1 from "../Pics/pic1.jpg";
+import pic2 from "../Pics/pic2.jpg";
 
 const mock = [
   {
@@ -74,8 +78,8 @@ const Hero = () => {
       <Container position={'relative'} zIndex={2}>
         <Box>
           <Grid container spacing={12}>
-        {mock.map((item, i) => (
-          <Grid item xs={4} md={4} key={i}>
+        {mock.map((item) => (
+          <Grid item xs={4} md={4} >
             <Box
               width={1}
               height={1}
@@ -99,6 +103,7 @@ const Hero = () => {
                         marginBottom: 3,
                        }}
                     />
+                    
                   </ListItemAvatar>
                 </ListItem>
                 <ListItemText
@@ -109,39 +114,19 @@ const Hero = () => {
                     primaryTypographyProps={{ variant: 'h6', fontWeight: 700 }}
                     secondaryTypographyProps={{ variant: 'subtitle1' }}
                   />
+                  <button
+                    boxShadow={5}
+                    variant={'outlined'}
+                    bgcolor={'alternate.main'}
+                    align={'center'}
+                    >follow
+                  </button>
               </CardContent>
             </Box>
           </Grid>
         ))}
 
-          <Grid item xs={4} md={4} >
-            <Box
-              width={1}
-              height={1}
-              component={Card}
-              boxShadow={5}
-              variant={'outlined'}
-              bgcolor={'alternate.main'}
-              align={'center'}
-            >
-              <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 700,
-          }}
-          gutterBottom
-          color={'black'}
-          align={'center'}
-        >
-          Collaborators
           
-        </Typography>
-              <CardContent sx={{ padding: 3 }}>
-                
-
-              </CardContent>
-            </Box>
-          </Grid>        
 
            <Grid item xs={4} md={4} >
             <Box
@@ -178,5 +163,6 @@ const Hero = () => {
    
   );
 };
+
 
 export default Hero;
