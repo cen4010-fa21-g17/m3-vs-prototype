@@ -27,12 +27,16 @@ const ExperiencePage = () => {
     const snackbar = useContext(SnackBarContext)
     const router = useRouter()
 
+    const user = JSON.parse(window.localStorage.getItem('user'))
+
     const [state, setState] = React.useState({
       title: "",
       skills: "",
       content: "",
       summary: ""
     });
+
+    console.log(state)
 
     useEffect(async () => {
         try {
@@ -129,6 +133,7 @@ const ExperiencePage = () => {
               fullWidth
               onChange={handleChange}
               value={state.title}
+              disabled={state.user_id !== user._id}
             />
 
             <Toolbar />
@@ -141,6 +146,7 @@ const ExperiencePage = () => {
               fullWidth
               onChange={handleChange}
               value={state.skills}
+              disabled={state.user_id !== user._id}
             />
 
             <Toolbar />
@@ -155,6 +161,7 @@ const ExperiencePage = () => {
               fullWidth
               onChange={handleChange}
               value={state.summary}
+              disabled={state.user_id !== user._id}
             />
 
             <Toolbar/>
@@ -165,14 +172,19 @@ const ExperiencePage = () => {
               label="Describe your Experience" 
               variant="outlined" 
               multiline
+              disabled={true}
               rows={20}
               fullWidth
               onChange={handleChange}
               value={state.content}
+              disabled={state.user_id !== user._id}
             />
 
             <Toolbar />
+            {state.user_id !== user._id ?
+            null :
             <Button onClick={saveExperience} color="primary" variant="outlined">Save</Button>
+            }
           </Box>
           
           <Toolbar />

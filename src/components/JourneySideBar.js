@@ -23,9 +23,12 @@ import Fab from '@mui/material/Fab'
 import AddIcon from '@mui/icons-material/Add'
 import Button from '@mui/material/Button'
 
+import { useRouter } from 'next/router'
+
 const drawerWidth = 240
 
 const JourneySideBar = () => {
+  const router = useRouter()
   return (
     <Drawer
     display="block"
@@ -44,14 +47,21 @@ const JourneySideBar = () => {
         
     >
       <Button href="/home" fullWidth variant="text">
+        {router.pathname=='/home' ? null : 
+        <Typography textAlign="center" variant="h7">
+          Back to
+        </Typography>
+        }
         <Typography textAlign="center" variant="h3">
           Journey
         </Typography>
       </Button>
+
     </Box>
 
     <Divider/>
-    
+
+
     <Box sx={{ overflow: 'auto' }}>
         <Toolbar />
         <Box 

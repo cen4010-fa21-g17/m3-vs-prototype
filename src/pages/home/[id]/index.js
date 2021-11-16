@@ -52,9 +52,15 @@ const Home = () => {
   const snackbar = useContext(SnackBarContext)
 
   useEffect(async () => {
-    const res = await axios.get(`/api/user/${router.query.id}/experience`)
+    try {
+      const res = await axios.get(`/api/user/${router.query.id}/experience`)
+      console.log(res.data)
+      setExperiences(res.data)
+
+    } catch (error) {
+      console.log(error)
+    }
     
-    setExperiences(res.data)
   }, [])
 
   console.log(experiences)
@@ -124,17 +130,10 @@ const Home = () => {
         flexDirection="column"
         >
           <Typography>
-            User did not share any experiences
+            User did not share any experiences yet
           </Typography>
-           
-          <Fab href='/experience' color="primary">
-            <AddIcon />
-          </Fab>
-        
         </Box>
-        
-        :
-        
+        :   
         <></>
         }
 

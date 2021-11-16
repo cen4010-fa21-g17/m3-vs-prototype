@@ -24,6 +24,7 @@ export default async function handler(req, res) {
                 lastName: req.body.lastName,
                 profileContent: 'My Profile',
             })
+            console.log(user)
             const account = new AccountModel({ 
                 user_id: user._id,
                 firstName: req.body.firstName,
@@ -31,12 +32,14 @@ export default async function handler(req, res) {
                 email: req.body.email,
                 password: hashedPassword 
             })
+            console.log(account)
 
             try {
                 const newUser = await user.save()
                 await account.save()
                 res.status(201).json(newUser)
             } catch (err) {
+                console.log(err)
                 res.status(500).json({ message: err.message})
             }
             break;

@@ -18,6 +18,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
     profiles: profilePages
   } = pages;
 
+  const user = JSON.parse(window.localStorage.getItem('user'))
+
   return (
     // Page Content Container
     <Box
@@ -75,9 +77,10 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
         </Box>
         {/* Signup Button */}
         <Box marginLeft={4}>
-          { window.localStorage.getItem('user') ?
+          { user ?
+            
             <NavItem
-            title={'ProfileName'}
+            title={user.firstName + user.lastName}
             id={'profile-page'}
             items={profilePages}
             colorInvert={colorInvert}

@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       case 'GET':
         try {
           console.log('tried getting expereinces')
-          const allExperience = await ExperienceModel.find({userid: `${req.query.id}`})
+          const allExperience = await ExperienceModel.find({user_id: `${req.query.id}`})
           res.json(allExperience)
         } catch (err) {
           res.status(500).json({ message: err.message })
@@ -24,6 +24,7 @@ export default async function handler(req, res) {
       // Create an experience for an user and post it to the database
       case 'POST':
         const experience = new ExperienceModel({
+          user_id: req.query.id,
           title: req.body.title,
           content: req.body.content,
           summary: req.body.summary,
