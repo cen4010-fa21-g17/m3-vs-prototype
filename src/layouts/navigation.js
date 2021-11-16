@@ -15,6 +15,24 @@ const pages = {
       href: '/help-center',
     },
   ],
+  profiles: [
+    {
+      title: 'Journey',
+      href: '/home'
+    },
+    {
+      title: 'My Profile',
+      href: '/home'
+    },
+    {
+      title: 'My Account',
+      href: '/account-general'
+    },
+    {
+      title: 'Log Out',
+      href: '/logout'
+    }
+  ]
 };
 
 export default pages;

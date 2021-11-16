@@ -13,12 +13,25 @@ export default async function handler(req, res) {
     // Get info from a single experience from a single user from the database
     case 'GET':
       try {
+        console.log('tried getting data')
         const experience = await ExperienceModel.findById(req.query.experience_id)
+        console.log('got data')
         res.json(experience)
       } catch (err) {
         res.status(500).json({ message: err.message })
       }
       break;
+
+      case 'PUT':
+          try {
+            const experience = await ExperienceModel.findOneAndUpdate({ _id: req.query.experience_id }, req.body, {
+                new: true
+            })
+            res.json(experience)
+        } catch (err) {
+            res.status(500).json({ message: err.message })
+        }
+        break;
 
     // Find and delete an experience from the database
     case 'DELETE':

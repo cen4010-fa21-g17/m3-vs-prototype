@@ -14,7 +14,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
   const { mode } = theme.palette;
   const {
     abouts: aboutPages,
-    supports: supportPages
+    supports: supportPages,
+    profiles: profilePages
   } = pages;
 
   const logOut = () => {
@@ -79,7 +80,38 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
         {/* Signup Button */}
         <Box marginLeft={4}>
           { window.localStorage.getItem('user') ?
-          <span>
+
+          // <span>
+            <NavItem
+            title={'ProfileName'}
+            id={'profile-page'}
+            items={profilePages}
+            colorInvert={colorInvert}
+          />
+          //   { <Button
+          //   variant="contained"
+          //   color="primary"
+          //   component="a"
+          //   target="blank"
+          //   href="/account-general"
+          //   size="large"
+          //   >
+          //   My Account
+          // </Button>
+          // <span>  </span>
+          // <Button
+          // onClick={logOut}
+          // variant="outlined"
+          // color="primary"
+          // component="a"
+          // target="blank"
+          // href="/"
+          // size="small"
+          // >
+          // Log out
+          // </Button>
+          //   </span> }
+              {/*<span>
             <Button
             variant="contained"
             color="primary"
@@ -103,7 +135,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
             >
             Log out
             </Button>
-            </span>
+            </span>*/}
+
           :
           // Sign-up Button
           <Button
