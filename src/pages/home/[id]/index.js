@@ -47,6 +47,7 @@ import { SnackbarContent } from '@mui/material';
 
 const Home = () => {
   const [experiences, setExperiences] = useState([])
+  const [user, setUser] = useState([])
   const router = useRouter()
 
   const snackbar = useContext(SnackBarContext)
@@ -56,6 +57,9 @@ const Home = () => {
       const res = await axios.get(`/api/user/${router.query.id}/experience`)
       console.log(res.data)
       setExperiences(res.data)
+
+      const userRes = await axios.get(`/api/user/${router.query.id}`)
+      setUser(userRes.data)
 
     } catch (error) {
       console.log(error)
@@ -74,7 +78,7 @@ const Home = () => {
       <CssBaseline />
       <Toolbar/>
 
-      <JourneySideBar />      
+      <JourneySideBar user='fsdf' />      
 
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
