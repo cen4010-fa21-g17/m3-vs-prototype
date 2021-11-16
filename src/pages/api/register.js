@@ -1,6 +1,7 @@
 import dbConnect from '../../utils/dbConnect'
 import UserModel from '../../models/user'
 import AccountModel from '../../models/account'
+import bcrypt from 'bcrypt'
 
 
 // Request handler function
@@ -14,6 +15,10 @@ export default async function handler(req, res) {
         
         // Create a new user and store account information in the database
         case 'POST':
+            const salt = await bcrypt.genSalt()
+            const hashedPassword = await bcrypt.hash(req.body.password, salt)
+            console.log(salt)
+            console.log(hashedPassword)
             const user = new UserModel({ 
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
@@ -24,7 +29,7 @@ export default async function handler(req, res) {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
-                password: req.body.password 
+                password: hashedPassword 
             })
 
             try {
