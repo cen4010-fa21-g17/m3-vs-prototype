@@ -10,40 +10,29 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
-import Fab from '@mui/material/Fab'
-import AddIcon from '@mui/icons-material/Add'
-import Grid from '@mui/material/Grid'
-import Container from '@mui/material/Container'
+
 
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+
 
 import Button from '@mui/material/Button'
 
 
 import Main from 'layouts/Main';
-// import Container from 'components/Container';
-import { PageReferences, Hero } from './components';
-import Form from './components/Form'
+
 
 import JourneySideBar from 'components/JourneySideBar';
 
 import axios from 'axios'
-import { Category, ConstructionRounded } from '@mui/icons-material';
+
 
 import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import { SnackBarContext } from 'contexts/SnackBarContext'
-import { SnackbarContent } from '@mui/material';
+
 
 const Home = () => {
   const [experiences, setExperiences] = useState([])
