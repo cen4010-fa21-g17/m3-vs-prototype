@@ -104,6 +104,7 @@ export default function SearchBar() {
                       <ListItem
                         key={user.item._id}
                         component={'a'}
+                        href={`/home/${user.item._id}`}
                         // Need link to user profile here.
                         // href={user.item.href}
                         button
