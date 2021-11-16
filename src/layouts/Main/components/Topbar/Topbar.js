@@ -5,8 +5,11 @@ import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavItem, SearchBar } from './components';
+import { ThemeModeToggler } from '../../components';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
+import Container from 'components/Container';
+
+const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transparent' }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   const {
@@ -47,13 +50,13 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           width={1}
         />
         {/*  END site logo */}
-        {/*  Search Bar */}
-      </Box>
-      {/*  END site logo container */}
 
+      </Box>
       {/*  Search Bar */}
       <Box>
-        <SearchBar />
+        <SearchBar 
+          style={{zIndex:1}}
+        />
       </Box>
 
       {/*  Site Navigation */}
@@ -77,6 +80,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         {/* Signup Button */}
         <Box marginLeft={4}>
           { window.localStorage.getItem('user') ?
+
           // <span>
             <NavItem
             title={'ProfileName'}
@@ -107,7 +111,34 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           // Log out
           // </Button>
           //   </span> }
+              {/*<span>
+            <Button
+            variant="contained"
+            color="primary"
+            component="a"
+            target="blank"
+            href="/account-general"
+            size="large"
+            >
+            My Account
+          </Button>
+          {/* Log-out Button */}
+          <span> </span>
+            <Button
+              onClick={logOut}
+              variant="outlined"
+              color="primary"
+              component="a"
+              target="blank"
+              href="/"
+              size="small"
+            >
+            Log out
+            </Button>
+            </span>*/}
+
           :
+          // Sign-up Button
           <Button
             variant="contained"
             color="primary"
@@ -119,6 +150,17 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             Sign Up
           </Button>
           }
+        </Box>
+        {/* Theme mode toggle button: Light Mode or Dark Mode */}
+        <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
+          <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>
+            <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+              {/*  Dark/Light Mode Toggler */}
+              <Box>
+                <ThemeModeToggler />
+              </Box>
+            </Box>
+          </Container>
         </Box>
       </Box>
       {/*  END site navigation */}
@@ -146,6 +188,7 @@ Topbar.propTypes = {
   onSidebarOpen: PropTypes.func,
   pages: PropTypes.object,
   colorInvert: PropTypes.bool,
+  bgcolor: PropTypes.string,
 };
 
 export default Topbar;

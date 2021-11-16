@@ -10,7 +10,9 @@ import Typography from '@mui/material/Typography';
 
 import Container from 'components/Container';
 
-const pages = [
+// Removed billing from the Account and placed user
+//  profile in its place.
+const pages = [ 
   {
     id: 'general',
     href: '/account-general',
@@ -25,11 +27,6 @@ const pages = [
     id: 'notifications',
     href: '/account-notifications',
     title: 'Notifications',
-  },
-  {
-    id: 'billing',
-    href: '/account-billing',
-    title: 'Billing Information',
   },
 ];
 
