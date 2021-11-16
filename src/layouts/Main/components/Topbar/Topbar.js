@@ -111,7 +111,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
           // Log out
           // </Button>
           //   </span> }
-              {/*<span>
+              /*<span>
             <Button
             variant="contained"
             color="primary"
@@ -122,7 +122,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
             >
             My Account
           </Button>
-          {/* Log-out Button */}
+          {/* Log-out Button */
+            /*
           <span> </span>
             <Button
               onClick={logOut}
@@ -135,7 +136,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
             >
             Log out
             </Button>
-            </span>*/}
+            </span>*/
 
           :
           // Sign-up Button
