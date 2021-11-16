@@ -50,13 +50,12 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
         />
         {/*  END site logo */}
 
-        {/*  Search Bar */}
       </Box>
-      {/*  END site logo container */}
-
       {/*  Search Bar */}
-      <Box mt={0}>
-        <SearchBar />
+      <Box>
+        <SearchBar 
+          style={{zIndex:1}}
+        />
       </Box>
 
       {/*  Site Navigation */}
@@ -91,20 +90,22 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
             >
             My Account
           </Button>
-          <span>  </span>
-          <Button
-          onClick={logOut}
-          variant="outlined"
-          color="primary"
-          component="a"
-          target="blank"
-          href="/"
-          size="small"
-          >
-          Log out
-          </Button>
+          {/* Log-out Button */}
+          <span> </span>
+            <Button
+              onClick={logOut}
+              variant="outlined"
+              color="primary"
+              component="a"
+              target="blank"
+              href="/"
+              size="small"
+            >
+            Log out
+            </Button>
             </span>
           :
+          // Sign-up Button
           <Button
             variant="contained"
             color="primary"
@@ -117,19 +118,17 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
           </Button>
           }
         </Box>
+        {/* Theme mode toggle button: Light Mode or Dark Mode */}
         <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
-          <Container
-            paddingTop={'8px !important'}
-            paddingBottom={'0 !important'}
-          >
-          <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-            {/*  Dark/Light Mode Toggler */}
-            <Box>
-              <ThemeModeToggler />
+          <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>
+            <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+              {/*  Dark/Light Mode Toggler */}
+              <Box>
+                <ThemeModeToggler />
+              </Box>
             </Box>
-          </Box>
-        </Container>
-      </Box>
+          </Container>
+        </Box>
       </Box>
       {/*  END site navigation */}
       {/*  Alternate Navigation on smaller displays */}
