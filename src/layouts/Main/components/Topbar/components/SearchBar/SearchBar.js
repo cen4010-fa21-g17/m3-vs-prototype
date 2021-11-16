@@ -22,13 +22,14 @@ const ariaLabel = { 'aria-label': 'description' };
 
 export default function SearchBar() {
   
-  // simple state change for fuse.js search bar function
+  // Simple state change for fuse.js search feature
   const data = SearchData();
   const [results,setResults] = useState();
 
-  // simple fade for change in search bar
+  // Search results simple fade for change in search bar
   const [open, setOpen] = useState(false);
 
+  // Search bar click handler fucntions.
   const handleClick = () => {
     setOpen ((prev) => !prev);
   };
@@ -38,6 +39,8 @@ export default function SearchBar() {
   };
 
   return (
+    // Entire card container fades out (disappears) whent he user clicks
+    //  away from the search bar
     <ClickAwayListener onClickAway={
       handleClickAway
 
@@ -63,6 +66,7 @@ export default function SearchBar() {
             const options = {
               keys: ['firstName','lastName']
             }
+            // Set search state
             const fuse = new Fuse(data.users, options);
             setResults(fuse.search(value));
             handleClick();
@@ -107,8 +111,12 @@ export default function SearchBar() {
                         <ListItemAvatar>
                           <Avatar />
                         </ListItemAvatar>
-                        <ListItemText primary={user.item.firstName + " " + user.item.lastName} secondary={user.item.profileContent} />
+                        <ListItemText 
+                          primary={user.item.firstName + " " + user.item.lastName} 
+                          secondary={user.item.profileContent} 
+                        />
                       </ListItem>
+                      {/* Divider is omitted if the number of listings is less than 2 */}
                       {user.item.length < 2 ?
                         <Divider component="li"/>: <div></div>
                       }
