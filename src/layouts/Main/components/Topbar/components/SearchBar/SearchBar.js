@@ -12,7 +12,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import { Avatar } from '@mui/material';
+import { Avatar, Typography } from '@mui/material';
 import Fade from '@mui/material/Fade';
 
 import { SearchData } from '..';
@@ -69,8 +69,8 @@ export default function SearchBar() {
             // Set search state
             const fuse = new Fuse(data.users, options);
             setResults(fuse.search(value));
-            handleClick();
           }}
+          onClick={handleClick}
         />
         {/* Search Icon (Outlined) */}
         <IconButton sx={{ p: '10px' }} aria-label="search">
@@ -122,7 +122,7 @@ export default function SearchBar() {
                         <Divider component="li"/>: <div></div>
                       }
                     </div>
-                  )) : ""
+                  )) : <Typography>Try again.</Typography>
                 }
                 </List>
               </CardContent>
