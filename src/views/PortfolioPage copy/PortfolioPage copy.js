@@ -3,30 +3,28 @@ import Box from '@mui/material/Box';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Features, Hero, Services } from './components';
-
-//Hero - User profile box and Followers box
-//Services - Timeline
-//Features - Biography card and Goals card
+import { Features, Folio, Gallery, Hero, Services } from './components';
 
 const PortfolioPage = () => (
   <Main colorInvert={true}>
-    <Box bgcolor ={'alternate.main'}>
     <Hero />
-    </Box>
-    <Box bgcolor={'primary'}>
+    <Container>
+      <Folio />
+    </Container>
+    <Box bgcolor={'alternate.main'}>
       <Container>
         <Services />
       </Container>
     </Box>
-    <Box >
+    <Box bgcolor={'primary.main'}>
       <Container>
         <Features />
       </Container>
     </Box>
-
+    <Container>
+      <Gallery />
+    </Container>
   </Main>
 );
 
 export default PortfolioPage;
-

@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link
             rel="shortcut icon"
-            href="https://lamp.cse.fau.edu/~lcasals2014/COP3813/p2/assets/img/favicon-meta.ico"
+            href="https://lamp.cse.fau.edu/~lcasals2014/COP3813/p2/projects/assets/img/favicon-meta.ico"
             //https://assets.maccarianagency.com/favicons/thefront/favicon.ico
           />
           <meta name="theme-color" content="#ffffff" />
@@ -36,11 +36,14 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content="https://assets.maccarianagency.com/screenshots/the-front/social.png"
+            //This is the photo the loads when you send someone the link to our page
+            content="https://lamp.cse.fau.edu/~lcasals2014/COP3813/p2/projects/assets/img/FrontPage-MetaSpace.png"
+            
           />
           <meta
             property="og:title"
-            content="theFront | UI Kit by Maccarian Agency."
+            //content="theFront | UI Kit by Maccarian Agency."
+            content ="MetaSpace"
           />
           <meta
             property="og:description"

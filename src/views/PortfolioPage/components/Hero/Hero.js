@@ -1,9 +1,27 @@
 import React, { useEffect } from 'react';
+import {Component} from 'react';
 import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import CardContent from '@mui/material/CardContent';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Button from '@mui/material/Button';
+
 
 import Container from 'components/Container';
+
+//hard coded information for the user profile
+const mock = [
+  {
+    name: 'First and Last Name',
+    avatar: '',
+  },
+];
 
 const Hero = () => {
   useEffect(() => {
@@ -20,6 +38,7 @@ const Hero = () => {
     jarallaxInit();
   });
 
+
   const theme = useTheme();
 
   return (
@@ -35,6 +54,7 @@ const Hero = () => {
       paddingTop={13}
       id="agency__portfolio-item--js-scroll"
     >
+      {/* This box contains the background photo for the profile page*/}
       <Box
         className={'jarallax-img'}
         sx={{
@@ -51,38 +71,102 @@ const Hero = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img44.jpg)',
+            'url(https://lamp.cse.fau.edu/~lcasals2014/COP3813/projects/p2/assets/img/blueBackgroundPhoto.jpg)',
           filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
         }}
       />
+      {/* This container holds user profile and followers*/}
       <Container position={'relative'} zIndex={2}>
         <Box>
-          <Typography
-            variant="h2"
-            gutterBottom
+          <Grid container spacing={12}>
+        {/* This maps to the hard code in "const mock" */}  
+        {mock.map((item) => (
+          <Grid item xs={4} md={4} >
+            <Box
+              width={1}
+              height={1}
+              component={Card}
+              boxShadow={5}
+              variant={'outlined'}
+              bgcolor={'alternate.main'}
+              textAlign ={'center'}
+              align={'center'}
+            >
+              {/* This is for the User profile */}
+              <CardContent sx={{ padding: 3 }}>
+                <ListItem component="div" disableGutters sx={{ padding: 0 }}>
+                  <ListItemAvatar sx={{ marginRight: 3 }} >
+                    <Avatar
+                      src={item.avatar}
+                      variant={'rounded'}
+                      sx={{ 
+                        marginLeft: 12,
+                        width: 100, 
+                        height: 100, 
+                        borderRadius: 3,
+                        marginBottom: 3,
+                       }}
+                    />
+                    
+                  </ListItemAvatar>
+                </ListItem>
+                <ListItemText
+                    sx={{ margin: 0, marginBottom: 3, }}
+                    marginTop={5}
+                    primary={item.name}
+                    primaryTypographyProps={{ variant: 'h6', fontWeight: 700 }}
+                    secondaryTypographyProps={{ variant: 'subtitle1' }}
+                  />
+                  {/* This is the follow button and styling */}
+                  <Button
+                    boxShadow={5}
+                    variant={'outlined'}
+                    bgcolor={'alternate.main'}
+                    align={'center'}
+                    >follow
+                  </Button>
+              </CardContent>
+            </Box>
+          </Grid>
+        ))}
+
+          {/* This is for followers */}
+           <Grid item xs={4} md={4} >
+            <Box
+              width={1}
+              height={1}
+              component={Card}
+              boxShadow={5}
+              variant={'outlined'}
+              bgcolor={'alternate.main'}
+              align={'center'}
+            >
+            <Typography
             sx={{
-              fontWeight: 900,
-              color: 'common.white',
               textTransform: 'uppercase',
+              fontWeight: 700,
             }}
-          >
-            Our work
-          </Typography>
-          <Typography
-            variant="h5"
-            component="p"
-            color="text.primary"
-            sx={{
-              color: 'common.white',
-            }}
-          >
-            We are founded by a leading academic and researcher in the field of
-            Industrial Systems Engineering.
-          </Typography>
+            gutterBottom
+            color={'primary'}
+            align={'center'}
+            fontWeight={700}
+            >
+              Followers
+            </Typography>
+
+              <CardContent sx={{ padding: 3 }}>
+                
+              </CardContent>
+            </Box>
+          </Grid>           
+
+      </Grid>
         </Box>
       </Container>
-    </Box>
+      </Box>
+   
   );
 };
+
 
 export default Hero;
