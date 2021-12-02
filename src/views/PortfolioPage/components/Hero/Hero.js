@@ -10,16 +10,15 @@ import CardContent from '@mui/material/CardContent';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Button from '@mui/material/Button';
+
 
 import Container from 'components/Container';
-import ProfilePicChanger from './ProfilePicChanger';
-import pic1 from "../Pics/pic1.jpg";
-import pic2 from "../Pics/pic2.jpg";
 
+//hard coded information for the user profile
 const mock = [
   {
-    name: 'Laura Casals',
-    title: 'Frontend Developer',
+    name: 'First and Last Name',
     avatar: '',
   },
 ];
@@ -39,6 +38,7 @@ const Hero = () => {
     jarallaxInit();
   });
 
+
   const theme = useTheme();
 
   return (
@@ -54,6 +54,7 @@ const Hero = () => {
       paddingTop={13}
       id="agency__portfolio-item--js-scroll"
     >
+      {/* This box contains the background photo for the profile page*/}
       <Box
         className={'jarallax-img'}
         sx={{
@@ -70,14 +71,15 @@ const Hero = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img44.jpg)',
+            'url(https://lamp.cse.fau.edu/~lcasals2014/COP3813/projects/p2/assets/img/blueBackgroundPhoto.jpg)',
           filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
         }}
       />
-
+      {/* This container holds user profile and followers*/}
       <Container position={'relative'} zIndex={2}>
         <Box>
           <Grid container spacing={12}>
+        {/* This maps to the hard code in "const mock" */}  
         {mock.map((item) => (
           <Grid item xs={4} md={4} >
             <Box
@@ -87,8 +89,10 @@ const Hero = () => {
               boxShadow={5}
               variant={'outlined'}
               bgcolor={'alternate.main'}
+              textAlign ={'center'}
               align={'center'}
             >
+              {/* This is for the User profile */}
               <CardContent sx={{ padding: 3 }}>
                 <ListItem component="div" disableGutters sx={{ padding: 0 }}>
                   <ListItemAvatar sx={{ marginRight: 3 }} >
@@ -107,27 +111,26 @@ const Hero = () => {
                   </ListItemAvatar>
                 </ListItem>
                 <ListItemText
-                    sx={{ margin: 0 }}
+                    sx={{ margin: 0, marginBottom: 3, }}
                     marginTop={5}
                     primary={item.name}
-                    secondary={item.title}
                     primaryTypographyProps={{ variant: 'h6', fontWeight: 700 }}
                     secondaryTypographyProps={{ variant: 'subtitle1' }}
                   />
-                  <button
+                  {/* This is the follow button and styling */}
+                  <Button
                     boxShadow={5}
                     variant={'outlined'}
                     bgcolor={'alternate.main'}
                     align={'center'}
                     >follow
-                  </button>
+                  </Button>
               </CardContent>
             </Box>
           </Grid>
         ))}
 
-          
-
+          {/* This is for followers */}
            <Grid item xs={4} md={4} >
             <Box
               width={1}
@@ -144,8 +147,9 @@ const Hero = () => {
               fontWeight: 700,
             }}
             gutterBottom
-            color={'black'}
+            color={'primary'}
             align={'center'}
+            fontWeight={700}
             >
               Followers
             </Typography>

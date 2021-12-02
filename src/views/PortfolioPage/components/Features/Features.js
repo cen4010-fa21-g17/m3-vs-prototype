@@ -1,17 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import Avatar from '@mui/material/Avatar';
-import { CardHeader, colors, IconButton } from '@mui/material';
+import { CardHeader, IconButton } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
 import EditIcon from '@mui/icons-material/Edit';
 
+//hard coded information for testing bio + goal cards
 const mock = {
   biography: {
     title: 'Biography',
@@ -28,19 +25,15 @@ const mock = {
     items: [
       {
         title: 'Goal 1',
-        updated: '1 week ago',
       },
       {
         title: 'Goal 2',
-        updated: 'a day ago',
       },
       {
         title: 'Goal 3',
-        updated: '2 month ago',
       },
       {
         title: 'Goal 4',
-        updated: '4 days ago',
       },
     ],
   },
@@ -48,7 +41,8 @@ const mock = {
 
 
 const Features = () => {
-  const renderFeaturesBox = (title = '', subtitle = '') => (
+  const renderFeaturesBox = (title = '',) => (
+    //This box makes the card and adds a shadow when the cursor hovers over
     <Box
       component={Card}
       variant={'outlined'}
@@ -62,10 +56,13 @@ const Features = () => {
     >
       <CardContent>
       <CardHeader
-              action={
-              <IconButton onClick={() => console.log('edit', mock.biography.title )}>
-                <EditIcon />
-               </IconButton>  
+
+          //This is where I added the edit icon
+          //goal is to be able to click on the icon and edit the cards directly
+          action={
+            <IconButton onClick={() => console.log('edit', mock.biography.title )}>
+              <EditIcon />
+            </IconButton>  
           }
           />
         <Box
@@ -83,18 +80,20 @@ const Features = () => {
     </Box>
   );
   return (
+    //This is where the biography card is
     <Box>
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Box marginBottom={2}>
-            
+
+            {/* displays "Biography" to screen*/}
             <Typography variant={'h6'} fontWeight={700} gutterBottom>
               {mock.biography.title}
-            
             </Typography>
 
           
           </Box>
+          {/* This where it maps back to bio to recieve the title*/}
           <Grid container spacing={2}>
             {mock.biography.items.map((item) => (
               <Grid item xs={12}>
@@ -103,13 +102,17 @@ const Features = () => {
             ))}
           </Grid>
         </Grid>
+        {/* This is where the goals cards are*/}
         <Grid item xs={12} md={6}>
           <Box marginBottom={2}>
             
+            {/* displays "Goals" to screen*/}
             <Typography variant={'h6'} fontWeight={700} gutterBottom>
               {mock.goals.title}
             </Typography>
           </Box>
+
+          {/* This where it maps back to goals to recieve the title*/}
           <Grid container spacing={2}>
             {mock.goals.items.map((item, index) => (
               <Grid item xs={12} key={index}>
@@ -118,8 +121,7 @@ const Features = () => {
             ))}
           </Grid>
         </Grid>
-    
-          </Grid>
+     </Grid>
     </Box>
   );
 };

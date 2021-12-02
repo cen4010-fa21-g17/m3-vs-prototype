@@ -3,7 +3,11 @@ import Box from '@mui/material/Box';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Features, Folio, Gallery, Hero, Services } from './components';
+import { Features, Hero, Services } from './components';
+
+//Hero - User profile box and Followers box
+//Services - Timeline
+//Features - Biography card and Goals card
 
 const PortfolioPage = () => (
   <Main colorInvert={true}>
@@ -25,3 +29,4 @@ const PortfolioPage = () => (
 );
 
 export default PortfolioPage;
+

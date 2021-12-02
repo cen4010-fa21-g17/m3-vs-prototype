@@ -1,38 +1,41 @@
 import React, { useEffect, useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
 import Grid from '@mui/material/Grid';
-import { ProfileTimeline } from '..';
+
+//Websites to create the timeline:
+//https://www.npmjs.com/package/react-horizontal-timeline
+//https://www.geeksforgeeks.org/what-is-horizontal-timeline-in-reactjs/
 
   
 function App() {
   const [value, setValue] = useState(0);
   const [previous, setPrevious] = useState(0);
   
-
+  // Values should be only date have to be in the format YYYY/MM/DD to work properly
+  // Hard code to test the timeline
+  const EVENT_DATES = ["2020/01/01", "2020/02/04", "2020/06/15", "2020/09/27", "2021/02/13", "2021/03/22"];
   
-  
-  // Values should be only date
-  //const EVENT_DATES = ["2021/01/01", "2021/01/15", "2021/02/15", "2021/03/15", "2021/04/15", "2021/03/22"];
-  const EVENT_DATES = {
-    keys: ['dates']
-  }
-  // Description array corresponding to values
+  // Description array corresponding to values of titles
+  //array of strings
   const EVENT_TITLES = [
-    "1 The event of 1 Jan 2021 : Happy New Year",
-    "2 The event of 15 Jan 2021 : Festival",
-    "3 The event of 22 March 2021 : Board Exam",
-    "4 The event of 1 Jan 2021 : Happy New Year",
-    "5 The event of 15 Jan 2021 : Festival",
-    "6 The event of 22 March 2021 : Board Exam",
+    "The event of 1 Jan 2020 : Mastering C++",
+    "The event of 4 Feb 2020 : Data Structures",
+    "The event of 15 Jun 2020 : Internship",
+    "The event of 27 Sep 2020 : HTML, CSS, and JS",
+    "The event of 13 Feb 2021 : Python",
+    "The event of 22 March 2021 : GitHub",
   ];
+  
 
+  // Description array corresponding to values of titles
+  // array of strings
   const EVENT_DESCRIPTIONS = [
-    "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "6 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   ];
   
   
@@ -47,16 +50,20 @@ function App() {
                         margin: "0 auto",
                         fontSize: "14px",    
                         }}>
+            {/* This is where the timline starts*/}             
             <HorizontalTimeline
               styles={{ outline: "#DFA867", foreground: "#19295C", margin: "5" }}
               index={value}
+              //This is what lets you click on the dots to display info from different dates
               indexClick={(index) => {
                 setValue(index);
                 setPrevious(value);
               }}
+              //This places the value of the date above the dot
               values={EVENT_DATES}
             />
           </div>
+          {/* This is where the title is + styling*/}
           <div style={{
                         textAlign: "center",
                         fontSize: "25px", 
@@ -64,7 +71,9 @@ function App() {
                         }}>
           {EVENT_TITLES[value]}
           </div>
+          {/* This is where the description is + syling*/}
           <div style={{
+                        marginTop: "15px",
                         textAlign: "center",
                         fontSize: "20px",    
                         }}>

@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Card from '@mui/material/Card';
-
 import HorizontalTimeline from "react-horizontal-timeline";
+
+//copy of the original timeline
 
   
 function App() {
