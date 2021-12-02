@@ -10,7 +10,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
+import { useContext } from 'react'
+import { SnackBarContext } from 'contexts/SnackBarContext'
+
 import axios from 'axios'
+import { Snackbar } from '@mui/material';
 
 const validationSchema = yup.object({
   firstName: yup
@@ -38,6 +42,7 @@ const validationSchema = yup.object({
 
 const Form = () => {
   const router = useRouter()
+  const snackbar = useContext(SnackBarContext)
 
   const initialValues = {
     firstName: '',
@@ -57,7 +62,11 @@ const Form = () => {
       if (response.status == 201) {
         console.log('registration successful')
         router.push('/signin-simple')
+        snackbar.showAlert('success', 'Registration successful')
       }
+    }).catch(error => {
+      console.log(error)
+      snackbar.showAlert('error', 'Registration failed')
     })
     //return values;
   };

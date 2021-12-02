@@ -16,6 +16,9 @@ import Page from '../components/Page';
 import Main from 'layouts/Main';
 
 import axios from 'axios'
+import { useContext } from 'react'
+import { SnackBarContext } from 'contexts/SnackBarContext'
+import Alert from '@mui/material/Alert'
 
 const validationSchema = yup.object({
   // currentPassword: yup.string().required('Please specify your password'),
@@ -29,7 +32,10 @@ const validationSchema = yup.object({
   //   .min(8, 'The password should have at minimum length of 8'),
 });
 
+
 const Security = () => {
+  const snackbar = useContext(SnackBarContext)
+
   const initialValues = {
     // currentPassword: '',
     newPassword: '',
@@ -44,13 +50,17 @@ const Security = () => {
   }
 
   const onSubmit = (values) => {
+    formik.resetForm()
     const user = JSON.parse(localStorage.getItem('user'))
     axios.put(`/api/user/${user._id}/account`, {
       password: values.newPassword
     }).then(response => {
       console.log(response.data)
+      if (response.status >= 200 && response.status < 300) 
+        snackbar.showAlert('success', 'Password changed successfully')
+      else
+        snackbar.showAlert('error', 'Could not change password')
     })
-    //return values;
   };
 
   const formik = useFormik({
@@ -58,6 +68,7 @@ const Security = () => {
     validationSchema: validationSchema,
     onSubmit,
   });
+
 
   return (
     <Main>

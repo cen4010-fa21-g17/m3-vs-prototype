@@ -13,7 +13,8 @@ export default async function handler(req, res) {
       // Get all experiences from a single user from the database
       case 'GET':
         try {
-          const allExperience = await ExperienceModel.find({userid: `${req.query.id}`})
+          console.log('tried getting expereinces')
+          const allExperience = await ExperienceModel.find({user_id: `${req.query.id}`})
           res.json(allExperience)
         } catch (err) {
           res.status(500).json({ message: err.message })
@@ -23,19 +24,33 @@ export default async function handler(req, res) {
       // Create an experience for an user and post it to the database
       case 'POST':
         const experience = new ExperienceModel({
-          dates: req.body.dates,
+          user_id: req.query.id,
           title: req.body.title,
-          content: req.body.content
-          
+          content: req.body.content,
+          summary: req.body.summary,
+          skills: req.body.skills
         })
-    
+        console.log(experience)
         try {
+          console.log('tried saving')
           const newExperience = await experience.save()
+          console.log('success')
           res.status(201).json(newExperience)
         } catch (err) {
           res.status(500).json({ message: err.message })
         }
         break;
+
+      // case 'PUT':
+      //   try {
+      //     const experience = await ExperienceModel.findOneAndUpdate({ user_id: req.query.id }, req.body, {
+      //         new: true
+      //     })
+      //     res.json(experience)
+      // } catch (err) {
+      //     res.status(500).json({ message: err.message })
+      // }
+      // break;
 
       // Method not implemented
       default:

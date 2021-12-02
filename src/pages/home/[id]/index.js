@@ -10,71 +10,56 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
-import Fab from '@mui/material/Fab'
-import AddIcon from '@mui/icons-material/Add'
-import Grid from '@mui/material/Grid'
-import Container from '@mui/material/Container'
+
 
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+
 
 import Button from '@mui/material/Button'
 
 
 import Main from 'layouts/Main';
-// import Container from 'components/Container';
-import { PageReferences, Hero } from './components';
-import Form from './components/Form'
+
 
 import JourneySideBar from 'components/JourneySideBar';
 
 import axios from 'axios'
-import { Category, ConstructionRounded } from '@mui/icons-material';
+
 
 import { useContext } from 'react'
+import { useRouter } from 'next/router'
 import { SnackBarContext } from 'contexts/SnackBarContext'
-import { SnackbarContent } from '@mui/material';
+
 
 const Home = () => {
   const [experiences, setExperiences] = useState([])
+  const [user, setUser] = useState([])
+  const router = useRouter()
 
   const snackbar = useContext(SnackBarContext)
 
   useEffect(async () => {
-    const userData = JSON.parse(window.localStorage.getItem('user'))
-    const res = await axios.get(`/api/user/${userData._id}/experience`)
+    try {
+      const res = await axios.get(`/api/user/${router.query.id}/experience`)
+      console.log(res.data)
+      setExperiences(res.data)
+
+      const userRes = await axios.get(`/api/user/${router.query.id}`)
+      setUser(userRes.data)
+
+    } catch (error) {
+      console.log(error)
+    }
     
-    setExperiences(res.data)
   }, [])
 
   console.log(experiences)
 
 
-  const drawerWidth = 240;
-
-  const deleteExperience = (id) => {
-    const userData = JSON.parse(window.localStorage.getItem('user'))
-    axios.delete(`/api/user/${userData._id}/experience/${id}`).then(response => {
-      console.log(response.data)
-      if (response.statusText == "OK") {
-        setExperiences(experiences.filter(experience => experience._id !== id ))
-        console.log(experiences)
-        snackbar.showAlert('success', 'Experience successfully deleted')
-      }
-    }).catch(error => {
-      console.log(error)
-      snackbar.showAlert('error', 'Could not delete experience')
-    })
-  }
+  const drawerWidth = 240
 
   return (
     <Main>
@@ -82,7 +67,7 @@ const Home = () => {
       <CssBaseline />
       <Toolbar/>
 
-      <JourneySideBar />      
+      <JourneySideBar user='fsdf' />      
 
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
@@ -105,7 +90,7 @@ const Home = () => {
 
           {experiences.map((experience, index) => (
             <Card variant="outlined" sx={{ minWidth: 275, margin: 1}}>
-              <Button onClick={() => {deleteExperience(experience._id)}} color="error" sx={{ float: 'right' }}> <DeleteForeverRoundedIcon></DeleteForeverRoundedIcon></Button>
+              
             <CardContent>
               <Typography variant="h4" component="div">
                 {experience.title}
@@ -138,17 +123,10 @@ const Home = () => {
         flexDirection="column"
         >
           <Typography>
-            Add your first experience
+            User did not share any experiences yet
           </Typography>
-           
-          <Fab href='/experience' color="primary">
-            <AddIcon />
-          </Fab>
-        
         </Box>
-        
-        :
-        
+        :   
         <></>
         }
 

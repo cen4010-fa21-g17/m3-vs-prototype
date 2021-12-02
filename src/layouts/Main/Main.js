@@ -9,7 +9,7 @@ import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import Container from 'components/Container';
-import { Topbar, Sidebar, Footer, ThemeModeToggler } from './components';
+import { Topbar, Sidebar, Footer } from './components';
 
 import pages from '../navigation';
 
@@ -38,7 +38,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
 
   return (
     <Box>
-      
+      {/* Former location of the theme mode toggle button. Moved to TopBar.js */}
       <AppBar
         position={'sticky'}
         sx={{

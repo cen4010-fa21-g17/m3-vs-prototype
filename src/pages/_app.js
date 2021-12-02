@@ -12,6 +12,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'react-image-lightbox/style.css';
 import 'aos/dist/aos.css';
 
+import SnackBarProvider from 'contexts/SnackBarContext'
+
 export default function App({ Component, pageProps }) {
   return (
     <React.Fragment>
@@ -23,9 +25,11 @@ export default function App({ Component, pageProps }) {
         <title>MetaSpace</title>
       </Head>
         <RouteGuard>
-          <Page>
-              <Component {...pageProps} />
-          </Page>
+          <SnackBarProvider>
+            <Page>
+                <Component {...pageProps} />
+            </Page>
+          </SnackBarProvider>
         </RouteGuard>
     </React.Fragment>
   );

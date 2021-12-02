@@ -14,12 +14,11 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
   const { mode } = theme.palette;
   const {
     abouts: aboutPages,
-    supports: supportPages
+    supports: supportPages,
+    profiles: profilePages
   } = pages;
 
-  const logOut = () => {
-    window.localStorage.removeItem('user')
-  }
+  const user = JSON.parse(window.localStorage.getItem('user'))
 
   return (
     // Page Content Container
@@ -50,13 +49,12 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
         />
         {/*  END site logo */}
 
-        {/*  Search Bar */}
       </Box>
-      {/*  END site logo container */}
-
       {/*  Search Bar */}
-      <Box mt={0}>
-        <SearchBar />
+      <Box>
+        <SearchBar 
+          style={{zIndex:1}}
+        />
       </Box>
 
       {/*  Site Navigation */}
@@ -79,32 +77,16 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
         </Box>
         {/* Signup Button */}
         <Box marginLeft={4}>
-          { window.localStorage.getItem('user') ?
-          <span>
-            <Button
-            variant="contained"
-            color="primary"
-            component="a"
-            target="blank"
-            href="/account-general"
-            size="large"
-            >
-            My Account
-          </Button>
-          <span>  </span>
-          <Button
-          onClick={logOut}
-          variant="outlined"
-          color="primary"
-          component="a"
-          target="blank"
-          href="/"
-          size="small"
-          >
-          Log out
-          </Button>
-            </span>
+          { user ?
+            
+            <NavItem
+            title={user.firstName + user.lastName}
+            id={'profile-page'}
+            items={profilePages}
+            colorInvert={colorInvert}
+          />
           :
+          // Sign-up Button
           <Button
             variant="contained"
             color="primary"
@@ -117,19 +99,17 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
           </Button>
           }
         </Box>
+        {/* Theme mode toggle button: Light Mode or Dark Mode */}
         <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
-          <Container
-            paddingTop={'8px !important'}
-            paddingBottom={'0 !important'}
-          >
-          <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-            {/*  Dark/Light Mode Toggler */}
-            <Box>
-              <ThemeModeToggler />
+          <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>
+            <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+              {/*  Dark/Light Mode Toggler */}
+              <Box>
+                <ThemeModeToggler />
+              </Box>
             </Box>
-          </Box>
-        </Container>
-      </Box>
+          </Container>
+        </Box>
       </Box>
       {/*  END site navigation */}
       {/*  Alternate Navigation on smaller displays */}
