@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
 // Create a schema of the data to be stored in the database
+//creating the table where everything is held 'array'
 const portfolioSchema = new mongoose.Schema({
     user_id: mongoose.Types.ObjectId,
     biography: {

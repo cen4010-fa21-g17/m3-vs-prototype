@@ -32,7 +32,7 @@ const PortfolioPage = () => {
   }
 
   // Create a new experience and store it in the database
-  const saveExperience = () => {
+  const savePortfolio = () => {
 
     // Retrieve user data from browser local storage
     const userData = window.localStorage.getItem('user')
@@ -150,7 +150,7 @@ const PortfolioPage = () => {
             />
 
             <Toolbar />
-            <Button onClick={saveExperience} color="primary" variant="outlined">Save</Button>
+            <Button onClick={savePortfolio} color="primary" variant="outlined">Save</Button>
             <Button href="/portfolio-page" color="primary" variant="outlined">My Profile</Button>
           </Box>
           
