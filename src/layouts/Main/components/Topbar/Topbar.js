@@ -80,7 +80,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
           { user ?
             
             <NavItem
-            title={user.firstName + user.lastName}
+            title={user.firstName + " " + user.lastName}
             id={'profile-page'}
             items={profilePages}
             colorInvert={colorInvert}
