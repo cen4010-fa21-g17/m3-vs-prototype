@@ -79,6 +79,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
         </Box>
         {/* Signup Button */}
         <Box marginLeft={4}>
+<<<<<<< Updated upstream
           { window.localStorage.getItem('user') ?
           <span>
             <Button
@@ -104,6 +105,16 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, bgcolor = 'transpar
           Log out
           </Button>
             </span>
+=======
+          { user ?
+            //adding a space between the first and last name
+            <NavItem
+            title={user.firstName + " " + user.lastName}
+            id={'profile-page'}
+            items={profilePages}
+            colorInvert={colorInvert}
+          />
+>>>>>>> Stashed changes
           :
           <Button
             variant="contained"
