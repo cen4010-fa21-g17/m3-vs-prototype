@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useContext } from 'react'
 
-
+import axios from 'axios'
 
 //hard coded information for testing bio + goal cards
 const mock = {
@@ -55,11 +55,17 @@ const Features = () => {
 
   useEffect(async () => {
     try {
-      const res = await axios.get(`/api/user/${router.query.id}/portfolio`)
+      const userData = window.localStorage.getItem('user')
+      const jsonUserData = JSON.parse(userData)
+
+      console.log("Getting portfolio data")
+      const res = await axios.get(`/api/user/${jsonUserData._id}/portfolio`)
+      //const res = await axios.get(`/api/user/${router.query.id}/portfolio`)
       console.log(res.data)
       setPortfolio(res.data)
 
-      const userRes = await axios.get(`/api/user/${router.query.id}`)
+      const userRes = await axios.get(`/api/user/${jsonUserData._id}`)
+      //const userRes = await axios.get(`/api/user/${router.query.id}`)
       setUser(userRes.data)
 
     } catch (error) {
@@ -141,40 +147,25 @@ const Features = () => {
           
           </Box>
 
-
-          <Card variant="outlined" sx={{ minWidth: 275, margin: 1}}>
-              
-            <CardContent>
-              <Typography variant="h4" component="div">
-                {portfolio.biography}
-              </Typography>
-            </CardContent>
-            
-          </Card>
-
           {portfolio.map((portfolio, index) => (
             <Card variant="outlined" sx={{ minWidth: 275, margin: 1}}>
               
             <CardContent>
+              
               <Typography variant="h4" component="div">
                 {portfolio.biography}
               </Typography>
-              
+              <IconButton href ={'../../portfolio/'+portfolio._id}>
+            <EditIcon/>
+          </IconButton>
             </CardContent>
             
           </Card>
+          
           ))}
 
 
 
-          {/* This where it maps back to bio to recieve the title*/}
-          <Grid container spacing={2}>
-            {mock.biography.items.map((item) => (
-              <Grid item xs={12}>
-                {renderFeaturesBox(item.title, `Last updated ${item.updated}`)}
-              </Grid>
-            ))}
-          </Grid>
         </Grid>
         {/* This is where the goals cards are*/}
         <Grid item xs={12} md={6}>
@@ -186,14 +177,53 @@ const Features = () => {
             </Typography>
           </Box>
 
-          {/* This where it maps back to goals to recieve the title*/}
-          <Grid container spacing={2}>
-            {mock.goals.items.map((item, index) => (
-              <Grid item xs={12} key={index}>
-                {renderFeaturesBox(item.title, `Last updated ${item.updated}`)}
-              </Grid>
-            ))}
-          </Grid>
+          {portfolio.map((portfolio, index) => (
+            <Card variant="outlined" sx={{ minWidth: 275, margin: 1}}>
+              
+            <CardContent>
+              
+              <Typography variant="h4" component="div">
+                {"Goal 1 : " + portfolio.goal1}
+              </Typography>
+              <IconButton href ={'../../portfolio/'+portfolio._id}>
+            <EditIcon/>
+          </IconButton>
+            </CardContent>
+
+            <CardContent>
+              
+              <Typography variant="h4" component="div">
+                {"Goal 2 : " + portfolio.goal2}
+              </Typography>
+              <IconButton href ={'../../portfolio/'+portfolio._id}>
+            <EditIcon/>
+          </IconButton>
+            </CardContent> 
+
+           <CardContent>
+              
+              <Typography variant="h4" component="div">
+                {"Goal 3 : " + portfolio.goal3}
+              </Typography>
+              <IconButton href ={'../../portfolio/'+portfolio._id}>
+            <EditIcon/>
+          </IconButton>
+            </CardContent>  
+
+           <CardContent>
+              
+              <Typography variant="h4" component="div">
+                {"Goal 4: " + portfolio.goal4}
+              </Typography>
+              <IconButton href ={'../../portfolio/'+portfolio._id}>
+            <EditIcon/>
+          </IconButton>
+            </CardContent>                                 
+            
+          </Card>
+          
+          ))}
+
         </Grid>
      </Grid>
     </Box>

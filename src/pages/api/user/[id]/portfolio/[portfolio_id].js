@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     // Get info from a single experience from a single user from the database
     case 'GET':
       try {
-        console.log('tried getting data')
+        console.log('tried getting portfolio data with id ' + `${req.query.portfolio_id}`)
         const portfolio = await PortfolioModel.findById(req.query.portfolio_id)
         console.log('got data')
         res.json(portfolio)

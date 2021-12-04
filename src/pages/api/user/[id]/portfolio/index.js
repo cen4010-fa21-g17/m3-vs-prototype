@@ -13,10 +13,13 @@ export default async function handler(req, res) {
       // Get all experiences from a single user from the database
       case 'GET':
         try {
-          console.log('tried getting portfolio information')
+          console.log('tried getting portfolio information for use - ' + `${req.query.id}`)
           const allPortfolio = await PortfolioModel.find({user_id: `${req.query.id}`})
+          //const portfolio = await PortfolioModel.find({user_id: `${req.query.id}` })
           res.json(allPortfolio)
         } catch (err) {
+          console.log('tried getting portfolio information failure' + err.message )
+
           res.status(500).json({ message: err.message })
         }
         break;
@@ -41,6 +44,23 @@ export default async function handler(req, res) {
           res.status(500).json({ message: err.message })
         }
         break;
+
+        case 'PUT':
+          try {
+              console.log('changing portfolio information for user - ' + `${req.query.id}`)
+              const portfolio = await PortfolioModel.findOneAndUpdate({
+                user_id: req.query.id,
+                biography: req.body.biography,
+                goal1: req.body.goal1,
+                goal2: req.body.goal2,
+                goal3: req.body.goal3,
+                goal4: req.body.goal4
+              })
+              res.json(portfolio)
+          } catch (err) {
+              res.status(500).json({ message: err.message })
+          }
+          break;
 
       // case 'PUT':
       //   try {

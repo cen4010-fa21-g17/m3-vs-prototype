@@ -40,7 +40,7 @@ const PortfolioPage = () => {
 
     // Make a POST request to the server with the correspondent 
     // experience data to be stored in the database
-    axios.post(`/api/user/${jsonUserData._id}/portfolio`, {
+    axios.put(`/api/user/${jsonUserData._id}/portfolio`, {
        biography: state.biography,
        goal1: state.goal1,
        goal2: state.goal2,
