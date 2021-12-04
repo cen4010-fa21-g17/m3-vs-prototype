@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
 import Grid from '@mui/material/Grid';
-import axios from "axios";
 
 //Websites to create the timeline:
 //https://www.npmjs.com/package/react-horizontal-timeline
@@ -11,53 +10,35 @@ import axios from "axios";
 function App() {
   const [value, setValue] = useState(0);
   const [previous, setPrevious] = useState(0);
-
-  const [experiences, setExperiences] = useState([])
- 
   
-  useEffect(async () => {
-    const userData = JSON.parse(window.localStorage.getItem('user'))
-    const res = await axios.get(`/api/user/${userData._id}/experience`)
-    
-    setExperiences(res.data)
-  }, [])
-
-
   // Values should be only date have to be in the format YYYY/MM/DD to work properly
   // Hard code to test the timeline
-  const EVENT_DATES = ["2020/01/01", "2020/02/04", "2020/06/15", "2020/09/27", "2021/02/13", "2021/03/22","2021/02/13",];
+  const EVENT_DATES = ["2020/01/01", "2020/02/04", "2020/06/15", "2020/09/27", "2021/02/13", "2021/03/22"];
   
   // Description array corresponding to values of titles
   //array of strings
   const EVENT_TITLES = [
-    /*"The event of 1 Jan 2020 : Mastering C++",
+    "The event of 1 Jan 2020 : Mastering C++",
     "The event of 4 Feb 2020 : Data Structures",
     "The event of 15 Jun 2020 : Internship",
     "The event of 27 Sep 2020 : HTML, CSS, and JS",
     "The event of 13 Feb 2021 : Python",
-    "The event of 22 March 2021 : GitHub",*/
+    "The event of 22 March 2021 : GitHub",
   ];
-
-  experiences.forEach(experience => {
-    EVENT_TITLES.push(experience.title)
-  })
   
-
 
   // Description array corresponding to values of titles
   // array of strings
   const EVENT_DESCRIPTIONS = [
-    /*"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."*/
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   ];
   
-  experiences.forEach(experience => {
-    EVENT_DESCRIPTIONS.push(experience.summary)
-  })
+  
 
 
   return (
