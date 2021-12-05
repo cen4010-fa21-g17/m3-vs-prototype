@@ -52,22 +52,7 @@ const Hero = () => {
   
 
   const theme = useTheme();
-  /*const state = {
-    selectedFile: null
-  }
-
- const fileSelectedHandler = event => {
-   this.setState({
-      selectedFile: event.target.files[0]
-   })
-   //console.log(event.target.files[0])
- }
- const fileUploadHandler = () => {
-   const fd = new FormData();
-   fd.append('image', this.state)
-    axios.post('');
- }*/
-
+  
   return (
 
     <Box
@@ -80,9 +65,8 @@ const Hero = () => {
       alignItems={'center'}
       marginTop={-15}
       paddingTop={13}
-      
-      
-      
+      //This is what makes the user's name go in the center of the page
+      justifyContent = {'center'}
       id="agency__portfolio-item--js-scroll"
     >
       {/* This box contains the background photo for the profile page*/}
@@ -117,11 +101,11 @@ const Hero = () => {
         justifyContents = {'center'}
       >
         <Box>
-          <Grid container spacing={12}>
+          <Grid container spacing={12} justifyContent = {'center'}>
 
         {/* Everything inside of the box */}  
         
-          <Grid item xs={5} md={5} >
+          <Grid item xs={5} md={5} justifyContent={'center'}>
             <Box
               width={1}
               height={1}
@@ -143,8 +127,6 @@ const Hero = () => {
                         
                        }}
                     />
-                    
-                    
                   </ListItemAvatar>
                 </ListItem>
                 {/*Output the user's firt and last name frtom JSON file */}
@@ -155,21 +137,14 @@ const Hero = () => {
                     primaryTypographyProps={{ variant: 'h4', fontWeight: 600, }}
                     secondaryTypographyProps={{ variant: 'subtitle1' }}
                   />
-                  
-             
             </Box>
           </Grid>
-        
-          
-
-      </Grid>
-        </Box>
+        </Grid>
+       </Box>
       </Container>
-      </Box>
+    </Box>
    
   );
 };
-
-
 
 export default Hero;
