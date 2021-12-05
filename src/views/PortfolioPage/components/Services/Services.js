@@ -25,8 +25,12 @@ function App() {
 
   // Values should be only date have to be in the format YYYY/MM/DD to work properly
   // Hard code to test the timeline
-  const EVENT_DATES = ["2020/01/01", "2020/02/04", "2020/06/15", "2020/09/27", "2021/02/13", "2021/03/22","2021/02/13",];
-  
+  const EVENT_DATES = [];//["2020/01/01", "2020/02/04", "2020/06/15", "2020/09/27", "2021/02/13", "2021/03/22","2021/02/13",];
+  experiences.forEach(experience => {
+    EVENT_DATES.push(experience.date)
+  })
+
+
   // Description array corresponding to values of titles
   //array of strings
   const EVENT_TITLES = [

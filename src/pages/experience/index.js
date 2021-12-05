@@ -27,9 +27,10 @@ const ExperiencePage = () => {
 
   const [state, setState] = React.useState({
     title: "",
-    skills: "",
+    date: "",
+    summary: "",
     content: "",
-    summary: ""
+    skills: ""
   });
 
   function handleChange(e) {
@@ -48,6 +49,7 @@ const ExperiencePage = () => {
     // experience data to be stored in the database
     axios.post(`/api/user/${jsonUserData._id}/experience`, {
        title: state.title,
+       date: state.date,
        summary: state.summary,
        content: state.content,
        skills: state.skills
@@ -106,6 +108,18 @@ const ExperiencePage = () => {
             />
 
             <Toolbar />
+
+            <TextField 
+              id="date" 
+              name="date"
+              label="yyyy/mm/dd" 
+              variant="standard" 
+              fullWidth
+              onChange={handleChange}
+              value={state.date}
+            />
+
+            <Toolbar />            
 
             <TextField 
               id="skills" 
