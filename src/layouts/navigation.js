@@ -22,7 +22,7 @@ const pages = {
     },
     {
       title: 'My Profile',
-      href: '/home'
+      href: '/portfolio-page'
     },
     {
       title: 'My Account',

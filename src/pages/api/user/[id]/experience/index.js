@@ -26,8 +26,9 @@ export default async function handler(req, res) {
         const experience = new ExperienceModel({
           user_id: req.query.id,
           title: req.body.title,
-          content: req.body.content,
+          date: req.body.date,
           summary: req.body.summary,
+          content: req.body.content,
           skills: req.body.skills
         })
         console.log(experience)

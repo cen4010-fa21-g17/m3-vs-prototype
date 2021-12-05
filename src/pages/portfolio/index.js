@@ -1,36 +1,29 @@
 import React from 'react';
 import Main from 'layouts/Main'
-
 import Typography from '@mui/material/Typography'
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar  from '@mui/material/Toolbar';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
-
 import TextField from '@mui/material/TextField'
-
 import Button from '@mui/material/Button'
-
-import JourneySideBar from 'components/JourneySideBar'
-
 import axios from 'axios'
-
 import { useContext } from 'react'
 import { SnackBarContext } from 'contexts/SnackBarContext'
 
 
 const drawerWidth = 240
 
-const ExperiencePage = () => {
+const PortfolioPage = () => {
 
   const snackbar = useContext(SnackBarContext)
 
   const [state, setState] = React.useState({
-    title: "",
-    date: "",
-    summary: "",
-    content: "",
-    skills: ""
+    biography: "",
+    goal1: "",
+    goal2: "",
+    goal3: "",
+    goal4: "",
   });
 
   function handleChange(e) {
@@ -39,7 +32,7 @@ const ExperiencePage = () => {
   }
 
   // Create a new experience and store it in the database
-  const saveExperience = () => {
+  const savePortfolio = () => {
 
     // Retrieve user data from browser local storage
     const userData = window.localStorage.getItem('user')
@@ -47,21 +40,21 @@ const ExperiencePage = () => {
 
     // Make a POST request to the server with the correspondent 
     // experience data to be stored in the database
-    axios.post(`/api/user/${jsonUserData._id}/experience`, {
-       title: state.title,
-       date: state.date,
-       summary: state.summary,
-       content: state.content,
-       skills: state.skills
+    axios.put(`/api/user/${jsonUserData._id}/portfolio`, {
+       biography: state.biography,
+       goal1: state.goal1,
+       goal2: state.goal2,
+       goal3: state.goal3,
+       goal4: state.goal4
     }).then(response => {
       // If the experience was successfully created, then notify the user
       if (response.statusText == "Created") {
-        snackbar.showAlert('success', 'Experience created successfully')
+        snackbar.showAlert('success', ' Information saved successfully')
       }
     }).catch(error => {
       // Notify the user if an error occured
       console.log(error)
-      snackbar.showAlert('error', 'Error creating experience')
+      snackbar.showAlert('error', 'Error saving information')
     })
   }
     
@@ -77,7 +70,6 @@ const ExperiencePage = () => {
         <CssBaseline />
         <Toolbar/>
 
-        <JourneySideBar />
 
          
           <Box
@@ -93,74 +85,73 @@ const ExperiencePage = () => {
           >
          
           <Typography variant="h4">
-            Add Experience
+            Edit Biography and Goals
           </Typography>
 
             <Toolbar/>
             <TextField 
-              id="title" 
-              name="title"
-              label="Title" 
+              id="goal1" 
+              name="goal1"
+              label="Goal" 
               variant="standard" 
               fullWidth
               onChange={handleChange}
-              value={state.title}
+              value={state.goal1}
             />
 
             <Toolbar />
 
             <TextField 
-              id="date" 
-              name="date"
-              label="yyyy/mm/dd" 
+              id="goal2" 
+              name="goal2"
+              label="Goal" 
               variant="standard" 
               fullWidth
               onChange={handleChange}
-              value={state.date}
-            />
-
-            <Toolbar />            
-
-            <TextField 
-              id="skills" 
-              name="skills"
-              label="Skills" 
-              variant="standard" 
-              fullWidth
-              onChange={handleChange}
-              value={state.skills}
+              value={state.goal2}
             />
 
             <Toolbar />
 
             <TextField 
-              id="summary"
-              name="summary"
-              label="Summary" 
-              variant="outlined"
-              multiline
-              rows={5}
+              id="goal3" 
+              name="goal3"
+              label="Goal" 
+              variant="standard" 
               fullWidth
               onChange={handleChange}
-              value={state.summary}
+              value={state.goal3}
             />
 
             <Toolbar/>
 
             <TextField 
-              id="content" 
-              name="content"
-              label="Describe your Experience" 
+              id="goal4" 
+              name="goal4"
+              label="Goal" 
+              variant="standard" 
+              fullWidth
+              onChange={handleChange}
+              value={state.goal4}
+            />
+
+            <Toolbar/>
+
+            <TextField 
+              id="biography" 
+              name="biography"
+              label="Enter biography" 
               variant="outlined" 
               multiline
               rows={20}
               fullWidth
               onChange={handleChange}
-              value={state.content}
+              value={state.biography}
             />
 
             <Toolbar />
-            <Button onClick={saveExperience} color="primary" variant="outlined">Save</Button>
+            <Button onClick={savePortfolio} color="primary" variant="outlined">Save</Button>
+            <Button href="/portfolio-page" color="primary" variant="outlined">My Profile</Button>
           </Box>
           
           <Toolbar />
@@ -169,4 +160,4 @@ const ExperiencePage = () => {
   );
 };
 
-export default ExperiencePage;
+export default PortfolioPage;

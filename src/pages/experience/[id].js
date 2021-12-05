@@ -31,9 +31,10 @@ const ExperiencePage = () => {
 
     const [state, setState] = React.useState({
       title: "",
-      skills: "",
+      date: "",
+      summary: "",
       content: "",
-      summary: ""
+      skills: ""
     });
 
     console.log(state)
@@ -71,7 +72,8 @@ const ExperiencePage = () => {
       formData.append(key, value);
     }
     console.log({
-      title: state.title,
+       title: state.title,
+       date: state.date,
        summary: state.summary,
        content: state.content,
        skills: state.skills
@@ -79,6 +81,7 @@ const ExperiencePage = () => {
 
     axios.put(`/api/user/${jsonUserData._id}/experience/${router.query.id}`, {
        title: state.title,
+       date: state.date,
        summary: state.summary,
        content: state.content,
        skills: state.skills
@@ -133,6 +136,19 @@ const ExperiencePage = () => {
               fullWidth
               onChange={handleChange}
               value={state.title}
+              disabled={state.user_id !== user._id}
+            />
+
+            <Toolbar />
+
+            <TextField 
+              id="date" 
+              name="date"
+              label="yyyy/mm/dd" 
+              variant="standard" 
+              fullWidth
+              onChange={handleChange}
+              value={state.date}
               disabled={state.user_id !== user._id}
             />
 

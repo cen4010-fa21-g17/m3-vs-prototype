@@ -3,7 +3,6 @@ import {Component} from 'react';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
@@ -13,11 +12,9 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Button from '@mui/material/Button';
 import axios from 'axios';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
+
 
 import Container from 'components/Container';
-import { SettingsInputAntennaTwoTone } from '@mui/icons-material';
-
 
 //hard coded information for the user profile
 const mock = [
@@ -27,11 +24,10 @@ const mock = [
   },
 ];
 
-const avatar = null;
+
 
 const Hero = () => {
   useEffect(() => {
-  
     const jarallaxInit = async () => {
       const jarallaxElems = document.querySelectorAll('.jarallax');
       if (!jarallaxElems || (jarallaxElems && jarallaxElems.length === 0)) {
@@ -44,32 +40,17 @@ const Hero = () => {
     jarallaxInit();
   });
 
-  //parsing the JSON file to get all of the user's data 
-  const user = JSON.parse(window.localStorage.getItem('user'));
-  console.log(user)
-  console.log(user.firstName)
- 
+  
+
+  const user = JSON.parse(window.localStorage.getItem('user'))
+  console.log('Hello');
   
 
   const theme = useTheme();
-  /*const state = {
-    selectedFile: null
-  }
-
- const fileSelectedHandler = event => {
-   this.setState({
-      selectedFile: event.target.files[0]
-   })
-   //console.log(event.target.files[0])
- }
- const fileUploadHandler = () => {
-   const fd = new FormData();
-   fd.append('image', this.state)
-    axios.post('');
- }*/
 
   return (
-
+    
+    
     <Box
       className={'jarallax'}
       data-jarallax
@@ -78,11 +59,8 @@ const Hero = () => {
       minHeight={{ xs: 400, sm: 500, md: 600 }}
       display={'flex'}
       alignItems={'center'}
-      marginTop={-15}
+      marginTop={-13}
       paddingTop={13}
-      
-      
-      
       id="agency__portfolio-item--js-scroll"
     >
       {/* This box contains the background photo for the profile page*/}
@@ -106,60 +84,53 @@ const Hero = () => {
           filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
         }}
       />
-
-
-
       {/* This container holds user profile and followers*/}
-      <Container 
-        position = {'relative'}
-        zIndex={2}
-        minWidth = {1580}
-        justifyContents = {'center'}
-      >
+      <Container position={'relative'} zIndex={2}>
         <Box>
           <Grid container spacing={12}>
-
-        {/* Everything inside of the box */}  
-        
-          <Grid item xs={5} md={5} >
+        {/* This maps to the hard code in "const mock" */}  
+        {mock.map((item) => (
+          <Grid item xs={4} md={4} >
             <Box
               width={1}
               height={1}
               component={Card}
+              boxShadow={5}
+              variant={'outlined'}
               bgcolor={'alternate.main'}
               textAlign ={'center'}
+              align={'center'}
             >
               {/* This is for the User profile */}
-                <ListItem component="div" disableGutters >
-                  <ListItemAvatar>
+              <CardContent sx={{ padding: 3 }}>
+                <ListItem component="div" disableGutters sx={{ padding: 0 }}>
+                  <ListItemAvatar sx={{ marginRight: 3 }} >
                     <Avatar
-                      src={avatar}
+                      src={item.avatar}
+                      variant={'rounded'}
                       sx={{ 
+                        marginLeft: 12,
                         width: 100, 
                         height: 100, 
-                        marginLeft: 30,
-                        marginTop: 3,
-                        marginBottom:2,
-                        
+                        borderRadius: 3,
+                        marginBottom: 3,
                        }}
                     />
                     
-                    
                   </ListItemAvatar>
                 </ListItem>
-                {/*Output the user's firt and last name frtom JSON file */}
                 <ListItemText
                     sx={{ margin: 0, marginBottom: 3, }}
                     marginTop={5}
-                    primary={user.firstName + " " + user.lastName}
-                    primaryTypographyProps={{ variant: 'h4', fontWeight: 600, }}
+                    primary={user.firstname}
+                    primaryTypographyProps={{ variant: 'h6', fontWeight: 700 }}
                     secondaryTypographyProps={{ variant: 'subtitle1' }}
                   />
                   
-             
+              </CardContent>
             </Box>
           </Grid>
-        
+        ))}
           
 
       </Grid>
