@@ -38,7 +38,7 @@ const PortfolioPage = () => {
     const userData = window.localStorage.getItem('user')
     const jsonUserData = JSON.parse(userData)
 
-    // Make a POST request to the server with the correspondent 
+    // Make a PUT request to the server with the correspondent 
     // experience data to be stored in the database
     axios.put(`/api/user/${jsonUserData._id}/portfolio`, {
        biography: state.biography,
@@ -48,7 +48,8 @@ const PortfolioPage = () => {
        goal4: state.goal4
     }).then(response => {
       // If the experience was successfully created, then notify the user
-      if (response.statusText == "Created") {
+      console.log("hello " + response.statusText)
+      if (response.statusText == "OK") {
         snackbar.showAlert('success', ' Information saved successfully')
       }
     }).catch(error => {

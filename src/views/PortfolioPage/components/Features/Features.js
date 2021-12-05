@@ -142,7 +142,11 @@ const Features = () => {
             {/* displays "Biography" to screen*/}
             <Typography variant={'h6'} fontWeight={700} gutterBottom>
               {mock.biography.title}
+              <IconButton href ={'../../portfolio/'}>
+            <EditIcon/>
+          </IconButton>
             </Typography>
+            
 
           
           </Box>
@@ -174,6 +178,9 @@ const Features = () => {
             {/* displays "Goals" to screen*/}
             <Typography variant={'h6'} fontWeight={700} gutterBottom>
               {mock.goals.title}
+              <IconButton href ={'../../portfolio/'}>
+            <EditIcon/>
+          </IconButton>
             </Typography>
           </Box>
 
