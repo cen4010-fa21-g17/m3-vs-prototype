@@ -4,7 +4,8 @@ import mongoose from 'mongoose'
 const userSchema = new mongoose.Schema({
     firstName: { type: String, required: true, },
     lastName: { type: String, required: true, },
-    profileContent: { type: String }
+    profileContent: { type: String },
+    profilePicture: { type: String }
 })
 
 const UserModel = mongoose.models.User || mongoose.model('User', userSchema)

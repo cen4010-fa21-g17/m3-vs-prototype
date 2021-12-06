@@ -17,8 +17,8 @@ export default async function handler(req, res) {
     case 'POST':
         try {
             const account =  await AccountModel.findOne({ email: req.body.email })
+            const user = await UserModel.findById(account.user_id)
             if (account)
-              
              if(await bcrypt.compare(req.body.password, account.password)){
                
              res.status(202).json({ 
@@ -26,6 +26,7 @@ export default async function handler(req, res) {
               email: account.email, 
               firstName: account.firstName,
               lastName: account.lastName,
+              profilePicture: user.profilePicture,
               message: "Login successful" 
               })
             }

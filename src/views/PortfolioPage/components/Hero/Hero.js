@@ -18,6 +18,8 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import Container from 'components/Container';
 import { SettingsInputAntennaTwoTone } from '@mui/icons-material';
 
+import EditIcon from '@mui/icons-material/Edit';
+
 
 //hard coded information for the user profile
 const mock = [
@@ -52,6 +54,10 @@ const Hero = () => {
   
 
   const theme = useTheme();
+
+  const updateProfilePic = () => {
+
+  }
   
   return (
 
@@ -117,7 +123,7 @@ const Hero = () => {
                 <ListItem component="div" disableGutters >
                   <ListItemAvatar>
                     <Avatar
-                      src={avatar}
+                      src={`/uploads/${user.profilePicture}`}
                       sx={{ 
                         width: 100, 
                         height: 100, 
@@ -127,6 +133,11 @@ const Hero = () => {
                         
                        }}
                     />
+                    <div align="center">
+                     
+                      <Button onClick={updateProfilePic}><EditIcon/></Button>
+                    
+                    </div>
                   </ListItemAvatar>
                 </ListItem>
                 {/*Output the user's firt and last name frtom JSON file */}

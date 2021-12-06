@@ -11,6 +11,7 @@ import axios from 'axios'
 import { useContext } from 'react'
 import { SnackBarContext } from 'contexts/SnackBarContext'
 
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const drawerWidth = 240
 
@@ -70,8 +71,10 @@ const PortfolioPage = () => {
         >
         <CssBaseline />
         <Toolbar/>
-
-
+        
+        
+        <Button href="/portfolio-page" color="primary" variant="text"><ArrowBackIosIcon/>My Profile</Button>
+       
          
           <Box
             component="form"
@@ -152,7 +155,6 @@ const PortfolioPage = () => {
 
             <Toolbar />
             <Button onClick={savePortfolio} color="primary" variant="outlined">Save</Button>
-            <Button href="/portfolio-page" color="primary" variant="outlined">My Profile</Button>
           </Box>
           
           <Toolbar />

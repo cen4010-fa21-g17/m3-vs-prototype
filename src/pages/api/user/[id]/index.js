@@ -20,6 +20,24 @@ export default async function handler(req, res) {
       }
       break;
 
+    case 'PUT':
+      try {
+        console.log(req.body)
+        const user = await UserModel.findOneAndUpdate({_id: req.query.id}, req.body, {
+          new: true
+      })
+
+      console.log(user)
+     
+      res.json(user)
+
+      } catch (err) {
+        res.status(500).json({ message: err.message })
+      }
+
+
+      break;
+
     // Find and delete a todo from database
     case 'DELETE':
       try {
