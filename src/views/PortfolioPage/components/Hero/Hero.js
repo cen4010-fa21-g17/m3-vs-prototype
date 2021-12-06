@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Component} from 'react';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -20,6 +20,9 @@ import { SettingsInputAntennaTwoTone } from '@mui/icons-material';
 
 import EditIcon from '@mui/icons-material/Edit';
 
+import { useContext } from 'react'
+import { SnackBarContext } from 'contexts/SnackBarContext'
+
 
 //hard coded information for the user profile
 const mock = [
@@ -32,6 +35,18 @@ const mock = [
 const avatar = null;
 
 const Hero = () => {
+  const snackbar = useContext(SnackBarContext)
+
+  const [state, setState] = useState({})
+  const [profilePic, setProfilePic] = useState('')
+
+  useEffect(() => {
+      const user1 = window.localStorage.getItem('user')
+      const userJsonData1 = JSON.parse(user1)
+      setState(userJsonData1)
+      setProfilePic(userJsonData1.profilePicture)
+  }, [])
+
   useEffect(() => {
   
     const jarallaxInit = async () => {
@@ -55,9 +70,63 @@ const Hero = () => {
 
   const theme = useTheme();
 
-  const updateProfilePic = () => {
+  const handleChangeProfilePic = async (event) => {
+    if (!event.target.files?.length) {
+        return;
+      }
+  
+    const formData = new FormData();
+    const user = window.localStorage.getItem('user')
+    const userJsonData = JSON.parse(user)
 
-  }
+    formData.append("user_id", userJsonData._id)
+
+    const filename = Date.now() + event.target.files[0].name
+    formData.append('profilePicture', filename)
+
+    Array.from(event.target.files).forEach((file) => {
+      formData.append(event.target.name, file);
+    });
+
+
+    console.log('handling change')
+    const config = {
+      headers: { 'content-type': 'multipart/form-data' },
+      onUploadProgress: (event) => {
+        console.log(`Current progress:`, Math.round((event.loaded * 100) / event.total));
+      },
+    };
+    console.log('sending post request')
+
+      
+      
+
+    const response = await axios.post('/api/uploads', formData, config);
+
+    console.log('got response')
+    console.log('response', response.data);
+
+    if (response.statusText === "OK") {
+
+      const res = await axios.put(`/api/user/${userJsonData._id}`, {
+          profilePicture: filename
+      })
+
+      if (res.statusText == "OK")
+        snackbar.showAlert('success', 'Profile picture updated successfully')
+
+      console.log('data...')
+      console.log(res.data)
+      setProfilePic(filename)
+      console.log(JSON.stringify(res.data))
+      window.localStorage.setItem('user', JSON.stringify(res.data))
+      setState(res.data)
+    }
+
+    const form = document.getElementById('profile-file-input')
+    form.value = ''
+      
+  };
   
   return (
 
@@ -133,13 +202,21 @@ const Hero = () => {
                         
                        }}
                     />
-                    <div align="center">
-                     
-                      <Button onClick={updateProfilePic}><EditIcon/></Button>
-                    
-                    </div>
                   </ListItemAvatar>
-                </ListItem>
+                  <input
+                    style={{ display: 'none' }}
+                    type="file" 
+                    id='profile-file-input'
+                    label="avatar"
+                    name="theFiles"
+                    accept="image/png, image/jpeg"
+                    onChange={handleChangeProfilePic} 
+                    
+                  />
+                    
+                  <Button onClick={() => document.getElementById('profile-file-input').click()}><EditIcon/></Button>
+                </ListItem>  
+                    
                 {/*Output the user's firt and last name frtom JSON file */}
                 <ListItemText
                     sx={{ margin: 0, marginBottom: 3, }}
