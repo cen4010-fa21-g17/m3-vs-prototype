@@ -11,6 +11,7 @@ import axios from 'axios'
 import { useContext } from 'react'
 import { SnackBarContext } from 'contexts/SnackBarContext'
 
+
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const drawerWidth = 240
@@ -72,8 +73,10 @@ const PortfolioPage = () => {
         <CssBaseline />
         <Toolbar/>
         
-        
+        {/* Wrapped button in a grid to be able to move the icon button */}
+        <Grid container spacing={-4} justifyContent={'flex-start'} alignItem={'flex-star'}>
         <Button href="/portfolio-page" color="primary" variant="text"><ArrowBackIosIcon/>My Profile</Button>
+        </Grid>
        
          
           <Box

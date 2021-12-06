@@ -19,6 +19,8 @@ import { useEffect } from 'react'
 
 import { useContext } from 'react'
 import { SnackBarContext } from 'contexts/SnackBarContext'
+import { Grid } from '@mui/material';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 
 const drawerWidth = 240
@@ -107,6 +109,11 @@ const PortfolioPage = () => {
     <CssBaseline />
     <Toolbar/>
 
+    {/* Wrapped button in a grid to be able to move the icon button */}
+    <Grid container spacing={-4} justifyContent={'flex-start'} alignItem={'flex-star'}>
+        <Button href="/portfolio-page" color="primary" variant="text"><ArrowBackIosIcon/>My Profile</Button>
+        </Grid>
+
 
      
       <Box
@@ -193,7 +200,6 @@ const PortfolioPage = () => {
 
         <Toolbar />
         <Button onClick={savePortfolio} color="primary" variant="outlined">Save</Button>
-        <Button href="/portfolio-page" color="primary" variant="outlined">My Profile</Button>
       </Box>
       
       <Toolbar />
