@@ -117,7 +117,7 @@ const Hero = () => {
       if (res.statusText == "OK")
         snackbar.showAlert('success', 'Profile picture updated successfully')
 
-      const deleteRes = await axios.delete(`/api/uploads`, oldProfilePic)
+      //const deleteRes = await axios.delete(`/api/uploads`, oldProfilePic)
 
       console.log('data...')
       console.log(res.data)

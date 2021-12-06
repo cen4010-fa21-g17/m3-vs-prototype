@@ -110,7 +110,7 @@ export default function SearchBar() {
                         button
                       >
                         <ListItemAvatar>
-                          <Avatar />
+                          <Avatar src={`/uploads/${user.item.profilePicture}`}/>
                         </ListItemAvatar>
                         <ListItemText 
                           primary={user.item.firstName + " " + user.item.lastName} 
