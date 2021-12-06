@@ -81,7 +81,7 @@ useEffect(async () => {
             <CardContent>
               <Typography variant="h6" component="div" fontWeight={700} >
                 {portfolio.biography + " "}
-                <IconButton href ={'../../portfolio/'+portfolio._id} size = {'small'}>
+                <IconButton href ={'../../portfolio/'} size = {'small'}>
                   <EditIcon/>
                 </IconButton>
               </Typography>
@@ -121,7 +121,7 @@ useEffect(async () => {
               <Typography variant="h6" component="div" fontWeight={700}>
                 {"Goal 1 : " + portfolio.goal1 + "  "}
                 <Grid container spacing={4} justifyContent={'flex-end'} alignItem={'flex-end'}>
-                <IconButton href ={'../../portfolio/'+portfolio._id} size = {'small'} >
+                <IconButton href ={'../../portfolio/'} size = {'small'} >
                   <EditIcon/>
                 </IconButton>
                 </Grid>
@@ -141,7 +141,7 @@ useEffect(async () => {
               <Typography variant="h6" component="div" fontWeight={700}>
                 {"Goal 2 : " + portfolio.goal2 + "  "}
                 <Grid container spacing={4} justifyContent={'flex-end'} alignItem={'flex-end'}>
-                <IconButton href ={'../../portfolio/'+portfolio._id} size = {'small'} >
+                <IconButton href ={'../../portfolio/'} size = {'small'} >
                   <EditIcon/>
                 </IconButton>
                 </Grid>
@@ -161,7 +161,7 @@ useEffect(async () => {
               <Typography variant="h6" component="div" fontWeight={700}>
                 {"Goal 3 : " + portfolio.goal3 + "  "}
                 <Grid container spacing={4} justifyContent={'flex-end'} alignItem={'flex-end'}>
-                <IconButton href ={'../../portfolio/'+portfolio._id} size = {'small'} >
+                <IconButton href ={'../../portfolio/'} size = {'small'} >
                   <EditIcon/>
                 </IconButton>
                 </Grid>
@@ -181,7 +181,7 @@ useEffect(async () => {
               <Typography variant="h6" component="div" fontWeight={700}>
                 {"Goal 4: " + portfolio.goal4 + "  "}
                 <Grid container spacing={4} justifyContent={'flex-end'} alignItem={'flex-end'}>
-                <IconButton href ={'../../portfolio/'+portfolio._id} size = {'small'} >
+                <IconButton href ={'../../portfolio/'} size = {'small'} >
                   <EditIcon/>
                 </IconButton>
                 </Grid>

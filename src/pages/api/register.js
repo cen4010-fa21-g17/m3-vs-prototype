@@ -34,19 +34,11 @@ export default async function handler(req, res) {
                 password: hashedPassword 
             })
             console.log(account)
-            const portfolio = new PortfolioModel({
-                user_id: user._id,
-                biography: '',
-                goal1: '',
-                goal2: '',
-                goal3: '',
-                goal4: ''
-            })
+           
 
             try {
                 const newUser = await user.save()
                 await account.save()
-                await portfolio.save()
                 res.status(201).json(newUser)
             } catch (err) {
                 console.log(err)
