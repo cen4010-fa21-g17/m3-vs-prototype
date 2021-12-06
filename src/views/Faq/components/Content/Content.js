@@ -92,29 +92,19 @@ const Content = () => {
           title={'Account & settings'}
           items={[
             {
-              title: 'How do I change my email?',
+              title: 'How do I update my Biography and Goals?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'How do I update my About?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'On your profile page you can click on the icon next to the item you want to edit',
             },
             {
               title: 'How do I change my profile picture?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'There is an icon next to the profile picture that allows you to upload a photo',
             },
             {
-              title: 'How do I manage my notifications?',
+              title: 'How do add or remove an experience?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'How do add or remove paths?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'Clicking on the "add experience" button on your journey workspace will redirect to a page where you can add your information. Once you added an experience you can return to your workspace and modify or delete the experience.',
             },
           ]}
         />
@@ -124,24 +114,9 @@ const Content = () => {
           title={'Security'}
           items={[
             {
-              title: 'How do I rest my password?',
+              title: 'How do I reset my password?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'I forgot my username/password',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'Can I make my profile public?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'How do I report a profile?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'Go to your account settings and in security you will be given the option to enter your preferred password',
             },
           ]}
         />

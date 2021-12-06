@@ -75,7 +75,7 @@ function App() {
                         }}>
             {/* This is where the timline starts*/}             
             <HorizontalTimeline
-              styles={{ outline: "#DFA867", foreground: "#19295C", margin: "5" }}
+              styles={{ outline: "#DFA867", foreground: "#0b7bbd", margin: "5" }}
               index={value}
               //This is what lets you click on the dots to display info from different dates
               indexClick={(index) => {
