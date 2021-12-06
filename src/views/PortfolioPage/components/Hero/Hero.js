@@ -108,12 +108,16 @@ const Hero = () => {
 
     if (response.statusText === "OK") {
 
+      const oldProfilePic = userJsonData.profilePicture
+
       const res = await axios.put(`/api/user/${userJsonData._id}`, {
           profilePicture: filename
       })
 
       if (res.statusText == "OK")
         snackbar.showAlert('success', 'Profile picture updated successfully')
+
+      const deleteRes = await axios.delete(`/api/uploads`, oldProfilePic)
 
       console.log('data...')
       console.log(res.data)
@@ -216,6 +220,11 @@ const Hero = () => {
                     
                   <Button onClick={() => document.getElementById('profile-file-input').click()}><EditIcon/></Button>
                 </ListItem>  
+                {/* <Button onClick={async () => {
+                  const res = await axios.delete(`/api/uploads/${user.profilePicture}`)
+                  if (res.statusText == "OK")
+                    console.log('success deleting picture')
+                }}>delete</Button> */}
                     
                 {/*Output the user's firt and last name frtom JSON file */}
                 <ListItemText

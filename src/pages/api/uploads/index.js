@@ -1,7 +1,8 @@
 import nextConnect from 'next-connect';
 import multer from 'multer';
 import axios from 'axios'
-
+import fs from 'fs'
+import path from 'path'
 
 const upload = multer({
   storage: multer.diskStorage({
@@ -33,6 +34,14 @@ apiRoute.post((req, res) => {
   
   res.status(200).json({ data: 'success' });
 });
+
+apiRoute.delete((req, res) => {
+  console.log(req.body)
+  fs.unlink(path.join(__dirname, '..', '..', req.body.profilePicture), err => {
+    if (err)
+      console.log(err)
+  })
+})
 
 export default apiRoute;
 
