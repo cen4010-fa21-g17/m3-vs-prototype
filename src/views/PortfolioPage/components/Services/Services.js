@@ -2,10 +2,18 @@ import React, { useEffect, useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
 import Grid from '@mui/material/Grid';
 import axios from "axios";
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+
 
 //Websites to create the timeline:
 //https://www.npmjs.com/package/react-horizontal-timeline
 //https://www.geeksforgeeks.org/what-is-horizontal-timeline-in-reactjs/
+
+
 
   
 function App() {
@@ -63,9 +71,9 @@ function App() {
     EVENT_DESCRIPTIONS.push(experience.summary)
   })
 
-
   return (
     <box>
+      <Box sx={{ width: '100%' }}>
       <Grid item xs={12} md={12} >   
         <div>
           <div style={{ width: "80%",
@@ -104,6 +112,7 @@ function App() {
           </div>
         </div>  
       </Grid>  
+    </Box>
     </box>
   );
 }

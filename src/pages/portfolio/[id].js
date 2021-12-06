@@ -44,7 +44,7 @@ const PortfolioPage = () => {
     useEffect(async () => {
         try {
             const userData = JSON.parse(window.localStorage.getItem('user'))
-            const res = await axios.get(`/api/user/${userData._id}/portfolio/${router.query.id}`)
+            const res = await axios.get(`/api/user/${router.query.id}/portfolio/`)
             console.log(res)
             setState(res.data)
         } catch (err) {

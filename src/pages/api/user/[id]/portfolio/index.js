@@ -14,9 +14,10 @@ export default async function handler(req, res) {
       case 'GET':
         try {
           console.log('tried getting portfolio information for use - ' + `${req.query.id}`)
-          const allPortfolio = await PortfolioModel.find({user_id: `${req.query.id}`})
+          console.log(req.query.id)
+          const portfolio = await PortfolioModel.find({user_id: `${req.query.id}`})
           //const portfolio = await PortfolioModel.find({user_id: `${req.query.id}` })
-          res.json(allPortfolio)
+          res.json(portfolio)
         } catch (err) {
           console.log('tried getting portfolio information failure' + err.message )
 
